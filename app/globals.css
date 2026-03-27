@@ -1,26 +1,168 @@
 @import "tailwindcss";
+@source "../app";
+@source "../components";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --color-background: #ffffff;
+  --color-foreground: #171717;
+  --color-navy: #0b1221;
+  --color-navy-light: #1a2332;
+  --color-blue-accent: #3b82f6;
+  --color-purple-accent: #8b5cf6;
+  --font-sans: 'Inter', sans-serif;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+/* =========================================
+   BASE LAYER — lower priority than utilities
+   ========================================= */
+@layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: #ffffff;
+    color: #171717;
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100vw;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #f8fafc;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #94a3b8, #cbd5e1);
+    border-radius: 3px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #64748b, #94a3b8);
+  }
+
+  /* Selection color */
+  ::selection {
+    background-color: rgba(59, 130, 246, 0.15);
+    color: inherit;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* =========================================
+   KEYFRAMES — these don't conflict with layers
+   ========================================= */
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* =========================================
+   COMPONENTS LAYER — between base and utilities
+   ========================================= */
+@layer components {
+  /* Banner gradient animation */
+  .banner-gradient {
+    background: linear-gradient(90deg, #4338ca, #6d28d9, #4f46e5, #7c3aed, #6366f1);
+    background-size: 400% 400%;
+    animation: gradientShift 8s ease infinite;
+  }
+
+  /* Logo marquee */
+  .marquee-track {
+    animation: marquee 25s linear infinite;
+  }
+
+  .marquee-track:hover {
+    animation-play-state: paused;
+  }
+
+  /* Grid background pattern */
+  .grid-bg {
+    background-image: 
+      linear-gradient(rgba(0, 0, 0, 0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0, 0, 0, 0.04) 1px, transparent 1px);
+    background-size: 48px 48px;
+  }
+
+  /* Dot pattern background for product hero sections */
+  .dot-pattern-bg {
+    background-image: radial-gradient(circle, rgba(0, 0, 0, 0.06) 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+
+  /* Tablet device frame */
+  .tablet-frame {
+    background: linear-gradient(145deg, #1e293b 0%, #0f172a 50%, #1a2332 100%);
+    border-radius: 16px;
+    padding: 10px;
+    box-shadow: 
+      0 25px 60px -15px rgba(0, 0, 0, 0.35),
+      0 0 0 1px rgba(255, 255, 255, 0.08),
+      inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  }
+
+  .tablet-screen {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  /* Feature card hover */
+  .feature-card {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid #e2e8f0;
+  }
+
+  .feature-card:hover {
+    border-color: #3b82f6;
+    box-shadow: 0 8px 30px rgba(59, 130, 246, 0.08);
+    transform: translateY(-3px);
+  }
+
+  /* Product page feature cards with smoother hover */
+  .product-feature-card {
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid #f1f5f9;
+  }
+
+  .product-feature-card:hover {
+    border-color: #bfdbfe;
+    box-shadow: 0 12px 40px rgba(59, 130, 246, 0.06);
+    transform: translateY(-2px);
+  }
+
+  /* Dashboard mockup styles */
+  .dashboard-topbar {
+    background: #1e293b;
+    color: white;
+  }
+
+  /* Arrow animation on hover */
+  .btn-arrow {
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .group:hover .btn-arrow {
+    transform: translate(2px, -2px);
+  }
 }
