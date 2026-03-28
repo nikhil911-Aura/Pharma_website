@@ -14,7 +14,7 @@ import {
 const mesTabs: ProductTabItem[] = [
   {
     id: "batch-execution",
-    label: "Run Engine",
+    label: "Batch Execution",
     icon: (
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <rect x="3" y="3" width="18" height="18" rx="2" />
@@ -29,7 +29,7 @@ const mesTabs: ProductTabItem[] = [
   },
   {
     id: "batch-intelligence",
-    label: "Process Analytics",
+    label: "Batch Intelligence",
     icon: (
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
@@ -43,7 +43,7 @@ const mesTabs: ProductTabItem[] = [
   },
   {
     id: "production-logbooks",
-    label: "Digital Records",
+    label: "Production Logbooks",
     icon: (
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <path d="M4 19.5A2.5 2.5 0 016.5 17H20" />

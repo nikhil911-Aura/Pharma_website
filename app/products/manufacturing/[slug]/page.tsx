@@ -33,7 +33,7 @@ const products: Record<
 > = {
   /* ── BATCH EXECUTION ── */
   "batch-execution": {
-    badge: "Run Engine",
+    badge: "Batch Execution",
     heroHeading:
       "Next-Gen Operation Flows,\nDesigned for Strict Adherence",
     heroDescription:
@@ -120,7 +120,7 @@ const products: Record<
 
   /* ── BATCH INTELLIGENCE ── */
   "batch-intelligence": {
-    badge: "Process Analytics",
+    badge: "Batch Intelligence",
     heroHeading:
       "Ensure Punctual & Complete\nDeliveries, Every Run",
     heroDescription:
@@ -183,7 +183,7 @@ const products: Record<
     ],
     faqs: [
       {
-        question: "What upstream data powers Process Analytics?",
+        question: "What upstream data powers Batch Intelligence?",
         answer:
           "It aggregates data from batch records, equipment sensors (OPC-UA), ERP schedules, and historical production data to generate insights.",
       },
@@ -202,7 +202,7 @@ const products: Record<
 
   /* ── PRODUCTION LOGBOOKS ── */
   "production-logbooks": {
-    badge: "Digital Records",
+    badge: "Production Logbooks",
     heroHeading:
       "Immutable System Logs\n— Perpetually Verified",
     heroDescription:

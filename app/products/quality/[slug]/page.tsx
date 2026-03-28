@@ -59,7 +59,7 @@ const ZapIcon = () => (
    ──────────────────────────────────────────── */
 const productPages: Record<string, React.ComponentProps<typeof ProductDetailPage>> = {
   "ai-investigator": {
-    badge: "Anomaly Detective",
+    badge: "AI Investigator",
     heroHeading: "Resolve Deviations Instantly, Formulate Impervious CAPAs",
     heroDescription:
       "Capitalize on algorithmic root cause mapping, empirical CAPA suggestions, and absolute audit trails to shield output from compounding errors.",
@@ -110,14 +110,14 @@ const productPages: Record<string, React.ComponentProps<typeof ProductDetailPage
       { tag: "Audit Readiness Checklist", title: "Systemic Correction Playbook", href: "#" },
     ],
     faqs: [
-      { question: "What is Anomaly Detective and how does it work?", answer: "Anomaly Detective is an AI-powered quality management tool that automates root cause analysis using Ishikawa 6M methodology. It analyzes historical deviation data, identifies patterns, and generates science-based hypotheses for faster investigation closure." },
-      { question: "How does Anomaly Detective improve CAPA effectiveness?", answer: "The platform generates data-driven CAPA recommendations by cross-referencing batch records, test results, and historical data. This ensures corrective actions address actual root causes rather than symptoms, reducing deviation recurrence by up to 60%." },
-      { question: "Is Anomaly Detective compliant with FDA 21 CFR Part 11?", answer: "Yes, Anomaly Detective is fully compliant with FDA 21 CFR Part 11 requirements, including electronic signatures, complete audit trails, and tamper-proof records. All investigation activities are documented with time-stamped entries." },
-      { question: "How long does it take to implement Anomaly Detective?", answer: "Typical implementation takes 4-8 weeks depending on the complexity of your quality processes and integration requirements. Our team provides full support during setup, configuration, and validation." },
+      { question: "What is AI Investigator and how does it work?", answer: "AI Investigator is an AI-powered quality management tool that automates root cause analysis using Ishikawa 6M methodology. It analyzes historical deviation data, identifies patterns, and generates science-based hypotheses for faster investigation closure." },
+      { question: "How does AI Investigator improve CAPA effectiveness?", answer: "The platform generates data-driven CAPA recommendations by cross-referencing batch records, test results, and historical data. This ensures corrective actions address actual root causes rather than symptoms, reducing deviation recurrence by up to 60%." },
+      { question: "Is AI Investigator compliant with FDA 21 CFR Part 11?", answer: "Yes, AI Investigator is fully compliant with FDA 21 CFR Part 11 requirements, including electronic signatures, complete audit trails, and tamper-proof records. All investigation activities are documented with time-stamped entries." },
+      { question: "How long does it take to implement AI Investigator?", answer: "Typical implementation takes 4-8 weeks depending on the complexity of your quality processes and integration requirements. Our team provides full support during setup, configuration, and validation." },
     ],
   },
   "cleaning-validation": {
-    badge: "Sanitization Check",
+    badge: "Cleaning Validation",
     heroHeading: "Sanitization Audit Software for Effortless Global Compliance",
     heroDescription:
       "Systematize carryover limit computations and live residue trend analysis. Certify extreme-case protocols, spawn verified documentation, and lock in seamless regulatory alignment.",
@@ -168,14 +168,14 @@ const productPages: Record<string, React.ComponentProps<typeof ProductDetailPage
       { tag: "Guide", title: "FDA Cleaning Validation Compliance Guide", href: "#" },
     ],
     faqs: [
-      { question: "What is Sanitization Check and how does it automate cleaning validation?", answer: "Sanitization Check is NovaRx's cleaning validation software that automates HBEL-based residue limit calculations, worst-case product identification, and validation protocol generation. It eliminates manual spreadsheets and ensures consistent, defensible cleaning validation documentation." },
-      { question: "How does Sanitization Check handle change impact assessments?", answer: "When new products are introduced or processes change, Sanitization Check automatically re-evaluates all product-equipment combinations, recalculates MACO limits, identifies new worst-case pairs, and flags any validation gaps that need to be addressed." },
-      { question: "Does Sanitization Check support HBEL-based cleaning validation?", answer: "Yes, Sanitization Check fully supports HBEL (Health-Based Exposure Limit) methodology as recommended by the EMA and FDA. It calculates ADE/PDE-based limits and applies them to determine maximum allowable carryover for all products." },
-      { question: "Can Sanitization Check generate audit-ready documentation?", answer: "Absolutely. Sanitization Check auto-generates complete validation protocols, cleaning verification reports, and change assessment documentation that meet FDA, EU GMP, and other regulatory standards for audit readiness." },
+      { question: "What is Cleaning Validation and how does it automate cleaning validation?", answer: "Cleaning Validation is NovaRx's cleaning validation software that automates HBEL-based residue limit calculations, worst-case product identification, and validation protocol generation. It eliminates manual spreadsheets and ensures consistent, defensible cleaning validation documentation." },
+      { question: "How does Cleaning Validation handle change impact assessments?", answer: "When new products are introduced or processes change, Cleaning Validation automatically re-evaluates all product-equipment combinations, recalculates MACO limits, identifies new worst-case pairs, and flags any validation gaps that need to be addressed." },
+      { question: "Does Cleaning Validation support HBEL-based cleaning validation?", answer: "Yes, Cleaning Validation fully supports HBEL (Health-Based Exposure Limit) methodology as recommended by the EMA and FDA. It calculates ADE/PDE-based limits and applies them to determine maximum allowable carryover for all products." },
+      { question: "Can Cleaning Validation generate audit-ready documentation?", answer: "Absolutely. Cleaning Validation auto-generates complete validation protocols, cleaning verification reports, and change assessment documentation that meet FDA, EU GMP, and other regulatory standards for audit readiness." },
     ],
   },
   "fda-tracker": {
-    badge: "Regulation Monitor",
+    badge: "FDA Tracker",
     heroHeading: "Outpace Agency Scrutiny via Preemptive Analysis",
     heroDescription:
       "Parse citation patterns dynamically, monitor international warning circulars, and systematically close adherence gaps prior to formal audits.",
@@ -197,7 +197,7 @@ const productPages: Record<string, React.ComponentProps<typeof ProductDetailPage
       { tag: "Analysis", title: "FDA Six-Systems Inspection Analysis", href: "#" },
     ],
     faqs: [
-      { question: "What data sources does Regulation Monitor use?", answer: "Regulation Monitor aggregates data from publicly available FDA databases including 483 observations, warning letters, and enforcement actions, enriched with AI analysis." },
+      { question: "What data sources does FDA Tracker use?", answer: "FDA Tracker aggregates data from publicly available FDA databases including 483 observations, warning letters, and enforcement actions, enriched with AI analysis." },
       { question: "How often is the data updated?", answer: "Data is updated as new FDA actions are published, typically within 24-48 hours of public release." },
     ],
   },

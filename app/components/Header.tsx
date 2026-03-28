@@ -5,15 +5,15 @@ import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 
 const qualityProducts = [
-  { name: "Anomaly Detective", desc: "Resolve Alerts Swiftly", href: "/products/quality/ai-investigator" },
-  { name: "Regulation Monitor", desc: "Watch Global Guidelines", href: "/products/quality/fda-tracker" },
-  { name: "Sanitization Check", desc: "Audit-Proof Hygiene Logs", href: "/products/quality/cleaning-validation" },
+  { name: "AI Investigator", desc: "Resolve Alerts Swiftly", href: "/products/quality/ai-investigator" },
+  { name: "FDA Tracker", desc: "Watch Global Guidelines", href: "/products/quality/fda-tracker" },
+  { name: "Cleaning Validation", desc: "Audit-Proof Hygiene Logs", href: "/products/quality/cleaning-validation" },
 ];
 
 const manufacturingProducts = [
-  { name: "Run Engine", desc: "Smart Process Orchestration", href: "/products/manufacturing/batch-execution" },
-  { name: "Process Analytics", desc: "Achieve Max Throughput", href: "/products/manufacturing/batch-intelligence" },
-  { name: "Digital Records", desc: "Synchronize Operations Data", href: "/products/manufacturing/production-logbooks" },
+  { name: "Batch Execution", desc: "Smart Process Orchestration", href: "/products/manufacturing/batch-execution" },
+  { name: "Batch Intelligence", desc: "Achieve Max Throughput", href: "/products/manufacturing/batch-intelligence" },
+  { name: "Production Logbooks", desc: "Synchronize Operations Data", href: "/products/manufacturing/production-logbooks" },
 ];
 
 const ProductIcon = () => (
@@ -92,31 +92,7 @@ function DropdownPanel({
           </div>
         </div>
 
-        {/* Right sidebar — Experience Centre */}
-        <div className="w-[180px] xl:w-[220px] bg-gray-50 p-4 xl:p-5 flex flex-col justify-center shrink-0 border-l border-gray-100">
-          <div className="rounded-xl overflow-hidden mb-3">
-            <div className="h-[100px] xl:h-[120px] bg-gradient-to-br from-gray-800 to-gray-900 flex items-center justify-center text-white">
-              <div className="text-center">
-                <div className="text-[9px] xl:text-[10px] uppercase tracking-wider opacity-70 mb-1">Experience</div>
-                <div className="text-sm font-bold">Centre</div>
-              </div>
-            </div>
-          </div>
-          <Link
-            href="#"
-            className="text-xs xl:text-sm font-semibold text-gray-900 flex items-center gap-1 hover:text-blue-600 transition-colors leading-tight"
-            onClick={onClose}
-          >
-            Visit NovaRx&apos;s Innovation Lab
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="shrink-0">
-              <line x1="5" y1="12" x2="19" y2="12" />
-              <polyline points="12 5 19 12 12 19" />
-            </svg>
-          </Link>
-          <p className="text-[10px] xl:text-xs text-gray-500 mt-2 leading-relaxed">
-            Uncover our unified software ecosystem that helps you coordinate, process, and scale every operation.
-          </p>
-        </div>
+
       </div>
     </div>
   );

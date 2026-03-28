@@ -3,18 +3,18 @@
 import Link from "next/link";
 
 const productLinks = [
-  { name: "Anomaly Detective", href: "/products/quality/ai-investigator" },
-  { name: "Regulation Monitor", href: "/products/quality/fda-tracker" },
-  { name: "Sanitization Check", href: "/products/quality/cleaning-validation" },
-  { name: "Run Engine", href: "/products/manufacturing/batch-execution" },
-  { name: "Process Analytics", href: "/products/manufacturing/batch-intelligence" },
+  { name: "AI Investigator", href: "/products/quality/ai-investigator" },
+  { name: "FDA Tracker", href: "/products/quality/fda-tracker" },
+  { name: "Cleaning Validation", href: "/products/quality/cleaning-validation" },
+  { name: "Batch Execution", href: "/products/manufacturing/batch-execution" },
+  { name: "Batch Intelligence", href: "/products/manufacturing/batch-intelligence" },
 ];
 
 const qualityLinks = [
   { name: "Quality Assurance Hub", href: "/products/quality" },
   { name: "Manufacturing Execution Engine", href: "/products/manufacturing" },
   { name: "Market Complaints", href: "/products/quality/market-complaints" },
-  { name: "Digital Records", href: "/products/manufacturing/production-logbooks" },
+  { name: "Production Logbooks", href: "/products/manufacturing/production-logbooks" },
 ];
 
 const aboutLinks = [

@@ -5,21 +5,21 @@ import Link from "next/link";
 
 const mainFeatures = [
   {
-    title: "Anomaly Detective",
+    title: "AI Investigator",
     description:
       "Utilize smart analytics and precise corrective strategies to foster reliable, transparent anomaly resolutions.",
     href: "/products/quality/ai-investigator",
     large: true,
   },
   {
-    title: "Regulation Monitor",
+    title: "FDA Tracker",
     description:
       "Track global compliance trends, observe official cautions, and mitigate protocol deviations before inspections occur.",
     href: "/products/quality/fda-tracker",
     large: false,
   },
   {
-    title: "Sanitization Check",
+    title: "Cleaning Validation",
     description:
       "Determine secure cross-contamination barriers, profile usage limits live, and produce comprehensive sanitation logs seamlessly.",
     href: "/products/quality/cleaning-validation",
@@ -227,7 +227,7 @@ export default function QMSSection() {
                 </div>
                 {/* Dashboard Mockup */}
                 <div className="px-6 pb-6">
-                  {feature.title === "Regulation Monitor" ? (
+                  {feature.title === "FDA Tracker" ? (
                     <FDATrackerMockup />
                   ) : (
                     <CleaningValidationMockup />
@@ -265,7 +265,7 @@ function FDATrackerMockup() {
       <div className="p-4">
         <p className="text-[10px] text-gray-400 mb-1">Home</p>
         <h4 className="text-sm font-semibold text-gray-800 mb-3">
-          Welcome to Regulation Monitor, Angela
+          Welcome to FDA Tracker, Angela
         </h4>
         <div className="grid grid-cols-2 gap-3">
           <div className="border border-gray-200 rounded-lg p-3">

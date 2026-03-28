@@ -13,14 +13,14 @@ const categories = [
     href: "/products/quality",
     color: "blue",
     products: [
-      "Anomaly Detective",
-      "Regulation Monitor",
-      "Sanitization Check",
-      "Defect Triage",
-      "Evolution Oversight",
-      "Correction Engine",
-      "Anomaly Routing",
-      "Inspection Defense",
+      "AI Investigator",
+      "FDA Tracker",
+      "Cleaning Validation",
+      "Market Complaints",
+      "Change Control",
+      "CAPA Manager",
+      "Deviation Management",
+      "Audit Management",
     ],
     icon: (
       <svg
@@ -47,9 +47,9 @@ const categories = [
     href: "/products/manufacturing",
     color: "indigo",
     products: [
-      "Run Engine",
-      "Process Analytics",
-      "Digital Records",
+      "Batch Execution",
+      "Batch Intelligence",
+      "Production Logbooks",
     ],
     icon: (
       <svg

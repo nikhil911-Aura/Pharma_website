@@ -14,7 +14,7 @@ import {
 const qmsTabs: ProductTabItem[] = [
   {
     id: "ai-investigator",
-    label: "Anomaly Detective",
+    label: "AI Investigator",
     icon: (
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
@@ -28,7 +28,7 @@ const qmsTabs: ProductTabItem[] = [
   },
   {
     id: "fda-tracker",
-    label: "Regulation Monitor",
+    label: "FDA Tracker",
     icon: (
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" />
@@ -46,7 +46,7 @@ const qmsTabs: ProductTabItem[] = [
   },
   {
     id: "cleaning-validation",
-    label: "Sanitization Check",
+    label: "Cleaning Validation",
     icon: (
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />

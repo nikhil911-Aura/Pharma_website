@@ -5,21 +5,21 @@ import Link from "next/link";
 
 const topFeatures = [
   {
-    title: "Run Engine",
+    title: "Batch Execution",
     subtitle: "Modernize and Standardize Operational Workflows.",
     description:
       "Guarantee precise asset allocation, mandate step verification, and capture execution insights for flawless operation logs.",
     href: "/products/manufacturing/batch-execution",
   },
   {
-    title: "Process Analytics",
+    title: "Batch Intelligence",
     subtitle: "Oversee operations as they happen.",
     description:
       "Identify risks instantly and deploy strategic countermeasures to boost overall output.",
     href: "/products/manufacturing/batch-intelligence",
   },
   {
-    title: "Digital Records",
+    title: "Production Logbooks",
     subtitle: "Electronically record equipment sanitation and state changes.",
     description:
       "Synchronize maintenance workflows to maintain a continuously audit-compliant environment.",
