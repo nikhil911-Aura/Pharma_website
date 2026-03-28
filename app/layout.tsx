@@ -21,6 +21,9 @@ export const metadata: Metadata = {
     "batch execution",
     "compliance",
   ],
+  icons: {
+    icon: "/logo1.png",
+  },
 };
 
 export default function RootLayout({

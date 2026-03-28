@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 
 const tabs = [
   {
@@ -145,9 +146,13 @@ function DashboardSidebar() {
     <div className="hidden md:flex flex-col w-[180px] bg-white border-r border-gray-100 shrink-0">
       {/* Logo */}
       <div className="flex items-center gap-2 px-4 py-3 border-b border-gray-100">
-        <svg width="18" height="18" viewBox="0 0 40 40" fill="none">
-          <path d="M20 4C12 4 8 10 8 16C8 22 12 28 20 36C28 28 32 22 32 16C32 10 28 4 20 4Z" fill="#0f172a" />
-        </svg>
+        <Image
+          src="/logo1.png"
+          alt="SYNCOMX"
+          width={18}
+          height={18}
+          className="w-[18px] h-[18px] object-contain"
+        />
         <span className="text-sm font-bold text-gray-900">SYNCOMX</span>
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#94a3b8" strokeWidth="2" className="ml-auto">
           <rect x="3" y="3" width="7" height="7" /><rect x="14" y="3" width="7" height="7" />
@@ -389,9 +394,13 @@ function DashboardToolbar({ title }: { title: string }) {
   return (
     <div className="dashboard-topbar flex items-center justify-between px-4 py-2.5">
       <div className="flex items-center gap-3">
-        <svg width="18" height="18" viewBox="0 0 40 40" fill="none">
-          <path d="M20 4C12 4 8 10 8 16C8 22 12 28 20 36C28 28 32 22 32 16C32 10 28 4 20 4Z" fill="white" />
-        </svg>
+        <Image
+          src="/logo1.png"
+          alt="SYNCOMX"
+          width={18}
+          height={18}
+          className="w-[18px] h-[18px] object-contain"
+        />
         <span className="text-white text-sm font-semibold">SYNCOMX</span>
       </div>
       <div className="flex items-center gap-3 text-xs text-gray-300">

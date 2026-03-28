@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 
 const mainFeatures = [
   {
@@ -91,17 +92,13 @@ export default function QMSSection() {
                 <div className="bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden">
                   <div className="dashboard-topbar flex items-center justify-between px-4 py-2">
                     <div className="flex items-center gap-2">
-                      <svg
-                        width="16"
-                        height="16"
-                        viewBox="0 0 40 40"
-                        fill="none"
-                      >
-                        <path
-                          d="M20 4C12 4 8 10 8 16C8 22 12 28 20 36C28 28 32 22 32 16C32 10 28 4 20 4Z"
-                          fill="white"
-                        />
-                      </svg>
+                      <Image
+                        src="/logo1.png"
+                        alt="SYNCOMX"
+                        width={16}
+                        height={16}
+                        className="w-4 h-4 object-contain"
+                      />
                       <span className="text-white text-xs font-semibold">
                         SYNCOMX
                       </span>
@@ -311,12 +308,13 @@ function CleaningValidationMockup() {
     <div className="bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden">
       <div className="dashboard-topbar flex items-center justify-between px-4 py-2">
         <div className="flex items-center gap-2">
-          <svg width="14" height="14" viewBox="0 0 40 40" fill="none">
-            <path
-              d="M20 4C12 4 8 10 8 16C8 22 12 28 20 36C28 28 32 22 32 16C32 10 28 4 20 4Z"
-              fill="white"
-            />
-          </svg>
+          <Image
+            src="/logo1.png"
+            alt="SYNCOMX"
+            width={14}
+            height={14}
+            className="w-3.5 h-3.5 object-contain"
+          />
           <span className="text-white text-xs font-semibold">SYNCOMX</span>
         </div>
         <div className="text-[10px] text-gray-300 flex items-center gap-2">

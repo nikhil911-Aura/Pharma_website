@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 
 const qualityProducts = [
   { name: "AI Investigator", href: "/products/quality/ai-investigator" },
@@ -26,26 +27,13 @@ export default function Footer() {
           {/* Left side - Branding */}
           <div className="lg:col-span-3">
             <Link href="/" className="flex items-center gap-2.5 mb-6">
-              <svg
-                width="28"
-                height="28"
-                viewBox="0 0 40 40"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M20 4C12 4 8 10 8 16C8 22 12 28 20 36C28 28 32 22 32 16C32 10 28 4 20 4Z"
-                  fill="white"
-                />
-                <path
-                  d="M20 8C15 8 12 12 12 16C12 20 15 24 20 30C25 24 28 20 28 16C28 12 25 8 20 8Z"
-                  fill="#0b1221"
-                />
-                <path
-                  d="M20 12C17.5 12 16 14 16 16C16 18 17.5 20 20 24C22.5 20 24 18 24 16C24 14 22.5 12 20 12Z"
-                  fill="white"
-                />
-              </svg>
+              <Image
+                src="/logo1.png"
+                alt="SYNCOMX Logo"
+                width={32}
+                height={32}
+                className="w-8 h-8 object-contain"
+              />
               <span className="text-xl font-bold text-white tracking-tight">
                 SYNCOMX
               </span>

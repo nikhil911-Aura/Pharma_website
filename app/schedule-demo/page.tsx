@@ -4,6 +4,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 
 export default function ScheduleDemoPage() {
   const router = useRouter();
@@ -78,16 +79,20 @@ export default function ScheduleDemoPage() {
         >
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2.5 mb-12">
-            <div className="w-8 h-8 bg-white rounded-lg flex items-center justify-center">
-              <span className="text-gray-900 font-extrabold text-sm">N</span>
-            </div>
-            <span className="text-xl font-bold tracking-tight">SYNCOMX</span>
+            <Image
+              src="/logo1.png"
+              alt="SYNCOMX Logo"
+              width={32}
+              height={32}
+              className="w-8 h-8 object-contain"
+            />
+            <span className="text-xl font-bold tracking-tight text-white">SYNCOMX</span>
           </Link>
 
           {/* Hero text */}
           <h1 className="text-3xl sm:text-4xl lg:text-[44px] font-extrabold leading-[1.12] tracking-tight mb-6">
             Experience{" "}
-            <span className="bg-gradient-to-r from-purple-400 via-violet-400 to-purple-500 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-blue-400 via-sky-400 to-blue-500 bg-clip-text text-transparent">
               SYNCOMX Core
             </span>{" "}
             <span className="inline-block relative">

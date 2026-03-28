@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Hero() {
   return (
@@ -193,13 +194,14 @@ function DashboardTopbar({ subtitle }: { subtitle: string }) {
   return (
     <div className="bg-[#1e293b] flex items-center justify-between px-3 sm:px-4 py-2 sm:py-2.5 text-white">
       <div className="flex items-center gap-1.5 sm:gap-2">
-        <div className="w-4 h-4 sm:w-5 sm:h-5 rounded-full bg-white/20 flex items-center justify-center">
-          <svg width="9" height="9" viewBox="0 0 40 40" fill="none">
-            <path
-              d="M20 4C12 4 8 10 8 16C8 22 12 28 20 36C28 28 32 22 32 16C32 10 28 4 20 4Z"
-              fill="white"
-            />
-          </svg>
+        <div className="flex items-center justify-center">
+          <Image
+            src="/logo1.png"
+            alt="SYNCOMX"
+            width={12}
+            height={12}
+            className="w-3 h-3 object-contain"
+          />
         </div>
         <span className="text-xs sm:text-sm font-semibold">SYNCOMX</span>
       </div>

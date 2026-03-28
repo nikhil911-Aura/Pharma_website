@@ -1,4 +1,4 @@
-"use client";
+import Image from "next/image";
 
 /**
  * CSS-built dashboard mockups that simulate actual app UIs
@@ -21,7 +21,13 @@ export function AIInvestigatorMockup() {
       {/* Top bar */}
       <div className="flex items-center justify-between px-4 py-3 bg-slate-800 text-white">
         <div className="flex items-center gap-2">
-          <div className="w-5 h-5 rounded bg-blue-500 flex items-center justify-center text-[8px] font-bold">S</div>
+          <Image
+            src="/logo.png"
+            alt="SYNCOMX"
+            width={20}
+            height={20}
+            className="w-5 h-5 object-contain"
+          />
           <div className="w-1 h-1 rounded-full bg-green-400" />
         </div>
         <div className="flex items-center gap-2 text-xs">
@@ -131,7 +137,13 @@ export function CleaningValidationMockup() {
       {/* Top bar */}
       <div className="flex items-center justify-between px-4 py-3 bg-slate-800 text-white">
         <div className="flex items-center gap-2">
-          <div className="w-5 h-5 rounded bg-blue-500 flex items-center justify-center text-[8px] font-bold">S</div>
+          <Image
+            src="/logo.png"
+            alt="SYNCOMX"
+            width={20}
+            height={20}
+            className="w-5 h-5 object-contain"
+          />
           <div className="w-1 h-1 rounded-full bg-green-400" />
         </div>
         <div className="flex items-center gap-2 text-xs">
@@ -180,7 +192,13 @@ export function EnvironmentalMonitoringMockup() {
       {/* Top bar */}
       <div className="flex items-center justify-between px-4 py-3 bg-slate-800 text-white">
         <div className="flex items-center gap-2">
-          <div className="w-5 h-5 rounded bg-emerald-500 flex items-center justify-center text-[8px] font-bold">S</div>
+          <Image
+            src="/logo.png"
+            alt="SYNCOMX"
+            width={20}
+            height={20}
+            className="w-5 h-5 object-contain"
+          />
           <div className="w-1 h-1 rounded-full bg-green-400" />
         </div>
         <div className="flex items-center gap-2 text-xs">
@@ -242,7 +260,13 @@ export function InstrumentLogbooksMockup() {
       {/* Top bar */}
       <div className="flex items-center justify-between px-4 py-3 bg-slate-800 text-white">
         <div className="flex items-center gap-2">
-          <div className="w-5 h-5 rounded bg-emerald-500 flex items-center justify-center text-[8px] font-bold">S</div>
+          <Image
+            src="/logo.png"
+            alt="SYNCOMX"
+            width={20}
+            height={20}
+            className="w-5 h-5 object-contain"
+          />
           <div className="w-1 h-1 rounded-full bg-green-400" />
         </div>
         <div className="flex items-center gap-2 text-xs">
@@ -306,7 +330,13 @@ export function BatchExecutionMockup() {
     <div className="bg-white">
       <div className="flex items-center justify-between px-4 py-3 bg-slate-800 text-white">
         <div className="flex items-center gap-2">
-          <div className="w-5 h-5 rounded bg-indigo-500 flex items-center justify-center text-[8px] font-bold">S</div>
+          <Image
+            src="/logo.png"
+            alt="SYNCOMX"
+            width={20}
+            height={20}
+            className="w-5 h-5 object-contain"
+          />
           <div className="w-1 h-1 rounded-full bg-green-400" />
         </div>
         <div className="flex items-center gap-2 text-xs">
@@ -367,7 +397,13 @@ export function BatchIntelligenceMockup() {
     <div className="bg-white">
       <div className="flex items-center justify-between px-4 py-3 bg-slate-800 text-white">
         <div className="flex items-center gap-2">
-          <div className="w-5 h-5 rounded bg-indigo-500 flex items-center justify-center text-[8px] font-bold">S</div>
+          <Image
+            src="/logo.png"
+            alt="SYNCOMX"
+            width={20}
+            height={20}
+            className="w-5 h-5 object-contain"
+          />
           <div className="w-1 h-1 rounded-full bg-green-400" />
         </div>
         <div className="flex items-center gap-2 text-xs">
@@ -413,7 +449,13 @@ export function ProductionLogbooksMockup() {
     <div className="bg-white">
       <div className="flex items-center justify-between px-4 py-3 bg-slate-800 text-white">
         <div className="flex items-center gap-2">
-          <div className="w-5 h-5 rounded bg-indigo-500 flex items-center justify-center text-[8px] font-bold">S</div>
+          <Image
+            src="/logo.png"
+            alt="SYNCOMX"
+            width={20}
+            height={20}
+            className="w-5 h-5 object-contain"
+          />
           <div className="w-1 h-1 rounded-full bg-green-400" />
         </div>
         <div className="flex items-center gap-2 text-xs">

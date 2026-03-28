@@ -3,34 +3,73 @@
 import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 
-const qualityProducts = [
-  { name: "AI Investigator", desc: "Resolve Alerts Swiftly", href: "/products/quality/ai-investigator" },
-  { name: "FDA Tracker", desc: "Watch Global Guidelines", href: "/products/quality/fda-tracker" },
-  { name: "Cleaning Validation", desc: "Audit-Proof Hygiene Logs", href: "/products/quality/cleaning-validation" },
-];
+// --- Unique Icons for Products ---
 
-const manufacturingProducts = [
-  { name: "Batch Execution", desc: "Smart Process Orchestration", href: "/products/manufacturing/batch-execution" },
-  { name: "Batch Intelligence", desc: "Achieve Max Throughput", href: "/products/manufacturing/batch-intelligence" },
-  { name: "Production Logbooks", desc: "Synchronize Operations Data", href: "/products/manufacturing/production-logbooks" },
-];
+const AIInvestigatorIcon = ({ color }: { color: string }) => (
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <circle cx="11" cy="11" r="8" />
+    <line x1="21" y1="21" x2="16.65" y2="16.65" />
+    <path d="M11 7v1" /><path d="M11 11v4" /><path d="M11 15h0" />
+    <path d="M15 7l.01 0" /><path d="M17 9l.01 0" /><path d="M15 11l.01 0" />
+  </svg>
+);
 
-const ProductIcon = () => (
-  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-    <rect x="3" y="3" width="18" height="18" rx="2" />
+const FDATrackerIcon = ({ color }: { color: string }) => (
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <circle cx="12" cy="12" r="10" />
+    <line x1="2" y1="12" x2="22" y2="12" />
+    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+  </svg>
+);
+
+const CleaningValidationIcon = ({ color }: { color: string }) => (
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
     <path d="M9 12l2 2 4-4" />
   </svg>
 );
 
-const ManufacturingIcon = () => (
-  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#6366f1" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-    <rect x="2" y="3" width="20" height="18" rx="2" />
-    <path d="M8 7v10" />
-    <path d="M12 7v10" />
-    <path d="M16 7v10" />
+const BatchExecutionIcon = ({ color }: { color: string }) => (
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <rect x="2" y="3" width="20" height="18" rx="2" ry="2" />
+    <path d="M7 8l5 4-5 4V8z" />
+    <line x1="13" y1="16" x2="17" y2="16" />
   </svg>
 );
+
+const BatchIntelligenceIcon = ({ color }: { color: string }) => (
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M18 20V10" />
+    <path d="M12 20V4" />
+    <path d="M6 20v-6" />
+    <path d="M3 11l3-3 3 3" />
+    <path d="M9 5l3-3 3 3" />
+  </svg>
+);
+
+const ProductionLogbooksIcon = ({ color }: { color: string }) => (
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+    <line x1="8" y1="6" x2="16" y2="6" />
+    <line x1="8" y1="10" x2="16" y2="10" />
+    <line x1="8" y1="14" x2="16" y2="14" />
+  </svg>
+);
+
+const qualityProducts = [
+  { name: "AI Investigator", desc: "Resolve Alerts Swiftly", href: "/products/quality/ai-investigator", icon: AIInvestigatorIcon },
+  { name: "FDA Tracker", desc: "Watch Global Guidelines", href: "/products/quality/fda-tracker", icon: FDATrackerIcon },
+  { name: "Cleaning Validation", desc: "Audit-Proof Hygiene Logs", href: "/products/quality/cleaning-validation", icon: CleaningValidationIcon },
+];
+
+const manufacturingProducts = [
+  { name: "Batch Execution", desc: "Smart Process Orchestration", href: "/products/manufacturing/batch-execution", icon: BatchExecutionIcon },
+  { name: "Batch Intelligence", desc: "Achieve Max Throughput", href: "/products/manufacturing/batch-intelligence", icon: BatchIntelligenceIcon },
+  { name: "Production Logbooks", desc: "Synchronize Operations Data", href: "/products/manufacturing/production-logbooks", icon: ProductionLogbooksIcon },
+];
 
 /* ──────────────────────────────────────────
    DROPDOWN PANEL — shared by both nav items
@@ -40,7 +79,6 @@ function DropdownPanel({
   description,
   href,
   products,
-  icon,
   accentColor,
   onClose,
 }: {
@@ -48,7 +86,6 @@ function DropdownPanel({
   description: string;
   href: string;
   products: typeof qualityProducts;
-  icon: React.ReactNode;
   accentColor: string;
   onClose: () => void;
 }) {
@@ -77,7 +114,7 @@ function DropdownPanel({
                   className="w-7 h-7 xl:w-8 xl:h-8 rounded-lg flex items-center justify-center shrink-0 mt-0.5"
                   style={{ backgroundColor: `${accentColor}12` }}
                 >
-                  {icon}
+                  <product.icon color={accentColor} />
                 </div>
                 <div className="min-w-0">
                   <div className="text-xs xl:text-sm font-semibold text-gray-900 group-hover:text-blue-600 transition-colors leading-tight">
@@ -155,11 +192,13 @@ export default function Header() {
 
             {/* Logo */}
             <Link href="/" className="flex items-center gap-2 shrink-0">
-              <svg width="28" height="28" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M20 4C12 4 8 10 8 16C8 22 12 28 20 36C28 28 32 22 32 16C32 10 28 4 20 4Z" fill="#0f172a" />
-                <path d="M20 8C15 8 12 12 12 16C12 20 15 24 20 30C25 24 28 20 28 16C28 12 25 8 20 8Z" fill="white" />
-                <path d="M20 12C17.5 12 16 14 16 16C16 18 17.5 20 20 24C22.5 20 24 18 24 16C24 14 22.5 12 20 12Z" fill="#0f172a" />
-              </svg>
+              <Image
+                src="/logo1.png"
+                alt="SYNCOMX Logo"
+                width={32}
+                height={32}
+                className="w-8 h-8 xl:w-9 xl:h-9 object-contain"
+              />
               <span className="text-xl sm:text-2xl font-bold text-gray-900 tracking-tight">
                 SYNCOMX
               </span>
@@ -167,6 +206,52 @@ export default function Header() {
 
             {/* ── Desktop Nav ── */}
             <div className="hidden lg:flex items-center gap-8 xl:gap-10">
+
+                            {/* Manufacturing Dropdown */}
+              <div
+                className="relative"
+                onMouseEnter={() => handleMouseEnter("manufacturing")}
+                onMouseLeave={handleMouseLeave}
+              >
+                <Link
+                  href="/products/manufacturing"
+                  className={`flex items-center gap-1.5 text-[15px] font-medium transition-colors py-2 ${
+                    activeDropdown === "manufacturing" ? "text-gray-900" : "text-gray-700 hover:text-gray-900"
+                  }`}
+                >
+                  Manufacturing
+                  <svg
+                    width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"
+                    className={`transition-transform duration-200 ${activeDropdown === "manufacturing" ? "rotate-180" : ""}`}
+                  >
+                    <polyline points="6 9 12 15 18 9" />
+                  </svg>
+                </Link>
+
+                <AnimatePresence>
+                  {activeDropdown === "manufacturing" && (
+                    <motion.div
+                      initial={{ opacity: 0, y: 8, scale: 0.98 }}
+                      animate={{ opacity: 1, y: 0, scale: 1 }}
+                      exit={{ opacity: 0, y: 8, scale: 0.98 }}
+                      transition={{ duration: 0.18, ease: "easeOut" }}
+                      className="absolute top-full left-1/2 -translate-x-1/2 pt-2"
+                      style={{ width: "min(700px, calc(100vw - 48px))" }}
+                      onMouseEnter={() => handleMouseEnter("manufacturing")}
+                      onMouseLeave={handleMouseLeave}
+                    >
+                      <DropdownPanel
+                        title="Manufacturing Execution Engine"
+                        description="Command line operations smoothly with smart activity orchestration, continuous output monitoring, and digital tracking."
+                        href="/products/manufacturing"
+                        products={manufacturingProducts}
+                        accentColor="#3b82f6"
+                        onClose={() => setActiveDropdown(null)}
+                      />
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
 
               {/* Quality Dropdown */}
               <div
@@ -206,7 +291,6 @@ export default function Header() {
                         description="Streamline root cause analysis, maintain robust audit readiness, and transform digital sanitation workflows safely."
                         href="/products/quality"
                         products={qualityProducts}
-                        icon={<ProductIcon />}
                         accentColor="#3b82f6"
                         onClose={() => setActiveDropdown(null)}
                       />
@@ -215,52 +299,7 @@ export default function Header() {
                 </AnimatePresence>
               </div>
 
-              {/* Manufacturing Dropdown */}
-              <div
-                className="relative"
-                onMouseEnter={() => handleMouseEnter("manufacturing")}
-                onMouseLeave={handleMouseLeave}
-              >
-                <Link
-                  href="/products/manufacturing"
-                  className={`flex items-center gap-1.5 text-[15px] font-medium transition-colors py-2 ${
-                    activeDropdown === "manufacturing" ? "text-gray-900" : "text-gray-700 hover:text-gray-900"
-                  }`}
-                >
-                  Manufacturing
-                  <svg
-                    width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"
-                    className={`transition-transform duration-200 ${activeDropdown === "manufacturing" ? "rotate-180" : ""}`}
-                  >
-                    <polyline points="6 9 12 15 18 9" />
-                  </svg>
-                </Link>
 
-                <AnimatePresence>
-                  {activeDropdown === "manufacturing" && (
-                    <motion.div
-                      initial={{ opacity: 0, y: 8, scale: 0.98 }}
-                      animate={{ opacity: 1, y: 0, scale: 1 }}
-                      exit={{ opacity: 0, y: 8, scale: 0.98 }}
-                      transition={{ duration: 0.18, ease: "easeOut" }}
-                      className="absolute top-full left-1/2 -translate-x-1/2 pt-2"
-                      style={{ width: "min(700px, calc(100vw - 48px))" }}
-                      onMouseEnter={() => handleMouseEnter("manufacturing")}
-                      onMouseLeave={handleMouseLeave}
-                    >
-                      <DropdownPanel
-                        title="Manufacturing Execution Engine"
-                        description="Command line operations smoothly with smart activity orchestration, continuous output monitoring, and digital tracking."
-                        href="/products/manufacturing"
-                        products={manufacturingProducts}
-                        icon={<ManufacturingIcon />}
-                        accentColor="#6366f1"
-                        onClose={() => setActiveDropdown(null)}
-                      />
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-              </div>
             </div>
 
             {/* Right side actions */}
@@ -323,10 +362,10 @@ export default function Header() {
                   isOpen={mobileQualityOpen}
                   onToggle={() => setMobileQualityOpen(!mobileQualityOpen)}
                   products={qualityProducts}
-                  icon={<ProductIcon />}
                   viewAllHref="/products/quality"
                   viewAllLabel="View all Quality products"
                   onClose={() => setMobileOpen(false)}
+                  accentColor="#3b82f6"
                 />
 
                 <div className="h-px bg-gray-100" />
@@ -337,10 +376,10 @@ export default function Header() {
                   isOpen={mobileManufacturingOpen}
                   onToggle={() => setMobileManufacturingOpen(!mobileManufacturingOpen)}
                   products={manufacturingProducts}
-                  icon={<ManufacturingIcon />}
                   viewAllHref="/products/manufacturing"
                   viewAllLabel="View all Manufacturing products"
                   onClose={() => setMobileOpen(false)}
+                  accentColor="#3b82f6"
                 />
 
                 <div className="h-px bg-gray-100" />
@@ -376,19 +415,19 @@ function MobileAccordion({
   isOpen,
   onToggle,
   products,
-  icon,
   viewAllHref,
   viewAllLabel,
   onClose,
+  accentColor,
 }: {
   label: string;
   isOpen: boolean;
   onToggle: () => void;
   products: typeof qualityProducts;
-  icon: React.ReactNode;
   viewAllHref: string;
   viewAllLabel: string;
   onClose: () => void;
+  accentColor: string;
 }) {
   return (
     <div>
@@ -432,8 +471,11 @@ function MobileAccordion({
                   className="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-gray-50 transition-colors"
                   onClick={onClose}
                 >
-                  <div className="w-7 h-7 rounded-lg bg-blue-50 flex items-center justify-center shrink-0">
-                    {icon}
+                  <div
+                    className="w-7 h-7 rounded-lg flex items-center justify-center shrink-0"
+                    style={{ backgroundColor: `${accentColor}12` }}
+                  >
+                    <product.icon color={accentColor} />
                   </div>
                   <div>
                     <div className="text-sm font-medium text-gray-900 leading-tight">{product.name}</div>
