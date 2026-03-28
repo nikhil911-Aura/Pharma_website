@@ -132,21 +132,7 @@ export default function ProductDetailPage({
         </div>
       </section>
 
-      {/* ── TRUST BAR ── */}
-      <section className="py-8 md:py-10 border-b border-gray-100">
-        <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between gap-8 overflow-hidden">
-            {trustLogos.map((logo) => (
-              <span
-                key={logo}
-                className="text-sm md:text-base font-bold text-gray-300 tracking-wider whitespace-nowrap uppercase"
-              >
-                {logo}
-              </span>
-            ))}
-          </div>
-        </div>
-      </section>
+
 
       {/* ── BENEFITS ── */}
       <section className="py-20 md:py-28 bg-gradient-to-b from-slate-50/50 to-white">
@@ -281,52 +267,7 @@ export default function ProductDetailPage({
         </div>
       </section>
 
-      {/* ── RELATED RESOURCES ── */}
-      {resources.length > 0 && (
-        <section className="py-16 md:py-24 bg-white">
-          <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="mb-10">
-              <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900 mb-2">
-                Related Resources
-              </h2>
-              <p className="text-base text-gray-500">
-                View and learn more about {badge} with our comprehensive list of resources
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-              {resources.map((resource, index) => (
-                <motion.div
-                  key={resource.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.4, delay: index * 0.1 }}
-                >
-                  <Link
-                    href={resource.href}
-                    className="block bg-white rounded-2xl border border-gray-100 overflow-hidden hover:border-gray-200 hover:shadow-lg transition-all duration-300 h-full group"
-                  >
-                    {/* Top accent band */}
-                    <div className="h-24 bg-gradient-to-br from-amber-50 via-orange-50 to-amber-50 flex items-center justify-center">
-                      <span className="px-3 py-1 text-xs font-semibold text-amber-700 border border-amber-200 rounded-full bg-white/80">
-                        {resource.tag}
-                      </span>
-                    </div>
-                    <div className="p-5">
-                      <h3 className="text-base font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors leading-snug">
-                        {resource.title}
-                      </h3>
-                      <span className="text-sm font-semibold text-blue-600">
-                        Read More →
-                      </span>
-                    </div>
-                  </Link>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-      )}
+
 
       {/* ── FAQ ── */}
       {faqs.length > 0 && (

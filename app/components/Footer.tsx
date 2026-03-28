@@ -2,26 +2,20 @@
 
 import Link from "next/link";
 
-const productLinks = [
+const qualityProducts = [
   { name: "AI Investigator", href: "/products/quality/ai-investigator" },
   { name: "FDA Tracker", href: "/products/quality/fda-tracker" },
   { name: "Cleaning Validation", href: "/products/quality/cleaning-validation" },
-  { name: "Batch Execution", href: "/products/manufacturing/batch-execution" },
-  { name: "Batch Intelligence", href: "/products/manufacturing/batch-intelligence" },
 ];
 
-const qualityLinks = [
-  { name: "Quality Assurance Hub", href: "/products/quality" },
-  { name: "Manufacturing Execution Engine", href: "/products/manufacturing" },
-  { name: "Market Complaints", href: "/products/quality/market-complaints" },
+const manufacturingProducts = [
+  { name: "Batch Execution", href: "/products/manufacturing/batch-execution" },
+  { name: "Batch Intelligence", href: "/products/manufacturing/batch-intelligence" },
   { name: "Production Logbooks", href: "/products/manufacturing/production-logbooks" },
 ];
 
-const aboutLinks = [
-  { name: "About NovaRx", href: "/about" },
-  { name: "All Products", href: "/products" },
-  { name: "Careers", href: "#", badge: "We are Hiring !" },
-  { name: "Privacy Policy", href: "#" },
+const quickLinks = [
+  { name: "Request a Demo", href: "/schedule-demo" },
 ];
 
 export default function Footer() {
@@ -61,11 +55,11 @@ export default function Footer() {
             </p>
           </div>
 
-          {/* Products */}
+          {/* Quality */}
           <div className="lg:col-span-3">
-            <h4 className="text-sm font-semibold text-white mb-5">Products</h4>
+            <h4 className="text-sm font-semibold text-white mb-5">Quality</h4>
             <ul className="space-y-3">
-              {productLinks.map((link) => (
+              {qualityProducts.map((link) => (
                 <li key={link.name}>
                   <Link
                     href={link.href}
@@ -78,13 +72,13 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Solutions */}
+          {/* Manufacturing */}
           <div className="lg:col-span-3">
             <h4 className="text-sm font-semibold text-white mb-5">
-              Solutions
+              Manufacturing
             </h4>
             <ul className="space-y-3">
-              {qualityLinks.map((link) => (
+              {manufacturingProducts.map((link) => (
                 <li key={link.name}>
                   <Link
                     href={link.href}
@@ -97,22 +91,17 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* About */}
+          {/* Quick Links */}
           <div className="lg:col-span-3">
-            <h4 className="text-sm font-semibold text-white mb-5">About</h4>
+            <h4 className="text-sm font-semibold text-white mb-5">Connect</h4>
             <ul className="space-y-3">
-              {aboutLinks.map((link) => (
+              {quickLinks.map((link) => (
                 <li key={link.name}>
                   <Link
                     href={link.href}
                     className="text-sm text-gray-400 hover:text-white transition-colors duration-200 inline-flex items-center gap-2"
                   >
                     {link.name}
-                    {link.badge && (
-                      <span className="text-red-400 font-semibold text-xs">
-                        {link.badge}
-                      </span>
-                    )}
                   </Link>
                 </li>
               ))}
