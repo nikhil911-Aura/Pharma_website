@@ -37,14 +37,14 @@ export default function Hero() {
           className="text-center max-w-5xl mx-auto"
         >
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[5.2rem] font-extrabold text-gray-900 leading-[1.06] tracking-[-0.02em]">
-            Experience the future
+            Accelerate the next era
             <br className="hidden sm:block" />
             <span className="sm:hidden"> </span>
-            of Pharma Manufacturing.
+            of Life Sciences Production.
           </h1>
           <p className="mt-5 sm:mt-7 md:mt-9 text-base sm:text-lg md:text-xl text-gray-500 max-w-2xl mx-auto leading-relaxed font-normal px-4 sm:px-2">
-            Plan, execute, and optimize every batch. Deliver On Time In Full
-            with AI-powered pharma manufacturing &amp; compliance intelligence.
+            Coordinate, monitor, and scale every operation. Achieve peak
+            throughput with intelligent software &amp; robust safety protocols.
           </p>
 
           {/* CTA Button */}
@@ -58,7 +58,7 @@ export default function Hero() {
               href="/schedule-demo"
               className="inline-flex items-center gap-2.5 px-6 sm:px-8 py-3.5 sm:py-4 bg-gray-900 text-white rounded-full text-sm sm:text-base font-semibold hover:bg-gray-800 transition-all duration-300 group shadow-xl shadow-gray-900/25 hover:shadow-gray-900/35 hover:scale-[1.02] active:scale-[0.98]"
             >
-              Request a Demo
+              Request Your Tour
               <svg
                 width="16"
                 height="16"
@@ -201,7 +201,7 @@ function DashboardTopbar({ subtitle }: { subtitle: string }) {
             />
           </svg>
         </div>
-        <span className="text-xs sm:text-sm font-semibold">Leucine</span>
+        <span className="text-xs sm:text-sm font-semibold">NovaRx</span>
       </div>
       <div className="flex items-center gap-2 sm:gap-3 text-[10px] sm:text-xs text-gray-400">
         <span className="hidden md:inline">📍 New York</span>
@@ -210,7 +210,7 @@ function DashboardTopbar({ subtitle }: { subtitle: string }) {
           <span className="w-4 h-4 sm:w-5 sm:h-5 rounded-full bg-blue-500 text-[9px] sm:text-[10px] flex items-center justify-center text-white font-bold shrink-0">
             SC
           </span>
-          <span className="hidden sm:inline">Smith Cowell</span>
+          <span className="hidden sm:inline">System Core</span>
         </span>
       </div>
     </div>
@@ -220,11 +220,11 @@ function DashboardTopbar({ subtitle }: { subtitle: string }) {
 function ManufacturingDashboard() {
   return (
     <>
-      <DashboardTopbar subtitle="Batch Manufacturing" />
+      <DashboardTopbar subtitle="Continuous Operations" />
       <div className="p-3 sm:p-4 md:p-5 bg-white">
         <div className="flex items-center justify-between mb-3 sm:mb-4">
           <h3 className="text-xs sm:text-sm md:text-base font-semibold text-gray-800">
-            Shop Floor Monitor
+            Production Floor Overview
           </h3>
           <span className="px-2 sm:px-2.5 py-0.5 bg-green-50 text-green-600 text-[10px] sm:text-xs font-medium rounded-full border border-green-200">
             Active

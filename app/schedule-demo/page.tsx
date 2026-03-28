@@ -83,16 +83,16 @@ export default function ScheduleDemoPage() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2.5 mb-12">
             <div className="w-8 h-8 bg-white rounded-lg flex items-center justify-center">
-              <span className="text-gray-900 font-extrabold text-sm">L</span>
+              <span className="text-gray-900 font-extrabold text-sm">N</span>
             </div>
-            <span className="text-xl font-bold tracking-tight">Leucine</span>
+            <span className="text-xl font-bold tracking-tight">NovaRx</span>
           </Link>
 
           {/* Hero text */}
           <h1 className="text-3xl sm:text-4xl lg:text-[44px] font-extrabold leading-[1.12] tracking-tight mb-6">
             Experience{" "}
             <span className="bg-gradient-to-r from-purple-400 via-violet-400 to-purple-500 bg-clip-text text-transparent">
-              Leucine AI
+              NovaRx Core
             </span>{" "}
             <span className="inline-block relative">
               <svg className="absolute -top-1 -right-5 w-4 h-4 text-purple-400" viewBox="0 0 24 24" fill="currentColor">
@@ -100,18 +100,16 @@ export default function ScheduleDemoPage() {
               </svg>
             </span>
             <br />
-            Powered Pharma
+            Powered Production
             <br />
-            Operations
+            Excellence
           </h1>
 
           <p className="text-gray-400 text-sm sm:text-base leading-relaxed max-w-md">
-            Transform Your Pharma Operations with AI-Powered Intelligence.
-            Experience how Leucine&apos;s integrated platform brings together
-            manufacturing, quality, and laboratory operations in one digital
-            ecosystem. Schedule a personalized demo to see how our AI
-            solutions can optimize your processes, ensure compliance, and drive
-            operational excellence.
+            Revolutionize Your Manufacturing Base with Systemic Control.
+            Explore how NovaRx unites operations, oversight, and logging inside a singular
+            ecosystem. Schedule a personalized showcase to see how our platforms can secure
+            flawless adherence, compress output delays, and optimize your entire facility.
           </p>
 
           {/* Trust indicators */}
@@ -147,7 +145,7 @@ export default function ScheduleDemoPage() {
           className="max-w-lg mx-auto w-full"
         >
           <h2 className="text-2xl sm:text-3xl font-extrabold text-gray-900 mb-1.5 tracking-tight">
-            Connect with a Leucine Expert
+            Connect with a NovaRx Specialist
           </h2>
           <p className="text-sm text-gray-500 mb-8">
             Schedule a 30-Minute Product Demo with Expert Q&A
@@ -325,7 +323,7 @@ export default function ScheduleDemoPage() {
                 </button>
 
                 <p className="text-xs text-gray-400 mt-2">
-                  By submitting, you agree to our Privacy Policy and consent to being contacted regarding Leucine products.
+                  By submitting, you agree to our Privacy Policy and consent to being contacted regarding NovaRx systems.
                 </p>
               </motion.form>
             )}

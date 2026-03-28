@@ -7,9 +7,9 @@ const tabs = [
   {
     id: "manufacturing",
     label: "Manufacturing",
-    title: "Manufacturing Execution System",
+    title: "Manufacturing Execution Engine",
     description:
-      "Optimize production with AI-powered batch execution, real-time OTIF tracking, and production logbooks.",
+      "Command line operations smoothly with smart activity orchestration, continuous output monitoring, and digital tracking.",
     icon: (
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <rect x="2" y="3" width="20" height="18" rx="2" />
@@ -20,9 +20,9 @@ const tabs = [
   {
     id: "quality",
     label: "Quality",
-    title: "Quality Management System",
+    title: "Quality Assurance Hub",
     description:
-      "Accelerate investigations, enforce compliance, and automate validation with AI-driven tools.",
+      "Streamline root cause analysis, maintain robust audit readiness, and transform digital sanitation workflows safely.",
     icon: (
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <circle cx="12" cy="12" r="10" />
@@ -59,12 +59,12 @@ export default function IntegratedPlatform() {
           className="text-center max-w-4xl mx-auto mb-12 md:mb-16"
         >
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight tracking-tight">
-            Integrated Platform to Plan, Execute, and Optimize Every Batch—On
-            Time, In Full.
+            Unified Ecosystem to Coordinate, Track, and Perfect Every Cycle—From
+            Start to Finish.
           </h2>
           <p className="mt-5 text-lg text-gray-500 leading-relaxed">
-            Track every batch from planning to release—identify constraints,
-            detect bottlenecks, and take proactive actions to eliminate delays.
+            Monitor each stage from inception to delivery—uncover hurdles,
+            spot inefficiencies, and deploy early interventions to prevent slowdowns.
           </p>
         </motion.div>
 
@@ -146,7 +146,7 @@ function DashboardSidebar() {
         <svg width="18" height="18" viewBox="0 0 40 40" fill="none">
           <path d="M20 4C12 4 8 10 8 16C8 22 12 28 20 36C28 28 32 22 32 16C32 10 28 4 20 4Z" fill="#0f172a" />
         </svg>
-        <span className="text-sm font-bold text-gray-900">Leucine</span>
+        <span className="text-sm font-bold text-gray-900">NovaRx</span>
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#94a3b8" strokeWidth="2" className="ml-auto">
           <rect x="3" y="3" width="7" height="7" /><rect x="14" y="3" width="7" height="7" />
           <rect x="3" y="14" width="7" height="7" /><rect x="14" y="14" width="7" height="7" />
@@ -184,7 +184,7 @@ function DashboardPreview({ tab }: { tab: (typeof tabs)[number] }) {
     return (
       <div className="tablet-frame">
         <div className="tablet-screen">
-          <DashboardToolbar title="Batch Manufacturing" />
+          <DashboardToolbar title="Continuous Operations" />
           <div className="flex">
             <DashboardSidebar />
             <div className="flex-1 p-4 md:p-5 bg-white">
@@ -390,7 +390,7 @@ function DashboardToolbar({ title }: { title: string }) {
         <svg width="18" height="18" viewBox="0 0 40 40" fill="none">
           <path d="M20 4C12 4 8 10 8 16C8 22 12 28 20 36C28 28 32 22 32 16C32 10 28 4 20 4Z" fill="white" />
         </svg>
-        <span className="text-white text-sm font-semibold">Leucine</span>
+        <span className="text-white text-sm font-semibold">NovaRx</span>
       </div>
       <div className="flex items-center gap-3 text-xs text-gray-300">
         <span className="hidden sm:flex items-center gap-1">
@@ -413,7 +413,7 @@ function DashboardToolbar({ title }: { title: string }) {
           <span className="w-5 h-5 rounded-full bg-blue-500 text-[10px] flex items-center justify-center text-white font-bold">
             SC
           </span>
-          <span className="hidden sm:inline">Smith Cowell</span>
+          <span className="hidden sm:inline">System Core</span>
         </span>
       </div>
     </div>

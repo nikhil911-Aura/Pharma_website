@@ -11,9 +11,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Leucine | AI for Pharma",
+  title: "NovaRx | Intelligent Life Sciences",
   description:
-    "Leucine's AI-powered platform delivers compliant, transformative solutions to streamline pharma manufacturing, enhance quality, and optimize productivity.",
+    "NovaRx's intelligent pharmaceutical ecosystem provides regulatory-ready, edge computing software to accelerate cleanroom production, elevate safety protocols, and maximize overall operational throughput.",
   keywords: [
     "pharma manufacturing",
     "AI",

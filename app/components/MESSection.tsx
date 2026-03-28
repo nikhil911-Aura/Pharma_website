@@ -5,48 +5,48 @@ import Link from "next/link";
 
 const topFeatures = [
   {
-    title: "Batch Execution",
-    subtitle: "Digitize and Standardize Manufacturing Workflows.",
+    title: "Run Engine",
+    subtitle: "Modernize and Standardize Operational Workflows.",
     description:
-      "Ensure accurate material dispensing, enforce process interlocks, and capture real-time execution data for error-free batches.",
+      "Guarantee precise asset allocation, mandate step verification, and capture execution insights for flawless operation logs.",
     href: "/products/manufacturing/batch-execution",
   },
   {
-    title: "Batch Intelligence",
-    subtitle: "Monitor production in real-time.",
+    title: "Process Analytics",
+    subtitle: "Oversee operations as they happen.",
     description:
-      "Detect potential delays early, and take proactive corrective actions to optimize efficiency.",
+      "Identify risks instantly and deploy strategic countermeasures to boost overall output.",
     href: "/products/manufacturing/batch-intelligence",
   },
   {
-    title: "Production Logbooks",
-    subtitle: "Digitally capture cleaning and usage logs.",
+    title: "Digital Records",
+    subtitle: "Electronically record equipment sanitation and state changes.",
     description:
-      "Maintenance records, and changeovers to ensure a seamless, audit-ready production process.",
+      "Synchronize maintenance workflows to maintain a continuously audit-compliant environment.",
     href: "/products/manufacturing/production-logbooks",
   },
 ];
 
 const bottomFeatures = [
   {
-    title: "Expedite Batch Release",
-    subtitle: "Streamline your batch record review process.",
+    title: "Accelerate Workflow Finalization",
+    subtitle: "Simplify your document review cycle.",
     description:
-      "Exception-based approach that accelerates approvals, improves accuracy, and ensures regulatory compliance.",
+      "Targeted alert mechanisms to hasten sign-offs, boost precision, and uphold stringent quality guidelines.",
     href: "/products/manufacturing",
   },
   {
-    title: "Monitor your Facility, at a Glance",
-    subtitle: "Gain real-time visibility into your facility's operations.",
+    title: "Visualize Your Ecosystem, End-to-End",
+    subtitle: "Achieve unparalleled clarity into all macro and micro operations.",
     description:
-      "Access comprehensive insights into equipment status, batch progress, and process efficiency.",
+      "View detailed status updates on machinery, run progress, and holistic site efficiency.",
     href: "/products/manufacturing",
   },
   {
-    title: "Track WIP Inventory Down to the Last Unit",
-    subtitle: "Gain real-time visibility and control.",
+    title: "Monitor Goods-in-Process in Real-Time",
+    subtitle: "Attain granular tracking capabilities.",
     description:
-      "Advanced material management software for precise operations.",
+      "Sophisticated inventory modules enabling tight operational tolerances.",
     href: "/products/manufacturing",
   },
 ];
@@ -66,11 +66,11 @@ export default function MESSection() {
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight tracking-tight max-w-2xl">
             Manufacturing
             <br />
-            Execution System
+            Execution Engine
           </h2>
           <p className="mt-4 text-lg text-gray-500 max-w-xl leading-relaxed">
-            Optimize every step of production, from material dispensing to final
-            batch release.
+            Streamline every phase of the process, from resource pooling to final
+            authorization.
           </p>
         </motion.div>
 
@@ -183,7 +183,7 @@ function MiniDashboard({ type }: { type: string }) {
             <svg width="12" height="12" viewBox="0 0 40 40" fill="none">
               <path d="M20 4C12 4 8 10 8 16C8 22 12 28 20 36C28 28 32 22 32 16C32 10 28 4 20 4Z" fill="white" />
             </svg>
-            <span className="text-[10px] font-semibold">Leucine</span>
+            <span className="text-[10px] font-semibold">NovaRx</span>
           </div>
           <span className="text-[8px] text-gray-400">Batch Manufacturing</span>
         </div>
@@ -212,7 +212,7 @@ function MiniDashboard({ type }: { type: string }) {
             <svg width="12" height="12" viewBox="0 0 40 40" fill="none">
               <path d="M20 4C12 4 8 10 8 16C8 22 12 28 20 36C28 28 32 22 32 16C32 10 28 4 20 4Z" fill="white" />
             </svg>
-            <span className="text-[10px] font-semibold">Leucine</span>
+            <span className="text-[10px] font-semibold">NovaRx</span>
           </div>
           <span className="text-[8px] text-gray-400">OTIF Analysis</span>
         </div>
@@ -246,7 +246,7 @@ function MiniDashboard({ type }: { type: string }) {
           <svg width="12" height="12" viewBox="0 0 40 40" fill="none">
             <path d="M20 4C12 4 8 10 8 16C8 22 12 28 20 36C28 28 32 22 32 16C32 10 28 4 20 4Z" fill="white" />
           </svg>
-          <span className="text-[10px] font-semibold">Leucine</span>
+          <span className="text-[10px] font-semibold">NovaRx</span>
         </div>
         <span className="text-[8px] text-gray-400">Production Logbooks</span>
       </div>

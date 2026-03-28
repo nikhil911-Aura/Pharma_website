@@ -5,23 +5,23 @@ import Link from "next/link";
 
 const mainFeatures = [
   {
-    title: "AI Investigator",
+    title: "Anomaly Detective",
     description:
-      "Leverage AI-powered root cause analysis and CAPA recommendations to drive consistent, science-based investigations.",
+      "Utilize smart analytics and precise corrective strategies to foster reliable, transparent anomaly resolutions.",
     href: "/products/quality/ai-investigator",
     large: true,
   },
   {
-    title: "FDA Tracker",
+    title: "Regulation Monitor",
     description:
-      "Analyze FDA 483 trends, monitor warning letters, and proactively address regulatory gaps to ensure inspection readiness.",
+      "Track global compliance trends, observe official cautions, and mitigate protocol deviations before inspections occur.",
     href: "/products/quality/fda-tracker",
     large: false,
   },
   {
-    title: "Cleaning Validation",
+    title: "Sanitization Check",
     description:
-      "Calculate safe carryover limits, track residue trends in real-time, and generate audit-ready validation reports effortlessly.",
+      "Determine secure cross-contamination barriers, profile usage limits live, and produce comprehensive sanitation logs seamlessly.",
     href: "/products/quality/cleaning-validation",
     large: false,
   },
@@ -40,11 +40,11 @@ export default function QMSSection() {
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight tracking-tight max-w-2xl">
             Quality
             <br />
-            Management System
+            Assurance Hub
           </h2>
           <p className="mt-4 text-lg text-gray-500 max-w-xl leading-relaxed">
-            Ensure seamless regulatory compliance and quality excellence with
-            AI-driven quality solutions.
+            Maintain flawless operational conformance and unparalleled standards through
+            next-generation analytics.
           </p>
         </motion.div>
 
@@ -103,7 +103,7 @@ export default function QMSSection() {
                         />
                       </svg>
                       <span className="text-white text-xs font-semibold">
-                        Leucine
+                        NovaRx
                       </span>
                     </div>
                     <div className="flex items-center gap-3 text-[10px] text-gray-300">
@@ -227,7 +227,7 @@ export default function QMSSection() {
                 </div>
                 {/* Dashboard Mockup */}
                 <div className="px-6 pb-6">
-                  {feature.title === "FDA Tracker" ? (
+                  {feature.title === "Regulation Monitor" ? (
                     <FDATrackerMockup />
                   ) : (
                     <CleaningValidationMockup />
@@ -252,8 +252,8 @@ function FDATrackerMockup() {
             <line x1="3" y1="6" x2="21" y2="6" />
             <line x1="3" y1="18" x2="21" y2="18" />
           </svg>
-          <span className="text-xs font-bold tracking-wider">FDA</span>
-          <span className="text-[10px] text-gray-400">TRACKER</span>
+          <span className="text-xs font-bold tracking-wider">REG</span>
+          <span className="text-[10px] text-gray-400">MONITOR</span>
         </div>
         <div className="flex items-center gap-2">
           <span className="text-[10px] text-gray-400">Feedback</span>
@@ -265,7 +265,7 @@ function FDATrackerMockup() {
       <div className="p-4">
         <p className="text-[10px] text-gray-400 mb-1">Home</p>
         <h4 className="text-sm font-semibold text-gray-800 mb-3">
-          Welcome to FDA Tracker, Angela
+          Welcome to Regulation Monitor, Angela
         </h4>
         <div className="grid grid-cols-2 gap-3">
           <div className="border border-gray-200 rounded-lg p-3">
@@ -317,7 +317,7 @@ function CleaningValidationMockup() {
               fill="white"
             />
           </svg>
-          <span className="text-white text-xs font-semibold">Leucine</span>
+          <span className="text-white text-xs font-semibold">NovaRx</span>
         </div>
         <div className="text-[10px] text-gray-300 flex items-center gap-2">
           <span>New York</span>

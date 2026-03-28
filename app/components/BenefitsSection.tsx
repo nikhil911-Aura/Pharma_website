@@ -5,9 +5,9 @@ import Link from "next/link";
 
 const benefits = [
   {
-    title: "Reduce Batch Delays",
+    title: "Minimize Cycle Slowdowns",
     description:
-      "Identify and resolve production bottlenecks in real time. Proactively mitigate risks to ensure seamless execution.",
+      "Spot and fix efficiency traps instantly. Preemptively clear hurdles to guarantee smooth continuous output.",
     icon: (
       <svg
         width="48"
@@ -29,9 +29,9 @@ const benefits = [
     ),
   },
   {
-    title: "Reduce Cost of Quality",
+    title: "Lower Conformance Expenses",
     description:
-      "Minimize deviations, improve compliance efficiency, and prevent costly rework with AI-driven process controls.",
+      "Decrease anomalies, elevate standard adherence, and avoid expensive rework using smart oversight features.",
     icon: (
       <svg
         width="48"
@@ -56,9 +56,9 @@ const benefits = [
     ),
   },
   {
-    title: "Improve OTIF Performance",
+    title: "Maximize Output Predictability",
     description:
-      "Optimize planning, execution, and release cycles to consistently deliver batches On Time, In Full.",
+      "Fine-tune scheduling, processing, and dispatch phases to routinely meet exact delivery metrics.",
     icon: (
       <svg
         width="48"
@@ -95,11 +95,11 @@ export default function BenefitsSection() {
           className="text-center mb-12 md:mb-16"
         >
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight tracking-tight">
-            Unlock Tangible Benefits with Leucine
+            Unleash Measurable Advantages with NovaRx
           </h2>
           <p className="mt-4 text-lg text-gray-500 max-w-2xl mx-auto leading-relaxed">
-            Track every batch from planning to release—identify constraints,
-            detect bottlenecks, and take proactive actions to eliminate delays.
+            Monitor every unit from design to final handover—pinpoint friction gaps,
+            anticipate traffic constraints, and execute early remedies.
           </p>
         </motion.div>
 
@@ -145,18 +145,18 @@ export function CTASection() {
           <div>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight tracking-tight">
               Experience{" "}
-              <span className="text-blue-600">Leucine AI</span>
+              <span className="text-blue-600">NovaRx OS</span>
               <br />
-              Powered pharma
+              Intelligent life sciences
               <br />
-              manufacturing
+              production
             </h2>
             <div className="mt-8">
               <Link
                 href="#"
                 className="inline-flex items-center gap-2.5 px-7 py-3.5 bg-gray-900 text-white rounded-full text-sm font-semibold hover:bg-gray-800 transition-all duration-300 group shadow-lg shadow-gray-900/20"
               >
-                Request Consultation
+                Book Strategy Session
                 <svg
                   width="14"
                   height="14"
@@ -176,9 +176,9 @@ export function CTASection() {
           </div>
           <div>
             <p className="text-base text-gray-500 leading-relaxed">
-              Join leading pharmaceutical companies in transforming batch
-              execution. Ensure regulatory compliance, reduce deviations and
-              accelerate batch release—all with one intelligent solution.
+              Partner with top-tier life sciences organizations in overhauling
+              operations. Guarantee rigorous regulatory alignment, minimize defects, and
+              hasten product launch—all from one unified command center.
             </p>
           </div>
         </motion.div>

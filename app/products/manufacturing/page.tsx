@@ -14,36 +14,36 @@ import {
 const mesTabs: ProductTabItem[] = [
   {
     id: "batch-execution",
-    label: "Batch Execution",
+    label: "Run Engine",
     icon: (
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <rect x="3" y="3" width="18" height="18" rx="2" />
         <path d="M9 12l2 2 4-4" />
       </svg>
     ),
-    heading: "AI-Powered Electronic Batch Records, Built for Compliance",
+    heading: "Next-Gen Operation Flows, Designed for Strict Adherence",
     description:
-      "Digitize and standardize manufacturing workflows. Ensure accurate material dispensing, enforce process interlocks, and capture real-time execution data for error-free batches.",
+      "Deploy unified execution systems. Validate allocations, enforce constraints, and log all events to secure continuous delivery.",
     learnMoreHref: "/products/manufacturing/batch-execution",
     mockupContent: <BatchExecutionMockup />,
   },
   {
     id: "batch-intelligence",
-    label: "Batch Intelligence",
+    label: "Process Analytics",
     icon: (
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
       </svg>
     ),
-    heading: "Intelligent Manufacturing Insights — On Time In Full",
+    heading: "Smart Workflow Analytics — Delivery Assured",
     description:
-      "Monitor production in real-time, detect potential delays early, and take proactive corrective actions to optimize efficiency and deliver every batch on time.",
+      "Oversee runs live, spot risks instantly, and deploy instant interventions to maximize operational velocity and keep timelines perfectly intact.",
     learnMoreHref: "/products/manufacturing/batch-intelligence",
     mockupContent: <BatchIntelligenceMockup />,
   },
   {
     id: "production-logbooks",
-    label: "Production Logbooks",
+    label: "Digital Records",
     icon: (
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <path d="M4 19.5A2.5 2.5 0 016.5 17H20" />
@@ -52,9 +52,9 @@ const mesTabs: ProductTabItem[] = [
         <path d="M9 9h6" />
       </svg>
     ),
-    heading: "Digital Production Logbooks — Always Audit-Ready",
+    heading: "Electronic Event Logs — Instantly Verifiable",
     description:
-      "Digitally capture cleaning and usage logs, maintenance records, and changeovers to ensure a seamless, audit-ready production process.",
+      "Electronically maintain asset states, shift handovers, and environmental data for frictionless regulatory inspections.",
     learnMoreHref: "/products/manufacturing/production-logbooks",
     mockupContent: <ProductionLogbooksMockup />,
   },
@@ -68,9 +68,9 @@ const mesBenefits = [
         <polyline points="12 6 12 12 16 14" />
       </svg>
     ),
-    title: "Faster Batch Start",
+    title: "Quicker Step Initiations",
     description:
-      "Automated readiness checks for materials, equipment, and operators ensure smooth batch initiation.",
+      "Systemic validation sequences for staff and physical assets allow frictionless kick-offs.",
   },
   {
     icon: (
@@ -78,9 +78,9 @@ const mesBenefits = [
         <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
       </svg>
     ),
-    title: "Smarter Manufacturing",
+    title: "Adaptive Over-watch",
     description:
-      "AI-driven intelligence detects risks early and keeps every batch on schedule.",
+      "Predictive insights highlight bottlenecks early, locking in consistent output.",
   },
   {
     icon: (
@@ -90,9 +90,9 @@ const mesBenefits = [
         <path d="M9 15l2 2 4-4" />
       </svg>
     ),
-    title: "Effortless Compliance",
+    title: "Simplified Adherence",
     description:
-      "Digital records and tamper-proof audit trails simplify inspections and ensure regulatory alignment.",
+      "Cryptographic tracking and paperless evidence streamline audits while maintaining supreme accuracy.",
   },
 ];
 
@@ -100,14 +100,14 @@ export default function ManufacturingPage() {
   return (
     <>
       <ProductHero
-        title="AI-Powered MES Software for Pharma Manufacturing"
-        description="Optimize every stage of production with AI-powered batch execution, real-time intelligence, and digital logbooks — ensuring compliance and accelerating release."
+        title="Intelligent Manufacturing Engine for Life Sciences"
+        description="Supercharge site operations using advanced running engines, live analytics, and seamless event logging — guaranteeing quality and rapid delivery."
       />
 
       <ProductTabs tabs={mesTabs} />
 
       <ProductBenefits
-        heading="Streamline Manufacturing from Batch Start to Release"
+        heading="Accelerate Operations from Planning to Dispatch"
         benefits={mesBenefits}
       />
 

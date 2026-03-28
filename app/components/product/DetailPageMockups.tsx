@@ -11,7 +11,7 @@ export function AIInvestigatorHeroDashboard() {
       {/* Top bar */}
       <div className="flex items-center justify-between px-5 py-3 bg-slate-800 text-white text-xs">
         <div className="flex items-center gap-2">
-          <div className="w-6 h-6 rounded bg-blue-500 flex items-center justify-center text-[10px] font-bold">L</div>
+          <div className="w-6 h-6 rounded bg-blue-500 flex items-center justify-center text-[10px] font-bold">N</div>
           <span className="text-green-400 text-[8px]">●</span>
         </div>
         <div className="flex items-center gap-4 text-gray-400 text-[11px]">
@@ -136,7 +136,7 @@ export function CleaningValidationHeroDashboard() {
       {/* Top bar */}
       <div className="flex items-center justify-between px-5 py-3 bg-slate-800 text-white text-xs">
         <div className="flex items-center gap-2">
-          <div className="w-6 h-6 rounded bg-blue-500 flex items-center justify-center text-[10px] font-bold">L</div>
+          <div className="w-6 h-6 rounded bg-blue-500 flex items-center justify-center text-[10px] font-bold">N</div>
           <span className="text-green-400 text-[8px]">●</span>
         </div>
         <div className="flex items-center gap-4 text-[11px]">
@@ -225,7 +225,7 @@ export function EnvironmentalMonitoringHeroDashboard() {
       {/* Top bar */}
       <div className="flex items-center justify-between px-5 py-3 bg-slate-800 text-white text-xs">
         <div className="flex items-center gap-2">
-          <div className="w-6 h-6 rounded bg-blue-500 flex items-center justify-center text-[10px] font-bold">L</div>
+          <div className="w-6 h-6 rounded bg-blue-500 flex items-center justify-center text-[10px] font-bold">N</div>
           <span className="text-green-400 text-[8px]">●</span>
         </div>
         <div className="flex items-center gap-4 text-[11px]">
@@ -233,7 +233,7 @@ export function EnvironmentalMonitoringHeroDashboard() {
           <span className="text-gray-400">⚗️ Batch Manufacturing ▾</span>
           <div className="flex items-center gap-1">
             <div className="w-5 h-5 rounded-full bg-teal-500 text-[8px] flex items-center justify-center font-bold">SC</div>
-            <span className="text-gray-300">Smith Cowell ▾</span>
+            <span className="text-gray-300">System Core ▾</span>
           </div>
         </div>
       </div>
@@ -335,7 +335,7 @@ export function InstrumentLogbooksHeroDashboard() {
       {/* Top bar */}
       <div className="flex items-center justify-between px-5 py-3 bg-slate-800 text-white text-xs">
         <div className="flex items-center gap-2">
-          <div className="w-6 h-6 rounded bg-blue-500 flex items-center justify-center text-[10px] font-bold">L</div>
+          <div className="w-6 h-6 rounded bg-blue-500 flex items-center justify-center text-[10px] font-bold">N</div>
           <span className="text-green-400 text-[8px]">●</span>
         </div>
         <div className="flex items-center gap-4 text-[11px]">
@@ -343,7 +343,7 @@ export function InstrumentLogbooksHeroDashboard() {
           <span className="text-gray-400">⚗️ Batch Manufacturing ▾</span>
           <div className="flex items-center gap-1">
             <div className="w-5 h-5 rounded-full bg-teal-500 text-[8px] flex items-center justify-center font-bold">SC</div>
-            <span className="text-gray-300">Smith Cowell ▾</span>
+            <span className="text-gray-300">System Core ▾</span>
           </div>
         </div>
       </div>
@@ -406,7 +406,7 @@ export function RCADashboardMockup() {
     <div className="w-full p-5">
       <div className="bg-slate-800 rounded-t-xl px-4 py-2.5 flex items-center justify-between">
         <div className="flex items-center gap-2 text-white text-[10px]">
-          <div className="w-5 h-5 rounded bg-blue-500 flex items-center justify-center text-[8px] font-bold">L</div>
+          <div className="w-5 h-5 rounded bg-blue-500 flex items-center justify-center text-[8px] font-bold">N</div>
           <span>Root Cause Analysis - 6M Method</span>
         </div>
       </div>
@@ -435,7 +435,7 @@ export function CAPAReportMockup() {
   return (
     <div className="w-full p-5">
       <div className="bg-slate-800 rounded-t-xl px-4 py-2.5 flex items-center gap-2 text-white text-[10px]">
-        <div className="w-5 h-5 rounded bg-blue-500 flex items-center justify-center text-[8px] font-bold">L</div>
+        <div className="w-5 h-5 rounded bg-blue-500 flex items-center justify-center text-[8px] font-bold">N</div>
         <span>CAPA Trend Report</span>
       </div>
       <div className="bg-white border border-gray-100 rounded-b-xl p-4">
@@ -465,7 +465,7 @@ export function HypothesisVerificationMockup() {
   return (
     <div className="w-full p-5">
       <div className="bg-slate-800 rounded-t-xl px-4 py-2.5 flex items-center gap-2 text-white text-[10px]">
-        <div className="w-5 h-5 rounded bg-blue-500 flex items-center justify-center text-[8px] font-bold">L</div>
+        <div className="w-5 h-5 rounded bg-blue-500 flex items-center justify-center text-[8px] font-bold">N</div>
         <span>Hypothesis Cross-Referencing</span>
       </div>
       <div className="bg-white border border-gray-100 rounded-b-xl p-4">
@@ -496,7 +496,7 @@ export function CleaningProtocolMockup() {
   return (
     <div className="w-full p-5">
       <div className="bg-slate-800 rounded-t-xl px-4 py-2.5 flex items-center gap-2 text-white text-[10px]">
-        <div className="w-5 h-5 rounded bg-blue-500 flex items-center justify-center text-[8px] font-bold">L</div>
+        <div className="w-5 h-5 rounded bg-blue-500 flex items-center justify-center text-[8px] font-bold">N</div>
         <span className="text-gray-400">🏢 Boston Plant ▾</span>
         <span className="text-gray-400">🔬 CLEEN ▾</span>
       </div>
@@ -528,7 +528,7 @@ export function ResidueTrendMockup() {
   return (
     <div className="w-full p-5">
       <div className="bg-slate-800 rounded-t-xl px-4 py-2.5 flex items-center gap-2 text-white text-[10px]">
-        <div className="w-5 h-5 rounded bg-blue-500 flex items-center justify-center text-[8px] font-bold">L</div>
+        <div className="w-5 h-5 rounded bg-blue-500 flex items-center justify-center text-[8px] font-bold">N</div>
         <span>Residue Trend Dashboard</span>
       </div>
       <div className="bg-white border border-gray-100 rounded-b-xl p-4">
@@ -564,7 +564,7 @@ export function EMSmartPlanningMockup() {
   return (
     <div className="w-full p-5">
       <div className="bg-slate-800 rounded-t-xl px-4 py-2.5 flex items-center gap-2 text-white text-[10px]">
-        <div className="w-5 h-5 rounded bg-blue-500 flex items-center justify-center text-[8px] font-bold">L</div>
+        <div className="w-5 h-5 rounded bg-blue-500 flex items-center justify-center text-[8px] font-bold">N</div>
         <span>Smart Sampling Planner</span>
       </div>
       <div className="bg-white border border-gray-100 rounded-b-xl p-4">
@@ -603,7 +603,7 @@ export function ExcursionManagementMockup() {
   return (
     <div className="w-full p-5">
       <div className="bg-slate-800 rounded-t-xl px-4 py-2.5 flex items-center gap-2 text-white text-[10px]">
-        <div className="w-5 h-5 rounded bg-blue-500 flex items-center justify-center text-[8px] font-bold">L</div>
+        <div className="w-5 h-5 rounded bg-blue-500 flex items-center justify-center text-[8px] font-bold">N</div>
         <span>Excursion Investigation</span>
       </div>
       <div className="bg-white border border-gray-100 rounded-b-xl p-4">
@@ -640,7 +640,7 @@ export function InstrumentCalibrationMockup() {
   return (
     <div className="w-full p-5">
       <div className="bg-slate-800 rounded-t-xl px-4 py-2.5 flex items-center gap-2 text-white text-[10px]">
-        <div className="w-5 h-5 rounded bg-blue-500 flex items-center justify-center text-[8px] font-bold">L</div>
+        <div className="w-5 h-5 rounded bg-blue-500 flex items-center justify-center text-[8px] font-bold">N</div>
         <span>Calibration Management</span>
       </div>
       <div className="bg-white border border-gray-100 rounded-b-xl p-4">
@@ -674,7 +674,7 @@ export function AuditTrailMockup() {
   return (
     <div className="w-full p-5">
       <div className="bg-slate-800 rounded-t-xl px-4 py-2.5 flex items-center gap-2 text-white text-[10px]">
-        <div className="w-5 h-5 rounded bg-blue-500 flex items-center justify-center text-[8px] font-bold">L</div>
+        <div className="w-5 h-5 rounded bg-blue-500 flex items-center justify-center text-[8px] font-bold">N</div>
         <span>Electronic Audit Trail</span>
       </div>
       <div className="bg-white border border-gray-100 rounded-b-xl p-4">
@@ -709,7 +709,7 @@ export function BatchExecutionHeroDashboard() {
     <div className="w-full">
       <div className="flex items-center justify-between px-5 py-3 bg-slate-800 text-white text-xs">
         <div className="flex items-center gap-2">
-          <div className="w-6 h-6 rounded bg-indigo-500 flex items-center justify-center text-[10px] font-bold">L</div>
+          <div className="w-6 h-6 rounded bg-indigo-500 flex items-center justify-center text-[10px] font-bold">N</div>
           <span className="text-green-400 text-[8px]">●</span>
         </div>
         <div className="flex items-center gap-4 text-[11px]">
@@ -787,7 +787,7 @@ export function BatchIntelligenceHeroDashboard() {
     <div className="w-full">
       <div className="flex items-center justify-between px-5 py-3 bg-slate-800 text-white text-xs">
         <div className="flex items-center gap-2">
-          <div className="w-6 h-6 rounded bg-indigo-500 flex items-center justify-center text-[10px] font-bold">L</div>
+          <div className="w-6 h-6 rounded bg-indigo-500 flex items-center justify-center text-[10px] font-bold">N</div>
           <span className="text-green-400 text-[8px]">●</span>
         </div>
         <div className="flex items-center gap-4 text-[11px]">
@@ -855,7 +855,7 @@ export function ProductionLogbooksHeroDashboard() {
     <div className="w-full">
       <div className="flex items-center justify-between px-5 py-3 bg-slate-800 text-white text-xs">
         <div className="flex items-center gap-2">
-          <div className="w-6 h-6 rounded bg-indigo-500 flex items-center justify-center text-[10px] font-bold">L</div>
+          <div className="w-6 h-6 rounded bg-indigo-500 flex items-center justify-center text-[10px] font-bold">N</div>
           <span className="text-green-400 text-[8px]">●</span>
         </div>
         <div className="flex items-center gap-4 text-[11px]">
@@ -913,7 +913,7 @@ export function BatchWorkflowMockup() {
   return (
     <div className="w-full p-5">
       <div className="bg-slate-800 rounded-t-xl px-4 py-2.5 flex items-center gap-2 text-white text-[10px]">
-        <div className="w-5 h-5 rounded bg-indigo-500 flex items-center justify-center text-[8px] font-bold">L</div>
+        <div className="w-5 h-5 rounded bg-indigo-500 flex items-center justify-center text-[8px] font-bold">N</div>
         <span>Batch Workflow Designer</span>
       </div>
       <div className="bg-white border border-gray-100 rounded-b-xl p-4">
@@ -949,7 +949,7 @@ export function OTIFDashboardMockup() {
   return (
     <div className="w-full p-5">
       <div className="bg-slate-800 rounded-t-xl px-4 py-2.5 flex items-center gap-2 text-white text-[10px]">
-        <div className="w-5 h-5 rounded bg-indigo-500 flex items-center justify-center text-[8px] font-bold">L</div>
+        <div className="w-5 h-5 rounded bg-indigo-500 flex items-center justify-center text-[8px] font-bold">N</div>
         <span>OTIF Monitoring</span>
       </div>
       <div className="bg-white border border-gray-100 rounded-b-xl p-4">
@@ -985,7 +985,7 @@ export function LogbookEntryMockup() {
   return (
     <div className="w-full p-5">
       <div className="bg-slate-800 rounded-t-xl px-4 py-2.5 flex items-center gap-2 text-white text-[10px]">
-        <div className="w-5 h-5 rounded bg-indigo-500 flex items-center justify-center text-[8px] font-bold">L</div>
+        <div className="w-5 h-5 rounded bg-indigo-500 flex items-center justify-center text-[8px] font-bold">N</div>
         <span>Digital Logbook Entry</span>
       </div>
       <div className="bg-white border border-gray-100 rounded-b-xl p-4">

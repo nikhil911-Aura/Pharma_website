@@ -3,22 +3,22 @@
 import Link from "next/link";
 
 const productLinks = [
-  { name: "AI Investigator", href: "/products/quality/ai-investigator" },
-  { name: "FDA Tracker", href: "/products/quality/fda-tracker" },
-  { name: "Cleaning Validation", href: "/products/quality/cleaning-validation" },
-  { name: "Batch Execution", href: "/products/manufacturing/batch-execution" },
-  { name: "Batch Intelligence", href: "/products/manufacturing/batch-intelligence" },
+  { name: "Anomaly Detective", href: "/products/quality/ai-investigator" },
+  { name: "Regulation Monitor", href: "/products/quality/fda-tracker" },
+  { name: "Sanitization Check", href: "/products/quality/cleaning-validation" },
+  { name: "Run Engine", href: "/products/manufacturing/batch-execution" },
+  { name: "Process Analytics", href: "/products/manufacturing/batch-intelligence" },
 ];
 
 const qualityLinks = [
-  { name: "Quality Management System", href: "/products/quality" },
-  { name: "Manufacturing Execution System", href: "/products/manufacturing" },
+  { name: "Quality Assurance Hub", href: "/products/quality" },
+  { name: "Manufacturing Execution Engine", href: "/products/manufacturing" },
   { name: "Market Complaints", href: "/products/quality/market-complaints" },
-  { name: "Production Logbooks", href: "/products/manufacturing/production-logbooks" },
+  { name: "Digital Records", href: "/products/manufacturing/production-logbooks" },
 ];
 
 const aboutLinks = [
-  { name: "About Leucine", href: "/about" },
+  { name: "About NovaRx", href: "/about" },
   { name: "All Products", href: "/products" },
   { name: "Careers", href: "#", badge: "We are Hiring !" },
   { name: "Privacy Policy", href: "#" },
@@ -53,11 +53,11 @@ export default function Footer() {
                 />
               </svg>
               <span className="text-xl font-bold text-white tracking-tight">
-                Leucine
+                NovaRx
               </span>
             </Link>
             <p className="text-sm text-gray-400 leading-relaxed max-w-xs">
-              Experience the Future of Pharma Manufacturing.
+              Accelerate the Next Era of Life Sciences Production.
             </p>
           </div>
 
@@ -124,7 +124,7 @@ export default function Footer() {
       {/* Bottom Bar */}
       <div className="border-t border-white/10">
         <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-sm text-gray-500">© Copyright 2026 Leucine</p>
+          <p className="text-sm text-gray-500">© Copyright 2026 NovaRx</p>
           <div className="flex items-center gap-5">
             {/* YouTube */}
             <Link

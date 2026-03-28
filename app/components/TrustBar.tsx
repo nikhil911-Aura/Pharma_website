@@ -3,14 +3,14 @@
 import { motion } from "framer-motion";
 
 const logos = [
-  { name: "GRANULES", style: "text-lg font-bold tracking-[0.15em] uppercase" },
-  { name: "VALENT", style: "text-2xl font-black tracking-wide uppercase" },
-  { name: "acme", style: "text-2xl font-bold italic" },
-  { name: "zydus", style: "text-2xl font-bold tracking-wider lowercase" },
-  { name: "Dr.Reddy's", style: "text-xl font-bold" },
-  { name: "LUPIN", style: "text-2xl font-black tracking-[0.15em] uppercase" },
-  { name: "Strides", style: "text-xl font-semibold tracking-wide" },
-  { name: "Biocon", style: "text-2xl font-bold" },
+  { name: "PHARMACORP", style: "text-lg font-bold tracking-[0.15em] uppercase" },
+  { name: "BIO-GEN", style: "text-2xl font-black tracking-wide uppercase" },
+  { name: "synthia", style: "text-2xl font-bold italic" },
+  { name: "vitas", style: "text-2xl font-bold tracking-wider lowercase" },
+  { name: "MedLife", style: "text-xl font-bold" },
+  { name: "LUMINA", style: "text-2xl font-black tracking-[0.15em] uppercase" },
+  { name: "ApexLife", style: "text-xl font-semibold tracking-wide" },
+  { name: "Evolva", style: "text-2xl font-bold" },
 ];
 
 export default function TrustBar() {

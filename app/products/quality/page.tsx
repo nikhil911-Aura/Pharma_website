@@ -14,21 +14,21 @@ import {
 const qmsTabs: ProductTabItem[] = [
   {
     id: "ai-investigator",
-    label: "AI Investigator",
+    label: "Anomaly Detective",
     icon: (
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
       </svg>
     ),
-    heading: "AI-Powered Investigations, Faster CAPAs, Lower Risks",
+    heading: "Algorithmic Deviation Resolution: Swift & Decisive",
     description:
-      "Standardize investigations with AI-driven RCA, generate science-backed CAPAs, and reduce recurrence to protect quality.",
+      "Systemize discrepancy hunting via AI-powered Root Cause Analysis, forge bulletproof CAPAs, and secure untarnished compliance.",
     learnMoreHref: "/products/quality/ai-investigator",
     mockupContent: <AIInvestigatorMockup />,
   },
   {
     id: "fda-tracker",
-    label: "FDA Tracker",
+    label: "Regulation Monitor",
     icon: (
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" />
@@ -38,24 +38,24 @@ const qmsTabs: ProductTabItem[] = [
         <polyline points="10 9 9 9 8 9" />
       </svg>
     ),
-    heading: "Proactive FDA Readiness, Always Audit-Prepared",
+    heading: "Preemptive Regulatory Alignment, Always Audit-Ready",
     description:
-      "Track FDA 483 observations, analyze warning letter trends, and benchmark compliance posture against the industry.",
+      "Monitor international guidelines, dissect citation trends, and benchmark your facility's posture securely against aggregate industry data.",
     learnMoreHref: "/products/quality/fda-tracker",
     mockupContent: <FDATrackerMockup />,
   },
   {
     id: "cleaning-validation",
-    label: "Cleaning Validation",
+    label: "Sanitization Check",
     icon: (
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
         <path d="M9 12l2 2 4-4" />
       </svg>
     ),
-    heading: "Effortless Cleaning Validation, 100% FDA Compliant",
+    heading: "Frictionless Sanitization Auditing, Completely Assured",
     description:
-      "Automate HBEL-based residue calculations, track residue data in real-time, and auto-generate validation reports.",
+      "Digitize residue limits, monitor hygienic parameters live, and auto-compile extensive validation dossiers.",
     learnMoreHref: "/products/quality/cleaning-validation",
     mockupContent: <CleaningValidationMockup />,
   },
@@ -69,9 +69,9 @@ const qmsBenefits = [
         <polyline points="12 6 12 12 16 14" />
       </svg>
     ),
-    title: "Consistent Investigations",
+    title: "Uniform Discrepancy Parsing",
     description:
-      "AI ensures every investigation follows a standardized, science-based approach for reliable outcomes.",
+      "Algorithmic rules maintain a strict, scientific framework for every deviation.",
   },
   {
     icon: (
@@ -79,9 +79,9 @@ const qmsBenefits = [
         <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
       </svg>
     ),
-    title: "Audit Readiness",
+    title: "Instant Verification",
     description:
-      "Automated reports, digital records, and proactive monitoring ensure every site is inspection-ready.",
+      "Generated dossiers and live monitoring guarantee absolute inspection-readiness.",
   },
   {
     icon: (
@@ -91,9 +91,9 @@ const qmsBenefits = [
         <path d="M9 15l2 2 4-4" />
       </svg>
     ),
-    title: "Effortless Validation",
+    title: "Streamlined Assurances",
     description:
-      "Residue calculations, risk assessments, and compliant reports—automated for speed and accuracy.",
+      "Calculations, threat matrices, and compliant logs—assembled autonomously for supreme accuracy.",
   },
 ];
 
@@ -101,14 +101,14 @@ export default function QualityPage() {
   return (
     <>
       <ProductHero
-        title="AI-Powered QMS Software for Pharma Compliance"
-        description="Ensure seamless regulatory compliance and faster resolution of deviations. Standardize investigations, automate validation, and stay audit-ready."
+        title="Next-Generation Quality Management System"
+        description="Secure unwavering compliance and rapid exception processing. Systematize resolution, digitize validation, and operate perpetually ready for oversight."
       />
 
       <ProductTabs tabs={qmsTabs} />
 
       <ProductBenefits
-        heading="Unifying Investigations, CAPAs, and Validation in One QMS"
+        heading="Converging Root Cause Analysis, Corrections, and Audits Under One Engine"
         benefits={qmsBenefits}
       />
 

@@ -7,20 +7,20 @@ const categories = [
   {
     id: "quality",
     title: "Quality Management System",
-    subtitle: "10x QMS",
+    subtitle: "NovaRx Quality",
     description:
-      "Accelerate investigations, enforce compliance, and automate validation with AI-driven tools.",
+      "Propel investigations, guarantee adherence, and standardize auditing via smart automation.",
     href: "/products/quality",
     color: "blue",
     products: [
-      "AI Investigator",
-      "FDA Tracker",
-      "Cleaning Validation",
-      "Market Complaints",
-      "Change Control",
-      "CAPA Manager",
-      "Deviation Management",
-      "Audit Management",
+      "Anomaly Detective",
+      "Regulation Monitor",
+      "Sanitization Check",
+      "Defect Triage",
+      "Evolution Oversight",
+      "Correction Engine",
+      "Anomaly Routing",
+      "Inspection Defense",
     ],
     icon: (
       <svg
@@ -41,15 +41,15 @@ const categories = [
   {
     id: "manufacturing",
     title: "Manufacturing Execution System",
-    subtitle: "10x MES",
+    subtitle: "NovaRx Execution",
     description:
-      "Optimize production with AI-powered batch execution, real-time OTIF tracking, and production logbooks.",
+      "Turbocharge output with precision batch sequences, instantaneous metrics, and digitized records.",
     href: "/products/manufacturing",
     color: "indigo",
     products: [
-      "Batch Execution",
-      "Batch Intelligence",
-      "Production Logbooks",
+      "Run Engine",
+      "Process Analytics",
+      "Digital Records",
     ],
     icon: (
       <svg
@@ -93,11 +93,10 @@ export default function ProductsPage() {
             className="text-center max-w-4xl mx-auto"
           >
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[64px] font-extrabold text-gray-900 leading-[1.1] tracking-tight">
-              Our Products
+              Ecosystem Components
             </h1>
             <p className="mt-6 text-lg md:text-xl text-gray-500 max-w-3xl mx-auto leading-relaxed">
-              AI-powered platform solutions for pharma manufacturing execution and
-              quality management.
+              State-of-the-art software matrix powering enterprise-grade execution and total compliance for life sciences.
             </p>
           </motion.div>
         </div>

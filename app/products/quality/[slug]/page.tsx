@@ -59,106 +59,106 @@ const ZapIcon = () => (
    ──────────────────────────────────────────── */
 const productPages: Record<string, React.ComponentProps<typeof ProductDetailPage>> = {
   "ai-investigator": {
-    badge: "AI Investigator",
-    heroHeading: "Close Investigations Faster, Identify Effective CAPAs",
+    badge: "Anomaly Detective",
+    heroHeading: "Resolve Deviations Instantly, Formulate Impervious CAPAs",
     heroDescription:
-      "Leverage automated root cause analysis, data-driven CAPA recommendations, and comprehensive audit trails to protect your brand from costly disruptions.",
+      "Capitalize on algorithmic root cause mapping, empirical CAPA suggestions, and absolute audit trails to shield output from compounding errors.",
     heroMockup: <AIInvestigatorHeroDashboard />,
-    benefitsHeading: "Lower Cost of Quality with Consistent Investigations and Effective CAPAs",
+    benefitsHeading: "Reduce Quality Overhead with Perfected Discrepancy Tracking",
     benefitsSubtext:
-      "Cut non-compliance costs and operational delays by speeding up investigations and implementing targeted corrective actions",
+      "Minimize compliance spend and structural delays by resolving issues rapidly and installing permanent corrective parameters.",
     benefits: [
       {
         icon: <FilterIcon />,
-        title: "Reduce Deviation Recurrence",
-        description: "Pinpoint underlying issues with AI-driven root cause analysis. Prevent repeat deviations and ensure a more stable production process.",
+        title: "Curtail Successive Deviations",
+        description: "Isolate systemic flaws using AI-led discovery. Intercept recurring anomalies to lock in process predictability.",
       },
       {
         icon: <DocIcon />,
-        title: "Improve Investigation Consistency",
-        description: "Ensures every investigation follows a standardized, data-driven approach for reliable, repeatable outcomes.",
+        title: "Standardize Resolution Protocols",
+        description: "Guarantee that every discrepancy analysis conforms to rigorous, data-driven methodology.",
       },
       {
         icon: <SearchIcon />,
-        title: "Improve CAPA Effectiveness",
-        description: "Generates precise, data-driven corrective action recommendations that boost the success of CAPAs and lead to lasting quality improvements.",
+        title: "Maximize CAPA Potency",
+        description: "Produce exact, empirically grounded corrective algorithms that amplify success rates and manifest permanent operational upgrades.",
       },
     ],
     features: [
       {
-        title: "Standardize RCA with proven methodologies",
+        title: "Harmonize RCA via Verified Paradigms",
         description:
-          "Use AI-powered Ishikawa 6M methodology and historical data patterns to systematically analyze and diagnose the causes of deviations. The platform ensures every investigation follows a standardized framework.",
+          "Apply algorithmic 6M methodology and historical event mapping to structurally dissect discrepancies. The engine enforces an unyielding evaluation framework.",
         mockup: <RCADashboardMockup />,
       },
       {
-        title: "Generate effective CAPAs to prevent recurrence",
+        title: "Synthesize Protective CAPAs to Halt Drift",
         description:
-          "Confirms generated hypotheses by cross-referencing batch records, test results, and other critical production data. Auto-generate targeted corrective and preventive actions.",
+          "Produce precise corrective mandates corroborated by telemetry and operational logs securely. Auto-generate targeted corrective and preventive actions.",
         mockup: <CAPAReportMockup />,
       },
       {
-        title: "Verify Hypothesis With Data",
+        title: "Empirically Corroborate Hypotheses",
         description:
-          "Confirms generated hypotheses by cross-referencing batch records, test results, and other critical production data. Automatically assembles investigation data into structured, precise reports.",
+          "Validate generated theories by interpolating batch logs, telemetry, and secondary constraints. Automatically assemble structured, undeniable dossiers.",
         mockup: <HypothesisVerificationMockup />,
       },
     ],
     resources: [
-      { tag: "Audit Readiness Checklist", title: "Quality Risk Management Audit Readiness Checklist", href: "#" },
-      { tag: "Audit Readiness Checklist", title: "Document Management Audit Readiness Checklist", href: "#" },
-      { tag: "Audit Readiness Checklist", title: "CAPA Management Audit Readiness Checklist", href: "#" },
+      { tag: "Audit Readiness Checklist", title: "Risk Mitigation Strategy Dossier", href: "#" },
+      { tag: "Audit Readiness Checklist", title: "Information Governance Protocol", href: "#" },
+      { tag: "Audit Readiness Checklist", title: "Systemic Correction Playbook", href: "#" },
     ],
     faqs: [
-      { question: "What is AI Investigator and how does it work?", answer: "AI Investigator is an AI-powered quality management tool that automates root cause analysis using Ishikawa 6M methodology. It analyzes historical deviation data, identifies patterns, and generates science-based hypotheses for faster investigation closure." },
-      { question: "How does AI Investigator improve CAPA effectiveness?", answer: "The platform generates data-driven CAPA recommendations by cross-referencing batch records, test results, and historical data. This ensures corrective actions address actual root causes rather than symptoms, reducing deviation recurrence by up to 60%." },
-      { question: "Is AI Investigator compliant with FDA 21 CFR Part 11?", answer: "Yes, AI Investigator is fully compliant with FDA 21 CFR Part 11 requirements, including electronic signatures, complete audit trails, and tamper-proof records. All investigation activities are documented with time-stamped entries." },
-      { question: "How long does it take to implement AI Investigator?", answer: "Typical implementation takes 4-8 weeks depending on the complexity of your quality processes and integration requirements. Our team provides full support during setup, configuration, and validation." },
+      { question: "What is Anomaly Detective and how does it work?", answer: "Anomaly Detective is an AI-powered quality management tool that automates root cause analysis using Ishikawa 6M methodology. It analyzes historical deviation data, identifies patterns, and generates science-based hypotheses for faster investigation closure." },
+      { question: "How does Anomaly Detective improve CAPA effectiveness?", answer: "The platform generates data-driven CAPA recommendations by cross-referencing batch records, test results, and historical data. This ensures corrective actions address actual root causes rather than symptoms, reducing deviation recurrence by up to 60%." },
+      { question: "Is Anomaly Detective compliant with FDA 21 CFR Part 11?", answer: "Yes, Anomaly Detective is fully compliant with FDA 21 CFR Part 11 requirements, including electronic signatures, complete audit trails, and tamper-proof records. All investigation activities are documented with time-stamped entries." },
+      { question: "How long does it take to implement Anomaly Detective?", answer: "Typical implementation takes 4-8 weeks depending on the complexity of your quality processes and integration requirements. Our team provides full support during setup, configuration, and validation." },
     ],
   },
   "cleaning-validation": {
-    badge: "CLEEN - Cleaning Validation",
-    heroHeading: "Cleaning Validation Software for Effortless FDA Compliance",
+    badge: "Sanitization Check",
+    heroHeading: "Sanitization Audit Software for Effortless Global Compliance",
     heroDescription:
-      "Automate safe carryover limit analysis and real-time residue trend monitoring with CLEEN. Validate worst-case product cleaning protocols, generate audit-ready documentation, and ensure seamless FDA compliance effortlessly.",
+      "Systematize carryover limit computations and live residue trend analysis. Certify extreme-case protocols, spawn verified documentation, and lock in seamless regulatory alignment.",
     heroMockup: <CleaningValidationHeroDashboard />,
-    benefitsHeading: "Effortless Cleaning Validation that Meets FDA Inspection Standards",
+    benefitsHeading: "Frictionless Sanitization Auditing That Exceeds Agency Scrutiny",
     benefitsSubtext:
-      "Stay audit-ready with automated residue monitoring, compliant change assessments, and seamless FDA alignment.",
+      "Remain inspection-ready via algorithmic residue watching, adaptive change evaluations, and total FDA adherence.",
     benefits: [
       {
         icon: <ClockIcon />,
-        title: "Compliant Change Impact Assessment",
-        description: "Automate risk evaluation for process and product changes, ensuring compliance while minimizing disruptions to validated cleaning processes.",
+        title: "Compliant Evolution Assessments",
+        description: "Systematize threat computation for procedural shifts, sustaining compliance while insulating certified processes from drag.",
       },
       {
         icon: <AlertIcon />,
-        title: "Adhere to FDA Regulations",
-        description: "Automated HBEL-based residue calculations eliminate manual errors, ensuring adherence to FDA and global regulatory standards.",
+        title: "Uphold Global Dictates",
+        description: "Algorithmic HBEL computations eradicate human calculation faults, cementing adherence to FDA and equivalent worldwide parameters.",
       },
       {
         icon: <ZapIcon />,
-        title: "Accelerate New Drug Introduction",
-        description: "Instant risk-based assessments enable rapid carryover limit calculations, expediting go/no-go decisions for manufacturing expansions.",
+        title: "Expedite New Formulations",
+        description: "Immediate threat-based forecasting permits swift carryover parameter calculations, hastening operational pipeline decisions.",
       },
     ],
     features: [
       {
-        title: "Calculate safe carryover limits instantly",
+        title: "Autonomous Safe Carryover Computations",
         description:
-          "Automated HBEL-based MACO/MAC calculations for all product-equipment combinations. The system evaluates worst-case scenarios instantly, eliminating manual spreadsheet work and ensuring consistent, defensible results.",
+          "Instantly generate MACO/MAC boundaries across every asset combination. Pre-evaluate worst-case permutations automatically and remove error-prone spreadsheet tabulations.",
         mockup: <ResidueTrendMockup />,
       },
       {
-        title: "Auto-generate standardized, compliant protocols",
+        title: "Generative Compliant Documentation",
         description:
-          "Combines limit data, worst-case scenarios, and essential cleaning parameters to auto-generate validation protocols tailored to specific products and equipment.",
+          "Compile limit metrics, threat contours, and fundamental cleaning parameters into cohesive validation protocols instantaneously.",
         mockup: <CleaningProtocolMockup />,
       },
       {
-        title: "Track residue trends in real-time",
+        title: "Live Pathogen & Residue Charting",
         description:
-          "Monitor cleaning residue data trends in real-time against established MACO limits. Automated alerts notify when residue levels approach or exceed acceptable thresholds, enabling proactive corrective actions.",
+          "Observe hygiene parameters actively against formulated limits. Receive autonomous alerts the moment measurements drift towards critical markers.",
         mockup: <ResidueTrendMockup />,
       },
     ],
@@ -168,28 +168,28 @@ const productPages: Record<string, React.ComponentProps<typeof ProductDetailPage
       { tag: "Guide", title: "FDA Cleaning Validation Compliance Guide", href: "#" },
     ],
     faqs: [
-      { question: "What is CLEEN and how does it automate cleaning validation?", answer: "CLEEN is Leucine's cleaning validation software that automates HBEL-based residue limit calculations, worst-case product identification, and validation protocol generation. It eliminates manual spreadsheets and ensures consistent, defensible cleaning validation documentation." },
-      { question: "How does CLEEN handle change impact assessments?", answer: "When new products are introduced or processes change, CLEEN automatically re-evaluates all product-equipment combinations, recalculates MACO limits, identifies new worst-case pairs, and flags any validation gaps that need to be addressed." },
-      { question: "Does CLEEN support HBEL-based cleaning validation?", answer: "Yes, CLEEN fully supports HBEL (Health-Based Exposure Limit) methodology as recommended by the EMA and FDA. It calculates ADE/PDE-based limits and applies them to determine maximum allowable carryover for all products." },
-      { question: "Can CLEEN generate audit-ready documentation?", answer: "Absolutely. CLEEN auto-generates complete validation protocols, cleaning verification reports, and change assessment documentation that meet FDA, EU GMP, and other regulatory standards for audit readiness." },
+      { question: "What is Sanitization Check and how does it automate cleaning validation?", answer: "Sanitization Check is NovaRx's cleaning validation software that automates HBEL-based residue limit calculations, worst-case product identification, and validation protocol generation. It eliminates manual spreadsheets and ensures consistent, defensible cleaning validation documentation." },
+      { question: "How does Sanitization Check handle change impact assessments?", answer: "When new products are introduced or processes change, Sanitization Check automatically re-evaluates all product-equipment combinations, recalculates MACO limits, identifies new worst-case pairs, and flags any validation gaps that need to be addressed." },
+      { question: "Does Sanitization Check support HBEL-based cleaning validation?", answer: "Yes, Sanitization Check fully supports HBEL (Health-Based Exposure Limit) methodology as recommended by the EMA and FDA. It calculates ADE/PDE-based limits and applies them to determine maximum allowable carryover for all products." },
+      { question: "Can Sanitization Check generate audit-ready documentation?", answer: "Absolutely. Sanitization Check auto-generates complete validation protocols, cleaning verification reports, and change assessment documentation that meet FDA, EU GMP, and other regulatory standards for audit readiness." },
     ],
   },
   "fda-tracker": {
-    badge: "FDA Tracker",
-    heroHeading: "Stay Ahead of FDA Inspections with AI-Powered Analysis",
+    badge: "Regulation Monitor",
+    heroHeading: "Outpace Agency Scrutiny via Preemptive Analysis",
     heroDescription:
-      "Analyze FDA 483 trends, monitor warning letters, and proactively address regulatory gaps to ensure inspection readiness.",
+      "Parse citation patterns dynamically, monitor international warning circulars, and systematically close adherence gaps prior to formal audits.",
     heroMockup: <AIInvestigatorHeroDashboard />,
-    benefitsHeading: "Proactive FDA Readiness with Data-Driven Intelligence",
-    benefitsSubtext: "Monitor, analyze, and benchmark your compliance posture against the industry.",
+    benefitsHeading: "Preemptive Preparation Utilizing Actionable Intelligence",
+    benefitsSubtext: "Observe and benchmark your firm's stance continuously against global competitors.",
     benefits: [
-      { icon: <DocIcon />, title: "Real-Time 483 Tracking", description: "Monitor FDA 483 observations as they are issued with comprehensive categorization." },
-      { icon: <SearchIcon />, title: "Warning Letter Analysis", description: "Track warning letter trends and identify patterns that could affect your compliance posture." },
-      { icon: <FilterIcon />, title: "Investigator Profiles", description: "Analyze individual FDA investigator patterns, focus areas, and historical observation data." },
+      { icon: <DocIcon />, title: "Live Citation Monitoring", description: "Track agency citations the moment they print, categorized accurately via algorithmic parsing." },
+      { icon: <SearchIcon />, title: "Formal Notice Dissection", description: "Highlight enforcement trends and recognize shifting regulatory winds that could jeopardize your operating license." },
+      { icon: <FilterIcon />, title: "Auditor Profiling", description: "Gauge individual auditor eccentricities, primary vectors of inquiry, and historical citation behavior." },
     ],
     features: [
-      { title: "FDA 483 Observation Analysis", description: "AI-powered analysis of FDA observations with pattern recognition and trend identification across facilities, products, and inspection systems.", mockup: <CAPAReportMockup /> },
-      { title: "Six-System Gap Assessment", description: "Evaluate your readiness across FDA's six inspection systems with comprehensive gap analysis tools and benchmarking against industry peers.", mockup: <HypothesisVerificationMockup /> },
+      { title: "Agency Observation Deconstruction", description: "Utilize intelligent pattern extraction on formal observations spanning distinct sites, product clusters, and inspection methodologies.", mockup: <CAPAReportMockup /> },
+      { title: "Comprehensive Quality System Threat Assessment", description: "Index your operational readiness across major required pillars utilizing granular benchmarking logic.", mockup: <HypothesisVerificationMockup /> },
     ],
     resources: [
       { tag: "Tool", title: "FDA Form 483 Analysis", href: "#" },
@@ -197,7 +197,7 @@ const productPages: Record<string, React.ComponentProps<typeof ProductDetailPage
       { tag: "Analysis", title: "FDA Six-Systems Inspection Analysis", href: "#" },
     ],
     faqs: [
-      { question: "What data sources does FDA Tracker use?", answer: "FDA Tracker aggregates data from publicly available FDA databases including 483 observations, warning letters, and enforcement actions, enriched with AI analysis." },
+      { question: "What data sources does Regulation Monitor use?", answer: "Regulation Monitor aggregates data from publicly available FDA databases including 483 observations, warning letters, and enforcement actions, enriched with AI analysis." },
       { question: "How often is the data updated?", answer: "Data is updated as new FDA actions are published, typically within 24-48 hours of public release." },
     ],
   },

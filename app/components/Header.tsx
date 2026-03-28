@@ -5,15 +5,15 @@ import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 
 const qualityProducts = [
-  { name: "AI Investigator", desc: "Close Investigations Faster", href: "/products/quality/ai-investigator" },
-  { name: "FDA Tracker", desc: "Track FDA 483 Observations", href: "/products/quality/fda-tracker" },
-  { name: "Cleaning Validation", desc: "FDA Ready Cleaning Validations", href: "/products/quality/cleaning-validation" },
+  { name: "Anomaly Detective", desc: "Resolve Alerts Swiftly", href: "/products/quality/ai-investigator" },
+  { name: "Regulation Monitor", desc: "Watch Global Guidelines", href: "/products/quality/fda-tracker" },
+  { name: "Sanitization Check", desc: "Audit-Proof Hygiene Logs", href: "/products/quality/cleaning-validation" },
 ];
 
 const manufacturingProducts = [
-  { name: "Batch Execution", desc: "AI Powered Batch Execution", href: "/products/manufacturing/batch-execution" },
-  { name: "Batch Intelligence", desc: "Deliver on Time in Full", href: "/products/manufacturing/batch-intelligence" },
-  { name: "Production Logbooks", desc: "Integrate Production Logbook", href: "/products/manufacturing/production-logbooks" },
+  { name: "Run Engine", desc: "Smart Process Orchestration", href: "/products/manufacturing/batch-execution" },
+  { name: "Process Analytics", desc: "Achieve Max Throughput", href: "/products/manufacturing/batch-intelligence" },
+  { name: "Digital Records", desc: "Synchronize Operations Data", href: "/products/manufacturing/production-logbooks" },
 ];
 
 const ProductIcon = () => (
@@ -107,14 +107,14 @@ function DropdownPanel({
             className="text-xs xl:text-sm font-semibold text-gray-900 flex items-center gap-1 hover:text-blue-600 transition-colors leading-tight"
             onClick={onClose}
           >
-            Visit Leucine&apos;s Experience Center
+            Visit NovaRx&apos;s Innovation Lab
             <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="shrink-0">
               <line x1="5" y1="12" x2="19" y2="12" />
               <polyline points="12 5 19 12 12 19" />
             </svg>
           </Link>
           <p className="text-[10px] xl:text-xs text-gray-500 mt-2 leading-relaxed">
-            Discover our integrated AI-powered platform that helps you plan, execute, &amp; optimize every batch
+            Uncover our unified software ecosystem that helps you coordinate, process, and scale every operation.
           </p>
         </div>
       </div>
@@ -185,7 +185,7 @@ export default function Header() {
                 <path d="M20 12C17.5 12 16 14 16 16C16 18 17.5 20 20 24C22.5 20 24 18 24 16C24 14 22.5 12 20 12Z" fill="#0f172a" />
               </svg>
               <span className="text-xl sm:text-2xl font-bold text-gray-900 tracking-tight">
-                Leucine
+                NovaRx
               </span>
             </Link>
 
@@ -226,8 +226,8 @@ export default function Header() {
                       onMouseLeave={handleMouseLeave}
                     >
                       <DropdownPanel
-                        title="Quality Management System"
-                        description="Accelerate investigations, enforce compliance, and automate validation with AI-driven tools."
+                        title="Quality Assurance Hub"
+                        description="Streamline root cause analysis, maintain robust audit readiness, and transform digital sanitation workflows safely."
                         href="/products/quality"
                         products={qualityProducts}
                         icon={<ProductIcon />}
@@ -273,8 +273,8 @@ export default function Header() {
                       onMouseLeave={handleMouseLeave}
                     >
                       <DropdownPanel
-                        title="Manufacturing Execution System"
-                        description="Optimize production with AI-powered batch execution, real-time OTIF tracking, and production logbooks."
+                        title="Manufacturing Execution Engine"
+                        description="Command line operations smoothly with smart activity orchestration, continuous output monitoring, and digital tracking."
                         href="/products/manufacturing"
                         products={manufacturingProducts}
                         icon={<ManufacturingIcon />}
@@ -294,7 +294,7 @@ export default function Header() {
                 href="/schedule-demo"
                 className="hidden md:flex items-center gap-2 px-4 xl:px-5 py-2 xl:py-2.5 rounded-full border border-gray-900 text-sm font-medium text-gray-900 hover:bg-gray-900 hover:text-white transition-all duration-300 group whitespace-nowrap"
               >
-                Schedule a Demo
+                Schedule Your Tour
                 <svg
                   width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"
                   className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
@@ -376,7 +376,7 @@ export default function Header() {
                     className="flex items-center justify-center gap-2 w-full px-5 py-3 rounded-full bg-gray-900 text-white text-sm font-semibold"
                     onClick={() => setMobileOpen(false)}
                   >
-                    Schedule a Demo
+                    Schedule Your Tour
                     <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                       <line x1="7" y1="17" x2="17" y2="7" />
                       <polyline points="7 7 17 7 17 17" />
