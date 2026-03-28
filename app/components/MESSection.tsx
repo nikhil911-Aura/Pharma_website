@@ -9,21 +9,21 @@ const topFeatures = [
     subtitle: "Digitize and Standardize Manufacturing Workflows.",
     description:
       "Ensure accurate material dispensing, enforce process interlocks, and capture real-time execution data for error-free batches.",
-    href: "#",
+    href: "/products/manufacturing/batch-execution",
   },
   {
     title: "Batch Intelligence",
     subtitle: "Monitor production in real-time.",
     description:
       "Detect potential delays early, and take proactive corrective actions to optimize efficiency.",
-    href: "#",
+    href: "/products/manufacturing/batch-intelligence",
   },
   {
     title: "Production Logbooks",
     subtitle: "Digitally capture cleaning and usage logs.",
     description:
       "Maintenance records, and changeovers to ensure a seamless, audit-ready production process.",
-    href: "#",
+    href: "/products/manufacturing/production-logbooks",
   },
 ];
 
@@ -33,21 +33,21 @@ const bottomFeatures = [
     subtitle: "Streamline your batch record review process.",
     description:
       "Exception-based approach that accelerates approvals, improves accuracy, and ensures regulatory compliance.",
-    href: "#",
+    href: "/products/manufacturing",
   },
   {
     title: "Monitor your Facility, at a Glance",
     subtitle: "Gain real-time visibility into your facility's operations.",
     description:
       "Access comprehensive insights into equipment status, batch progress, and process efficiency.",
-    href: "#",
+    href: "/products/manufacturing",
   },
   {
     title: "Track WIP Inventory Down to the Last Unit",
     subtitle: "Gain real-time visibility and control.",
     description:
       "Advanced material management software for precise operations.",
-    href: "#",
+    href: "/products/manufacturing",
   },
 ];
 

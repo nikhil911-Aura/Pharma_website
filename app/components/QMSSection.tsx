@@ -8,21 +8,21 @@ const mainFeatures = [
     title: "AI Investigator",
     description:
       "Leverage AI-powered root cause analysis and CAPA recommendations to drive consistent, science-based investigations.",
-    href: "#",
+    href: "/products/quality/ai-investigator",
     large: true,
   },
   {
     title: "FDA Tracker",
     description:
       "Analyze FDA 483 trends, monitor warning letters, and proactively address regulatory gaps to ensure inspection readiness.",
-    href: "#",
+    href: "/products/quality/fda-tracker",
     large: false,
   },
   {
     title: "Cleaning Validation",
     description:
       "Calculate safe carryover limits, track residue trends in real-time, and generate audit-ready validation reports effortlessly.",
-    href: "#",
+    href: "/products/quality/cleaning-validation",
     large: false,
   },
 ];

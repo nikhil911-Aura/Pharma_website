@@ -3,7 +3,7 @@ import TrustBar from "./components/TrustBar";
 import IntegratedPlatform from "./components/IntegratedPlatform";
 import MESSection from "./components/MESSection";
 import QMSSection from "./components/QMSSection";
-import LESSection from "./components/LESSection";
+
 import BenefitsSection, { CTASection } from "./components/BenefitsSection";
 
 export default function Home() {
@@ -14,7 +14,7 @@ export default function Home() {
       <IntegratedPlatform />
       <MESSection />
       <QMSSection />
-      <LESSection />
+
       <BenefitsSection />
       <CTASection />
     </>

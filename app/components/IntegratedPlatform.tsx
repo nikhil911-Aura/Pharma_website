@@ -31,19 +31,6 @@ const tabs = [
       </svg>
     ),
   },
-  {
-    id: "laboratory",
-    label: "Laboratory",
-    title: "Laboratory Execution System",
-    description:
-      "Enhance lab efficiency with automated environmental monitoring and intelligent instrument management.",
-    icon: (
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M9 3h6v7l4 8H5l4-8V3z" />
-        <path d="M9 3h6" />
-      </svg>
-    ),
-  },
 ];
 
 const sidebarItems = [
@@ -344,7 +331,7 @@ function DashboardPreview({ tab }: { tab: (typeof tabs)[number] }) {
     );
   }
 
-  // Laboratory
+  // Default: Manufacturing dashboard
   return (
     <div className="tablet-frame">
       <div className="tablet-screen">
@@ -352,61 +339,42 @@ function DashboardPreview({ tab }: { tab: (typeof tabs)[number] }) {
         <div className="flex">
           <DashboardSidebar />
           <div className="flex-1 p-4 md:p-5 bg-white">
-            <h3 className="text-sm font-semibold text-gray-800 mb-3">
-              Incubation Sessions Stages Timeline
-            </h3>
-            <div className="space-y-2.5">
-              {[
-                {
-                  stage: "Stage: Condition 1",
-                  session: "Session #87",
-                  date: "19 Oct, 2024 12:00 AM",
-                  startTime: "19 Oct, 2024 08:36 PM",
-                  endTime: "22 Oct, 2024 08:55 PM",
-                  observation: "All plates were successfully incubated for the full duration without any issues. No contamination or abnormalities observed during the incubation period.",
-                },
-                {
-                  stage: "Stage: Condition 2",
-                  session: "Session #87",
-                  date: "19 Oct, 2024 12:00 AM",
-                  startTime: "19 Oct, 2024 08:57 PM",
-                  endTime: "21 Oct, 2024 08:58 PM",
-                  observation: "Incubation session completed successfully. All plates exhibited normal growth patterns, with no deviations from expected results.",
-                },
-                {
-                  stage: "Stage: Condition 1",
-                  session: "Session #115",
-                  date: "28 Oct, 2024 12:00 AM",
-                  startTime: "28 Oct, 2024 12:04 AM",
-                  endTime: "28 Oct, 2024 12:06 AM",
-                  observation: "N/A",
-                },
-              ].map((item, i) => (
-                <div key={i} className="border border-gray-200 rounded-lg p-3">
-                  <div className="flex items-center justify-between mb-1.5">
-                    <div className="flex items-center gap-1.5">
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#22c55e" strokeWidth="2">
-                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
-                        <polyline points="22 4 12 14.01 9 11.01" />
-                      </svg>
-                      <span className="text-xs font-medium text-gray-800">
-                        {item.stage} - <span className="text-blue-600">{item.session}</span>
-                      </span>
-                    </div>
-                    <span className="text-[10px] text-gray-400 flex items-center gap-1">
-                      <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                        <circle cx="12" cy="12" r="10" /><polyline points="12 6 12 12 16 14" />
-                      </svg>
-                      {item.date}
-                    </span>
-                  </div>
-                  <div className="text-[10px] text-gray-500 space-y-0.5">
-                    <p><span className="font-medium">Start Time:</span> {item.startTime}</p>
-                    <p><span className="font-medium">End Time:</span> {item.endTime}</p>
-                    <p><span className="font-medium">Observations:</span> {item.observation}</p>
-                  </div>
+            <div className="flex items-center justify-between mb-4">
+              <h3 className="text-sm md:text-base font-semibold text-gray-800">
+                Shop Floor Monitor
+              </h3>
+              <span className="px-2.5 py-0.5 bg-green-50 text-green-600 text-xs font-medium rounded-full border border-green-200">
+                Active
+              </span>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+              <div className="border border-gray-200 rounded-lg p-3">
+                <h4 className="font-semibold text-xs text-gray-800 mb-2.5">Tablet Press Machine</h4>
+                <div className="space-y-2 text-[11px]">
+                  <div className="flex justify-between"><span className="text-gray-400">MACHINE ID</span><span className="font-medium text-gray-700">TP - 001</span></div>
+                  <div className="flex justify-between"><span className="text-gray-400">CURRENT STATUS</span><span className="px-1.5 py-0.5 bg-green-50 text-green-600 rounded text-[10px] font-medium">Running</span></div>
+                  <div className="flex justify-between"><span className="text-gray-400">TEMPERATURE</span><span className="font-medium text-gray-700">75°C</span></div>
+                  <div className="flex justify-between"><span className="text-gray-400">OUTPUT RATE</span><span className="font-medium text-gray-700">500/min</span></div>
                 </div>
-              ))}
+              </div>
+              <div className="border border-gray-200 rounded-lg p-3">
+                <h4 className="font-semibold text-xs text-gray-800 mb-2.5">Cleanroom 101</h4>
+                <div className="space-y-2 text-[11px]">
+                  <div className="flex justify-between"><span className="text-gray-400">AREA ID</span><span className="font-medium text-gray-700">CR - 001</span></div>
+                  <div className="flex justify-between"><span className="text-gray-400">STATUS</span><span className="px-1.5 py-0.5 bg-blue-50 text-blue-600 rounded text-[10px] font-medium">Operational</span></div>
+                  <div className="flex justify-between"><span className="text-gray-400">TEMP & HUMIDITY</span><span className="font-medium text-gray-700">22°C, 45%</span></div>
+                  <div className="flex justify-between"><span className="text-gray-400">PARTICLE COUNT</span><span className="font-medium text-gray-700">70/m³</span></div>
+                </div>
+              </div>
+              <div className="border border-gray-200 rounded-lg p-3">
+                <h4 className="font-semibold text-xs text-gray-800 mb-2.5">LABOUR ANALYTICS</h4>
+                <div className="h-[130px] flex items-end justify-between gap-0.5 px-1">
+                  {[22, 24, 23, 21, 24, 22, 25, 23, 22, 24, 21, 23].map((val, i) => (
+                    <div key={i} className="flex-1 bg-indigo-400 rounded-t-sm hover:bg-indigo-500 transition-colors" style={{ height: `${(val / 26) * 100}%` }} />
+                  ))}
+                </div>
+                <p className="text-[9px] text-gray-400 mt-1.5 text-center">Man Hours Per Batch</p>
+              </div>
             </div>
           </div>
         </div>

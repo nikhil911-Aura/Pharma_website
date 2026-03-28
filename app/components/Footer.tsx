@@ -6,15 +6,15 @@ const productLinks = [
   { name: "AI Investigator", href: "/products/quality/ai-investigator" },
   { name: "FDA Tracker", href: "/products/quality/fda-tracker" },
   { name: "Cleaning Validation", href: "/products/quality/cleaning-validation" },
-  { name: "Environmental Monitoring", href: "/products/laboratory/environmental-monitoring" },
-  { name: "Instrument Logbooks", href: "/products/laboratory/instrument-logbooks" },
+  { name: "Batch Execution", href: "/products/manufacturing/batch-execution" },
+  { name: "Batch Intelligence", href: "/products/manufacturing/batch-intelligence" },
 ];
 
 const qualityLinks = [
   { name: "Quality Management System", href: "/products/quality" },
-  { name: "Laboratory Execution System", href: "/products/laboratory" },
+  { name: "Manufacturing Execution System", href: "/products/manufacturing" },
   { name: "Market Complaints", href: "/products/quality/market-complaints" },
-  { name: "CAPA Manager", href: "/products/quality/capa-manager" },
+  { name: "Production Logbooks", href: "/products/manufacturing/production-logbooks" },
 ];
 
 const aboutLinks = [

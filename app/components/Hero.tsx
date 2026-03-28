@@ -138,26 +138,6 @@ function HeroTabs() {
         </svg>
       ),
     },
-    {
-      id: "laboratory",
-      label: "Laboratory",
-      icon: (
-        <svg
-          width="14"
-          height="14"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          className="shrink-0"
-        >
-          <path d="M9 3h6v7l4 8H5l4-8V3z" />
-          <path d="M9 3h6" />
-        </svg>
-      ),
-    },
   ];
 
   return (
@@ -201,7 +181,6 @@ function HeroTabs() {
             <div className="rounded-[10px] sm:rounded-[18px] overflow-hidden bg-white">
               {activeTab === "manufacturing" && <ManufacturingDashboard />}
               {activeTab === "quality" && <QualityDashboard />}
-              {activeTab === "laboratory" && <LaboratoryDashboard />}
             </div>
           </div>
         </motion.div>
@@ -401,70 +380,6 @@ function QualityDashboard() {
               </div>
             ))}
           </div>
-        </div>
-      </div>
-    </>
-  );
-}
-
-function LaboratoryDashboard() {
-  return (
-    <>
-      <DashboardTopbar subtitle="Batch Manufacturing" />
-      <div className="p-3 sm:p-4 md:p-5 bg-white">
-        <h3 className="text-xs sm:text-sm font-semibold text-gray-800 mb-2.5 sm:mb-3">
-          Incubation Sessions Stages Timeline
-        </h3>
-        <div className="space-y-2 sm:space-y-2.5">
-          {[
-            {
-              stage: "Stage: Condition 1",
-              session: "#87",
-              date: "19 Oct, 2024",
-              obs: "All plates were successfully incubated for the full duration without any issues.",
-            },
-            {
-              stage: "Stage: Condition 2",
-              session: "#87",
-              date: "19 Oct, 2024",
-              obs: "Incubation session completed successfully. All plates exhibited normal growth patterns.",
-            },
-            {
-              stage: "Stage: Condition 1",
-              session: "#115",
-              date: "28 Oct, 2024",
-              obs: "N/A",
-            },
-          ].map((item, i) => (
-            <div key={i} className="border border-gray-200 rounded-lg p-2.5 sm:p-3">
-              <div className="flex items-start sm:items-center justify-between gap-2 mb-1 sm:mb-1.5">
-                <div className="flex items-center gap-1.5">
-                  <svg
-                    width="12"
-                    height="12"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="#22c55e"
-                    strokeWidth="2"
-                    className="shrink-0"
-                  >
-                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
-                    <polyline points="22 4 12 14.01 9 11.01" />
-                  </svg>
-                  <span className="text-[10px] sm:text-xs font-medium text-gray-800 leading-tight">
-                    {item.stage} -{" "}
-                    <span className="text-blue-600">Session {item.session}</span>
-                  </span>
-                </div>
-                <span className="text-[9px] sm:text-[10px] text-gray-400 shrink-0">
-                  {item.date}
-                </span>
-              </div>
-              <p className="text-[10px] sm:text-[11px] text-gray-500 leading-relaxed">
-                <span className="font-medium">Observations:</span> {item.obs}
-              </p>
-            </div>
-          ))}
         </div>
       </div>
     </>

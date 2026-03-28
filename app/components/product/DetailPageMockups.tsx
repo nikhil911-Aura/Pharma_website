@@ -702,3 +702,315 @@ export function AuditTrailMockup() {
     </div>
   );
 }
+
+/* ─── MANUFACTURING — BATCH EXECUTION HERO ─── */
+export function BatchExecutionHeroDashboard() {
+  return (
+    <div className="w-full">
+      <div className="flex items-center justify-between px-5 py-3 bg-slate-800 text-white text-xs">
+        <div className="flex items-center gap-2">
+          <div className="w-6 h-6 rounded bg-indigo-500 flex items-center justify-center text-[10px] font-bold">L</div>
+          <span className="text-green-400 text-[8px]">●</span>
+        </div>
+        <div className="flex items-center gap-4 text-[11px]">
+          <span className="text-gray-400">🏢 Chicago Plant ▾</span>
+          <span className="text-gray-400">⚙️ Batch Manufacturing ▾</span>
+          <div className="flex items-center gap-1">
+            <div className="w-5 h-5 rounded-full bg-indigo-500 text-[8px] flex items-center justify-center font-bold">RK</div>
+            <span className="text-gray-300">R. Kumar ▾</span>
+          </div>
+        </div>
+      </div>
+      <div className="flex min-h-[380px]">
+        <div className="w-12 bg-white border-r border-gray-100 flex flex-col items-center gap-4 pt-4">
+          {["📊", "📁", "📝", "🔍", "⚡", "⚙️", "👥"].map((icon, i) => (
+            <div key={i} className="w-7 h-7 rounded-lg flex items-center justify-center text-xs hover:bg-gray-100 cursor-pointer">{icon}</div>
+          ))}
+        </div>
+        <div className="flex-1 bg-white p-5">
+          <div className="flex items-center gap-2 mb-1">
+            <span className="text-sm font-semibold text-gray-800">Batch Record Execution</span>
+            <span className="px-2 py-0.5 text-[9px] font-medium rounded-full bg-green-100 text-green-700">Active</span>
+          </div>
+          <div className="text-[10px] text-gray-500 mb-4">Batch #BX-2026-0342 • Amoxicillin 500mg • Started: Mar 25, 2026 08:00 AM</div>
+
+          <div className="grid grid-cols-4 gap-3 mb-5">
+            {[
+              { label: "Batch Progress", value: "60%", color: "text-indigo-600" },
+              { label: "ETA Release", value: "Mar 28", color: "text-gray-800" },
+              { label: "Materials Used", value: "4 / 7", color: "text-gray-800" },
+              { label: "Interlocks", value: "All Pass", color: "text-green-600" },
+            ].map((s) => (
+              <div key={s.label} className="bg-gray-50 rounded-xl p-3 text-center">
+                <div className={`text-lg font-bold ${s.color}`}>{s.value}</div>
+                <div className="text-[9px] text-gray-500">{s.label}</div>
+              </div>
+            ))}
+          </div>
+
+          <div className="space-y-2">
+            {[
+              { step: "1. Weighing & Dispensing", status: "completed", time: "2h 15m", by: "J. Smith" },
+              { step: "2. Granulation", status: "completed", time: "3h 42m", by: "R. Kumar" },
+              { step: "3. Compression", status: "in-progress", time: "1h 20m", by: "A. Patel" },
+              { step: "4. Coating", status: "pending", time: "—", by: "—" },
+              { step: "5. Packaging", status: "pending", time: "—", by: "—" },
+            ].map((item) => (
+              <div key={item.step} className="flex items-center gap-3 p-3 rounded-lg border border-gray-100 hover:bg-gray-50/50">
+                <div className={`w-6 h-6 rounded-full flex items-center justify-center shrink-0 ${
+                  item.status === "completed" ? "bg-green-500" : item.status === "in-progress" ? "bg-indigo-500 animate-pulse" : "bg-gray-200"
+                }`}>
+                  {item.status === "completed" && (
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="white" stroke="white" strokeWidth="3"><polyline points="20 6 9 17 4 12" /></svg>
+                  )}
+                  {item.status === "in-progress" && <div className="w-2.5 h-2.5 rounded-full bg-white" />}
+                </div>
+                <div className="flex-1">
+                  <div className={`text-[11px] font-medium ${item.status === "completed" ? "text-gray-400 line-through" : item.status === "in-progress" ? "text-indigo-600" : "text-gray-500"}`}>
+                    {item.step}
+                  </div>
+                </div>
+                <span className="text-[10px] text-gray-400 w-16">{item.time}</span>
+                <span className="text-[10px] text-gray-400 w-16">{item.by}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+/* ─── MANUFACTURING — BATCH INTELLIGENCE HERO ─── */
+export function BatchIntelligenceHeroDashboard() {
+  return (
+    <div className="w-full">
+      <div className="flex items-center justify-between px-5 py-3 bg-slate-800 text-white text-xs">
+        <div className="flex items-center gap-2">
+          <div className="w-6 h-6 rounded bg-indigo-500 flex items-center justify-center text-[10px] font-bold">L</div>
+          <span className="text-green-400 text-[8px]">●</span>
+        </div>
+        <div className="flex items-center gap-4 text-[11px]">
+          <span className="text-gray-400">🏢 All Plants ▾</span>
+          <span className="text-gray-400">📊 OTIF Analytics ▾</span>
+          <span className="px-1.5 py-0.5 rounded bg-green-500/20 text-green-400 text-[9px] font-bold">Live</span>
+        </div>
+      </div>
+      <div className="flex min-h-[380px]">
+        <div className="w-12 bg-white border-r border-gray-100 flex flex-col items-center gap-4 pt-4">
+          {["📊", "📁", "🔍", "📋", "⚡", "👥"].map((icon, i) => (
+            <div key={i} className="w-7 h-7 rounded-lg flex items-center justify-center text-xs hover:bg-gray-100 cursor-pointer">{icon}</div>
+          ))}
+        </div>
+        <div className="flex-1 bg-white p-5">
+          <div className="text-sm font-semibold text-gray-800 mb-4">Production Intelligence Dashboard</div>
+          <div className="grid grid-cols-4 gap-3 mb-5">
+            {[
+              { label: "Current OTIF", value: "94.5%", trend: "+5.2%", tColor: "text-green-600", bg: "bg-green-50" },
+              { label: "Average Delay", value: "1.8 days", trend: "-0.2d", tColor: "text-green-600", bg: "bg-blue-50" },
+              { label: "Active Batches", value: "23", trend: "+3", tColor: "text-blue-600", bg: "bg-indigo-50" },
+              { label: "At Risk", value: "4", trend: "-1", tColor: "text-amber-600", bg: "bg-amber-50" },
+            ].map((stat) => (
+              <div key={stat.label} className={`${stat.bg} rounded-xl p-3 text-center`}>
+                <div className="text-lg font-bold text-gray-900">{stat.value}</div>
+                <div className="text-[9px] text-gray-500">{stat.label}</div>
+                <div className={`text-[9px] mt-0.5 ${stat.tColor}`}>{stat.trend} vs last month</div>
+              </div>
+            ))}
+          </div>
+          <div className="border border-gray-100 rounded-xl p-4 mb-4">
+            <div className="text-xs font-semibold text-gray-700 mb-2">OTIF Trend — Last 12 Months</div>
+            <div className="h-32 bg-gradient-to-t from-indigo-50/30 to-transparent rounded-lg">
+              <svg className="w-full h-full" viewBox="0 0 400 100" fill="none">
+                {[20, 40, 60, 80].map((y) => (
+                  <line key={y} x1="0" y1={y} x2="400" y2={y} stroke="#f1f5f9" strokeWidth="1" />
+                ))}
+                <polyline points="30,70 65,65 100,60 135,55 170,50 205,45 240,40 275,35 310,30 345,25 380,20" stroke="#6366f1" strokeWidth="2.5" fill="none" />
+                <polyline points="30,70 65,65 100,60 135,55 170,50 205,45 240,40 275,35 310,30 345,25 380,20 380,90 30,90" fill="rgba(99,102,241,0.06)" />
+                {[[30,70],[65,65],[100,60],[135,55],[170,50],[205,45],[240,40],[275,35],[310,30],[345,25],[380,20]].map(([cx,cy], i) => (
+                  <circle key={i} cx={cx} cy={cy} r="3.5" fill="#6366f1" stroke="white" strokeWidth="2" />
+                ))}
+              </svg>
+            </div>
+            <div className="flex justify-between mt-1.5 px-2 text-[8px] text-gray-400">
+              {["Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec","Jan","Feb","Mar"].map((m) => (
+                <span key={m}>{m}</span>
+              ))}
+            </div>
+          </div>
+          <div className="grid grid-cols-3 gap-3">
+            <div className="bg-green-50 rounded-xl p-3 text-center"><div className="text-lg font-bold text-green-700">87%</div><div className="text-[9px] text-green-600">On-Time Rate</div></div>
+            <div className="bg-blue-50 rounded-xl p-3 text-center"><div className="text-lg font-bold text-blue-700">96%</div><div className="text-[9px] text-blue-600">In-Full Rate</div></div>
+            <div className="bg-indigo-50 rounded-xl p-3 text-center"><div className="text-lg font-bold text-indigo-700">2.1d</div><div className="text-[9px] text-indigo-600">Avg Cycle Time</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+/* ─── MANUFACTURING — PRODUCTION LOGBOOKS HERO ─── */
+export function ProductionLogbooksHeroDashboard() {
+  return (
+    <div className="w-full">
+      <div className="flex items-center justify-between px-5 py-3 bg-slate-800 text-white text-xs">
+        <div className="flex items-center gap-2">
+          <div className="w-6 h-6 rounded bg-indigo-500 flex items-center justify-center text-[10px] font-bold">L</div>
+          <span className="text-green-400 text-[8px]">●</span>
+        </div>
+        <div className="flex items-center gap-4 text-[11px]">
+          <span className="text-gray-400">🏢 New York ▾</span>
+          <span className="text-gray-400">📋 Production Logbooks ▾</span>
+        </div>
+      </div>
+      <div className="flex min-h-[380px]">
+        <div className="w-12 bg-white border-r border-gray-100 flex flex-col items-center gap-4 pt-4">
+          {["📋", "📊", "🔧", "📁", "🔔", "⚙️"].map((icon, i) => (
+            <div key={i} className="w-7 h-7 rounded-lg flex items-center justify-center text-xs hover:bg-gray-100 cursor-pointer">{icon}</div>
+          ))}
+        </div>
+        <div className="flex-1 bg-white p-5">
+          <div className="text-sm font-semibold text-gray-800 mb-4">Blister Pack Machine Log</div>
+          <table className="w-full text-[10px]">
+            <thead>
+              <tr className="text-gray-400 text-left border-b border-gray-100">
+                <th className="pb-2 pr-3 font-medium">STATUS</th>
+                <th className="pb-2 pr-3 font-medium">JOB ID</th>
+                <th className="pb-2 pr-3 font-medium">STARTED BY</th>
+                <th className="pb-2 pr-3 font-medium">START DATE</th>
+                <th className="pb-2 pr-3 font-medium">EQUIPMENT</th>
+                <th className="pb-2 font-medium">ACTION</th>
+              </tr>
+            </thead>
+            <tbody>
+              {[
+                { status: "Completed", id: "87543", user: "John Doe", date: "2026-03-20", equip: "BPM-001", sColor: "bg-green-50 text-green-600" },
+                { status: "In Progress", id: "74785", user: "Jane Smith", date: "2026-03-22", equip: "BPM-002", sColor: "bg-blue-50 text-blue-600" },
+                { status: "Completed", id: "78500", user: "Robert Brown", date: "2026-03-18", equip: "BPM-001", sColor: "bg-green-50 text-green-600" },
+                { status: "Completed", id: "39665", user: "Emily Davis", date: "2026-03-15", equip: "BPM-003", sColor: "bg-green-50 text-green-600" },
+                { status: "Completed", id: "41290", user: "Michael Chen", date: "2026-03-13", equip: "BPM-002", sColor: "bg-green-50 text-green-600" },
+                { status: "Completed", id: "38442", user: "Sarah Wilson", date: "2026-03-10", equip: "BPM-001", sColor: "bg-green-50 text-green-600" },
+              ].map((row, i) => (
+                <tr key={i} className="border-b border-gray-50 hover:bg-gray-50/50">
+                  <td className="py-2.5 pr-3"><span className={`px-1.5 py-0.5 rounded-full text-[9px] font-medium ${row.sColor}`}>{row.status}</span></td>
+                  <td className="py-2.5 pr-3 text-indigo-600 font-medium">{row.id}</td>
+                  <td className="py-2.5 pr-3 text-gray-700">{row.user}</td>
+                  <td className="py-2.5 pr-3 text-gray-500">{row.date}</td>
+                  <td className="py-2.5 pr-3 text-gray-500">{row.equip}</td>
+                  <td className="py-2.5 text-indigo-600 cursor-pointer hover:underline">View Log →</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+/* ─── MFG FEATURE MOCKUPS ─── */
+export function BatchWorkflowMockup() {
+  return (
+    <div className="w-full p-5">
+      <div className="bg-slate-800 rounded-t-xl px-4 py-2.5 flex items-center gap-2 text-white text-[10px]">
+        <div className="w-5 h-5 rounded bg-indigo-500 flex items-center justify-center text-[8px] font-bold">L</div>
+        <span>Batch Workflow Designer</span>
+      </div>
+      <div className="bg-white border border-gray-100 rounded-b-xl p-4">
+        <div className="text-xs font-semibold text-gray-700 mb-3">Process Interlocks & Workflow Steps</div>
+        <div className="space-y-2">
+          {[
+            { step: "Material Verification", desc: "Barcode scan confirms correct raw materials", status: "interlock" },
+            { step: "Environment Check", desc: "Temperature & humidity within range", status: "interlock" },
+            { step: "Operator Authentication", desc: "Biometric + e-signature verification", status: "interlock" },
+            { step: "Weighing & Dispensing", desc: "Automated material dispensing with variance check", status: "step" },
+            { step: "In-Process Controls", desc: "Real-time IPC data capture", status: "step" },
+          ].map((item) => (
+            <div key={item.step} className="flex items-center gap-3 bg-gray-50 rounded-lg p-3">
+              <div className={`w-6 h-6 rounded-lg flex items-center justify-center shrink-0 ${item.status === "interlock" ? "bg-amber-100" : "bg-indigo-100"}`}>
+                <span className="text-[10px]">{item.status === "interlock" ? "🔒" : "⚡"}</span>
+              </div>
+              <div className="flex-1">
+                <div className="text-[10px] font-semibold text-gray-700">{item.step}</div>
+                <div className="text-[9px] text-gray-500">{item.desc}</div>
+              </div>
+              <span className={`text-[8px] px-2 py-0.5 rounded-full font-medium ${item.status === "interlock" ? "bg-amber-50 text-amber-600" : "bg-indigo-50 text-indigo-600"}`}>
+                {item.status === "interlock" ? "Interlock" : "Process Step"}
+              </span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export function OTIFDashboardMockup() {
+  return (
+    <div className="w-full p-5">
+      <div className="bg-slate-800 rounded-t-xl px-4 py-2.5 flex items-center gap-2 text-white text-[10px]">
+        <div className="w-5 h-5 rounded bg-indigo-500 flex items-center justify-center text-[8px] font-bold">L</div>
+        <span>OTIF Monitoring</span>
+      </div>
+      <div className="bg-white border border-gray-100 rounded-b-xl p-4">
+        <div className="text-xs font-semibold text-gray-700 mb-3">Real-Time Batch Tracking</div>
+        <div className="space-y-2">
+          {[
+            { batch: "BX-2026-0342", product: "Amoxicillin 500mg", progress: 85, status: "On Track", color: "text-green-600" },
+            { batch: "BX-2026-0343", product: "Metformin HCl 500mg", progress: 45, status: "Delayed", color: "text-red-600" },
+            { batch: "BX-2026-0344", product: "Atorvastatin 20mg", progress: 92, status: "On Track", color: "text-green-600" },
+            { batch: "BX-2026-0345", product: "Paracetamol 500mg", progress: 30, status: "At Risk", color: "text-amber-600" },
+          ].map((item) => (
+            <div key={item.batch} className="bg-gray-50 rounded-lg p-3">
+              <div className="flex items-center justify-between mb-1.5">
+                <div>
+                  <span className="text-[10px] font-semibold text-gray-700">{item.batch}</span>
+                  <span className="text-[9px] text-gray-400 ml-2">{item.product}</span>
+                </div>
+                <span className={`text-[9px] font-semibold ${item.color}`}>{item.status}</span>
+              </div>
+              <div className="w-full h-2 bg-gray-200 rounded-full overflow-hidden">
+                <div className={`h-full rounded-full ${item.status === "On Track" ? "bg-green-500" : item.status === "Delayed" ? "bg-red-500" : "bg-amber-500"}`} style={{ width: `${item.progress}%` }} />
+              </div>
+              <div className="text-[8px] text-gray-400 mt-1 text-right">{item.progress}% complete</div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export function LogbookEntryMockup() {
+  return (
+    <div className="w-full p-5">
+      <div className="bg-slate-800 rounded-t-xl px-4 py-2.5 flex items-center gap-2 text-white text-[10px]">
+        <div className="w-5 h-5 rounded bg-indigo-500 flex items-center justify-center text-[8px] font-bold">L</div>
+        <span>Digital Logbook Entry</span>
+      </div>
+      <div className="bg-white border border-gray-100 rounded-b-xl p-4">
+        <div className="flex items-center justify-between mb-3">
+          <span className="text-xs font-semibold text-gray-700">Equipment Cleaning Log — BPM-001</span>
+          <span className="text-[9px] px-2 py-0.5 bg-green-50 text-green-600 rounded-full">21 CFR Part 11</span>
+        </div>
+        <div className="space-y-2">
+          {[
+            { time: "06:00 AM", user: "J. Smith", action: "Pre-production cleaning started", sig: "e-Signed ✓" },
+            { time: "06:45 AM", user: "J. Smith", action: "Cleaning completed — visual inspection passed", sig: "e-Signed ✓" },
+            { time: "07:00 AM", user: "S. Wilson", action: "QA verification — approved for production", sig: "e-Signed ✓" },
+            { time: "07:15 AM", user: "System", action: "Equipment status: Ready for use", sig: "System ✓" },
+          ].map((entry, i) => (
+            <div key={i} className="flex items-start gap-3 bg-gray-50 rounded-lg p-2.5">
+              <div className="text-[9px] text-gray-400 w-14 shrink-0">{entry.time}</div>
+              <div className="flex-1">
+                <div className="text-[10px] text-gray-700"><span className="font-semibold">{entry.user}</span> — {entry.action}</div>
+              </div>
+              <span className="text-[8px] text-green-600 font-medium shrink-0">{entry.sig}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+

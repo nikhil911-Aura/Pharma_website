@@ -8,34 +8,129 @@ const qualityProducts = [
   { name: "AI Investigator", desc: "Close Investigations Faster", href: "/products/quality/ai-investigator" },
   { name: "FDA Tracker", desc: "Track FDA 483 Observations", href: "/products/quality/fda-tracker" },
   { name: "Cleaning Validation", desc: "FDA Ready Cleaning Validations", href: "/products/quality/cleaning-validation" },
-
 ];
 
-const laboratoryProducts = [
-  { name: "Environmental Monitoring", desc: "Plan, Track & Analyse EM Samples", href: "/products/laboratory/environmental-monitoring" },
-  { name: "Instrument Logbooks", desc: "Track Instrument Usage & Inventory", href: "/products/laboratory/instrument-logbooks" },
+const manufacturingProducts = [
+  { name: "Batch Execution", desc: "AI Powered Batch Execution", href: "/products/manufacturing/batch-execution" },
+  { name: "Batch Intelligence", desc: "Deliver on Time in Full", href: "/products/manufacturing/batch-intelligence" },
+  { name: "Production Logbooks", desc: "Integrate Production Logbook", href: "/products/manufacturing/production-logbooks" },
 ];
 
-const ProductIcon = ({ color = "#3b82f6" }: { color?: string }) => (
-  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+const ProductIcon = () => (
+  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
     <rect x="3" y="3" width="18" height="18" rx="2" />
     <path d="M9 12l2 2 4-4" />
   </svg>
 );
 
-const LabIcon = () => (
-  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#10b981" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-    <path d="M9 3h6v7l4 8H5l4-8V3z" />
-    <path d="M9 3h6" />
+const ManufacturingIcon = () => (
+  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#6366f1" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <rect x="2" y="3" width="20" height="18" rx="2" />
+    <path d="M8 7v10" />
+    <path d="M12 7v10" />
+    <path d="M16 7v10" />
   </svg>
 );
 
+/* ──────────────────────────────────────────
+   DROPDOWN PANEL — shared by both nav items
+   ────────────────────────────────────────── */
+function DropdownPanel({
+  title,
+  description,
+  href,
+  products,
+  icon,
+  accentColor,
+  onClose,
+}: {
+  title: string;
+  description: string;
+  href: string;
+  products: typeof qualityProducts;
+  icon: React.ReactNode;
+  accentColor: string;
+  onClose: () => void;
+}) {
+  return (
+    <div className="bg-white rounded-2xl shadow-2xl border border-gray-100 overflow-hidden">
+      <div className="flex">
+        {/* Main content */}
+        <div className="flex-1 p-5 xl:p-6">
+          <Link href={href} className="group" onClick={onClose}>
+            <h3 className="text-base xl:text-lg font-bold text-gray-900 mb-1 group-hover:text-blue-600 transition-colors">
+              {title}
+            </h3>
+          </Link>
+          <p className="text-xs xl:text-sm text-gray-500 mb-5 leading-relaxed">
+            {description}
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 xl:gap-3">
+            {products.map((product) => (
+              <Link
+                key={product.name}
+                href={product.href}
+                className="flex items-start gap-2.5 p-2.5 xl:p-3 rounded-lg hover:bg-gray-50 transition-colors group"
+                onClick={onClose}
+              >
+                <div
+                  className="w-7 h-7 xl:w-8 xl:h-8 rounded-lg flex items-center justify-center shrink-0 mt-0.5"
+                  style={{ backgroundColor: `${accentColor}12` }}
+                >
+                  {icon}
+                </div>
+                <div className="min-w-0">
+                  <div className="text-xs xl:text-sm font-semibold text-gray-900 group-hover:text-blue-600 transition-colors leading-tight">
+                    {product.name}
+                  </div>
+                  <div className="text-[10px] xl:text-xs text-gray-500 mt-0.5 leading-tight">
+                    {product.desc}
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+
+        {/* Right sidebar — Experience Centre */}
+        <div className="w-[180px] xl:w-[220px] bg-gray-50 p-4 xl:p-5 flex flex-col justify-center shrink-0 border-l border-gray-100">
+          <div className="rounded-xl overflow-hidden mb-3">
+            <div className="h-[100px] xl:h-[120px] bg-gradient-to-br from-gray-800 to-gray-900 flex items-center justify-center text-white">
+              <div className="text-center">
+                <div className="text-[9px] xl:text-[10px] uppercase tracking-wider opacity-70 mb-1">Experience</div>
+                <div className="text-sm font-bold">Centre</div>
+              </div>
+            </div>
+          </div>
+          <Link
+            href="#"
+            className="text-xs xl:text-sm font-semibold text-gray-900 flex items-center gap-1 hover:text-blue-600 transition-colors leading-tight"
+            onClick={onClose}
+          >
+            Visit Leucine&apos;s Experience Center
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="shrink-0">
+              <line x1="5" y1="12" x2="19" y2="12" />
+              <polyline points="12 5 19 12 12 19" />
+            </svg>
+          </Link>
+          <p className="text-[10px] xl:text-xs text-gray-500 mt-2 leading-relaxed">
+            Discover our integrated AI-powered platform that helps you plan, execute, &amp; optimize every batch
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+/* ──────────────────────────────────────────
+   HEADER
+   ────────────────────────────────────────── */
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-  const [activeTab, setActiveTab] = useState("quality");
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [mobileProductsOpen, setMobileProductsOpen] = useState(false);
+  const [mobileQualityOpen, setMobileQualityOpen] = useState(false);
+  const [mobileManufacturingOpen, setMobileManufacturingOpen] = useState(false);
   const dropdownTimeout = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   useEffect(() => {
@@ -48,7 +143,8 @@ export default function Header() {
     const handleResize = () => {
       if (window.innerWidth >= 1024) {
         setMobileOpen(false);
-        setMobileProductsOpen(false);
+        setMobileQualityOpen(false);
+        setMobileManufacturingOpen(false);
       }
     };
     window.addEventListener("resize", handleResize);
@@ -69,31 +165,8 @@ export default function Header() {
     dropdownTimeout.current = setTimeout(() => setActiveDropdown(null), 120);
   };
 
-  const tabContent = activeTab === "quality"
-    ? {
-        title: "Quality Management System",
-        description: "Accelerate investigations, enforce compliance, and automate validation with AI-driven tools.",
-        products: qualityProducts,
-        href: "/products/quality",
-        iconColor: "#3b82f6",
-      }
-    : {
-        title: "Laboratory Execution System",
-        description: "Enhance lab efficiency with automated environmental monitoring and intelligent instrument management.",
-        products: laboratoryProducts,
-        href: "/products/laboratory",
-        iconColor: "#10b981",
-      };
-
-  const tabs = [
-    { id: "quality", label: "QUALITY" },
-    { id: "laboratory", label: "LABORATORY" },
-  ];
-
   return (
     <>
-
-      {/* Main Header */}
       <header
         className={`sticky top-0 z-40 transition-all duration-300 ${
           scrolled
@@ -116,144 +189,102 @@ export default function Header() {
               </span>
             </Link>
 
-            {/* Desktop Nav */}
+            {/* ── Desktop Nav ── */}
             <div className="hidden lg:flex items-center gap-8 xl:gap-10">
 
-              {/* Products Dropdown */}
+              {/* Quality Dropdown */}
               <div
                 className="relative"
-                onMouseEnter={() => handleMouseEnter("products")}
+                onMouseEnter={() => handleMouseEnter("quality")}
                 onMouseLeave={handleMouseLeave}
               >
                 <Link
-                  href="/products"
-                  className="flex items-center gap-1.5 text-[15px] font-medium text-gray-700 hover:text-gray-900 transition-colors py-2"
+                  href="/products/quality"
+                  className={`flex items-center gap-1.5 text-[15px] font-medium transition-colors py-2 ${
+                    activeDropdown === "quality" ? "text-gray-900" : "text-gray-700 hover:text-gray-900"
+                  }`}
                 >
-                  Products
+                  Quality
                   <svg
                     width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"
-                    className={`transition-transform duration-200 ${activeDropdown === "products" ? "rotate-180" : ""}`}
+                    className={`transition-transform duration-200 ${activeDropdown === "quality" ? "rotate-180" : ""}`}
                   >
                     <polyline points="6 9 12 15 18 9" />
                   </svg>
                 </Link>
 
                 <AnimatePresence>
-                  {activeDropdown === "products" && (
+                  {activeDropdown === "quality" && (
                     <motion.div
                       initial={{ opacity: 0, y: 8, scale: 0.98 }}
                       animate={{ opacity: 1, y: 0, scale: 1 }}
                       exit={{ opacity: 0, y: 8, scale: 0.98 }}
                       transition={{ duration: 0.18, ease: "easeOut" }}
                       className="absolute top-full left-1/2 -translate-x-1/2 pt-2"
-                      style={{ width: "min(800px, calc(100vw - 48px))" }}
-                      onMouseEnter={() => handleMouseEnter("products")}
+                      style={{ width: "min(700px, calc(100vw - 48px))" }}
+                      onMouseEnter={() => handleMouseEnter("quality")}
                       onMouseLeave={handleMouseLeave}
                     >
-                      <div className="bg-white rounded-2xl shadow-2xl border border-gray-100 overflow-hidden">
-                        <div className="flex">
-                          {/* Left sidebar tabs */}
-                          <div className="w-[180px] xl:w-[200px] border-r border-gray-100 py-4 shrink-0">
-                            {tabs.map((tab) => (
-                              <button
-                                key={tab.id}
-                                onMouseEnter={() => setActiveTab(tab.id)}
-                                onClick={() => setActiveTab(tab.id)}
-                                className={`w-full flex items-center justify-between px-4 xl:px-5 py-3 text-xs font-semibold tracking-wide transition-all ${
-                                  activeTab === tab.id
-                                    ? "text-gray-900 bg-gray-50 border-l-2 border-blue-600"
-                                    : "text-gray-400 hover:text-gray-600 border-l-2 border-transparent"
-                                }`}
-                              >
-                                {tab.label}
-                                {activeTab === tab.id && (
-                                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                                    <line x1="5" y1="12" x2="19" y2="12" />
-                                    <polyline points="12 5 19 12 12 19" />
-                                  </svg>
-                                )}
-                              </button>
-                            ))}
-                          </div>
-
-                          {/* Center content */}
-                          <AnimatePresence mode="wait">
-                            <motion.div
-                              key={activeTab}
-                              initial={{ opacity: 0, x: 6 }}
-                              animate={{ opacity: 1, x: 0 }}
-                              exit={{ opacity: 0, x: -6 }}
-                              transition={{ duration: 0.15 }}
-                              className="flex-1 p-5 xl:p-6 min-w-0"
-                            >
-                              <Link href={tabContent.href} className="group">
-                                <h3 className="text-base xl:text-lg font-bold text-gray-900 mb-1 group-hover:text-blue-600 transition-colors">
-                                  {tabContent.title}
-                                </h3>
-                              </Link>
-                              <p className="text-xs xl:text-sm text-gray-500 mb-4 leading-relaxed">
-                                {tabContent.description}
-                              </p>
-                              <div className="grid grid-cols-2 gap-2 xl:gap-3">
-                                {tabContent.products.map((product) => (
-                                  <Link
-                                    key={product.name}
-                                    href={product.href}
-                                    className="flex items-start gap-2.5 p-2.5 xl:p-3 rounded-lg hover:bg-gray-50 transition-colors group"
-                                    onClick={() => setActiveDropdown(null)}
-                                  >
-                                    <div className="w-7 h-7 xl:w-8 xl:h-8 rounded-lg bg-blue-50 flex items-center justify-center shrink-0 mt-0.5">
-                                      {activeTab === "quality" ? <ProductIcon /> : <LabIcon />}
-                                    </div>
-                                    <div className="min-w-0">
-                                      <div className="text-xs xl:text-sm font-semibold text-gray-900 group-hover:text-blue-600 transition-colors leading-tight">
-                                        {product.name}
-                                      </div>
-                                      <div className="text-[10px] xl:text-xs text-gray-500 mt-0.5 leading-tight">
-                                        {product.desc}
-                                      </div>
-                                    </div>
-                                  </Link>
-                                ))}
-                              </div>
-                            </motion.div>
-                          </AnimatePresence>
-
-                          {/* Right sidebar */}
-                          <div className="w-[180px] xl:w-[220px] bg-gray-50 p-4 xl:p-5 flex flex-col justify-center shrink-0 border-l border-gray-100">
-                            <div className="rounded-xl overflow-hidden mb-3">
-                              <div className="h-[100px] xl:h-[120px] bg-gradient-to-br from-gray-800 to-gray-900 flex items-center justify-center text-white">
-                                <div className="text-center">
-                                  <div className="text-[9px] xl:text-[10px] uppercase tracking-wider opacity-70 mb-1">Experience</div>
-                                  <div className="text-sm font-bold">Centre</div>
-                                </div>
-                              </div>
-                            </div>
-                            <Link href="#" className="text-xs xl:text-sm font-semibold text-gray-900 flex items-center gap-1 hover:text-blue-600 transition-colors leading-tight">
-                              Visit Leucine&apos;s Experience Center
-                              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="shrink-0">
-                                <line x1="5" y1="12" x2="19" y2="12" />
-                                <polyline points="12 5 19 12 12 19" />
-                              </svg>
-                            </Link>
-                            <p className="text-[10px] xl:text-xs text-gray-500 mt-2 leading-relaxed">
-                              Discover our integrated AI-powered platform that helps you plan, execute, &amp; optimize every batch
-                            </p>
-                          </div>
-                        </div>
-                      </div>
+                      <DropdownPanel
+                        title="Quality Management System"
+                        description="Accelerate investigations, enforce compliance, and automate validation with AI-driven tools."
+                        href="/products/quality"
+                        products={qualityProducts}
+                        icon={<ProductIcon />}
+                        accentColor="#3b82f6"
+                        onClose={() => setActiveDropdown(null)}
+                      />
                     </motion.div>
                   )}
                 </AnimatePresence>
               </div>
 
-              {/* About Us */}
-              <Link
-                href="/about"
-                className="text-[15px] font-medium text-gray-700 hover:text-gray-900 transition-colors py-2"
+              {/* Manufacturing Dropdown */}
+              <div
+                className="relative"
+                onMouseEnter={() => handleMouseEnter("manufacturing")}
+                onMouseLeave={handleMouseLeave}
               >
-                About Us
-              </Link>
+                <Link
+                  href="/products/manufacturing"
+                  className={`flex items-center gap-1.5 text-[15px] font-medium transition-colors py-2 ${
+                    activeDropdown === "manufacturing" ? "text-gray-900" : "text-gray-700 hover:text-gray-900"
+                  }`}
+                >
+                  Manufacturing
+                  <svg
+                    width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"
+                    className={`transition-transform duration-200 ${activeDropdown === "manufacturing" ? "rotate-180" : ""}`}
+                  >
+                    <polyline points="6 9 12 15 18 9" />
+                  </svg>
+                </Link>
+
+                <AnimatePresence>
+                  {activeDropdown === "manufacturing" && (
+                    <motion.div
+                      initial={{ opacity: 0, y: 8, scale: 0.98 }}
+                      animate={{ opacity: 1, y: 0, scale: 1 }}
+                      exit={{ opacity: 0, y: 8, scale: 0.98 }}
+                      transition={{ duration: 0.18, ease: "easeOut" }}
+                      className="absolute top-full left-1/2 -translate-x-1/2 pt-2"
+                      style={{ width: "min(700px, calc(100vw - 48px))" }}
+                      onMouseEnter={() => handleMouseEnter("manufacturing")}
+                      onMouseLeave={handleMouseLeave}
+                    >
+                      <DropdownPanel
+                        title="Manufacturing Execution System"
+                        description="Optimize production with AI-powered batch execution, real-time OTIF tracking, and production logbooks."
+                        href="/products/manufacturing"
+                        products={manufacturingProducts}
+                        icon={<ManufacturingIcon />}
+                        accentColor="#6366f1"
+                        onClose={() => setActiveDropdown(null)}
+                      />
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
             </div>
 
             {/* Right side actions */}
@@ -298,7 +329,7 @@ export default function Header() {
           </nav>
         </div>
 
-        {/* Mobile Menu */}
+        {/* ── Mobile Menu ── */}
         <AnimatePresence>
           {mobileOpen && (
             <motion.div
@@ -310,91 +341,31 @@ export default function Header() {
             >
               <div className="px-4 sm:px-6 py-5 space-y-1 max-h-[calc(100svh-120px)] overflow-y-auto">
 
-                {/* Products accordion */}
-                <div>
-                  <button
-                    className="flex items-center justify-between w-full py-3 text-sm font-semibold text-gray-900"
-                    onClick={() => setMobileProductsOpen(!mobileProductsOpen)}
-                  >
-                    Products
-                    <svg
-                      width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"
-                      className={`transition-transform duration-200 ${mobileProductsOpen ? "rotate-180" : ""}`}
-                    >
-                      <polyline points="6 9 12 15 18 9" />
-                    </svg>
-                  </button>
+                {/* Quality accordion */}
+                <MobileAccordion
+                  label="Quality"
+                  isOpen={mobileQualityOpen}
+                  onToggle={() => setMobileQualityOpen(!mobileQualityOpen)}
+                  products={qualityProducts}
+                  icon={<ProductIcon />}
+                  viewAllHref="/products/quality"
+                  viewAllLabel="View all Quality products"
+                  onClose={() => setMobileOpen(false)}
+                />
 
-                  <AnimatePresence>
-                    {mobileProductsOpen && (
-                      <motion.div
-                        initial={{ height: 0, opacity: 0 }}
-                        animate={{ height: "auto", opacity: 1 }}
-                        exit={{ height: 0, opacity: 0 }}
-                        transition={{ duration: 0.2 }}
-                        className="overflow-hidden"
-                      >
-                        {/* Tabs */}
-                        <div className="flex gap-2 mb-3 px-1">
-                          {tabs.map((tab) => (
-                            <button
-                              key={tab.id}
-                              onClick={() => setActiveTab(tab.id)}
-                              className={`flex-1 py-2 text-xs font-semibold rounded-lg transition-all ${
-                                activeTab === tab.id
-                                  ? "bg-gray-900 text-white"
-                                  : "bg-gray-100 text-gray-500"
-                              }`}
-                            >
-                              {tab.label}
-                            </button>
-                          ))}
-                        </div>
-
-                        {/* Category link */}
-                        <Link
-                          href={tabContent.href}
-                          className="block px-3 py-2 mb-1 text-xs font-semibold text-blue-600"
-                          onClick={() => setMobileOpen(false)}
-                        >
-                          View all {activeTab === "quality" ? "Quality" : "Laboratory"} products →
-                        </Link>
-
-                        {/* Products list */}
-                        <div className="space-y-1 mb-3">
-                          {tabContent.products.map((product) => (
-                            <Link
-                              key={product.name}
-                              href={product.href}
-                              className="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-gray-50 transition-colors"
-                              onClick={() => setMobileOpen(false)}
-                            >
-                              <div className="w-7 h-7 rounded-lg bg-blue-50 flex items-center justify-center shrink-0">
-                                {activeTab === "quality" ? <ProductIcon /> : <LabIcon />}
-                              </div>
-                              <div>
-                                <div className="text-sm font-medium text-gray-900 leading-tight">{product.name}</div>
-                                <div className="text-xs text-gray-500 leading-tight">{product.desc}</div>
-                              </div>
-                            </Link>
-                          ))}
-                        </div>
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
-                </div>
-
-                {/* Divider */}
                 <div className="h-px bg-gray-100" />
 
-                {/* About Us */}
-                <Link
-                  href="/about"
-                  className="block py-3 text-sm font-semibold text-gray-900"
-                  onClick={() => setMobileOpen(false)}
-                >
-                  About Us
-                </Link>
+                {/* Manufacturing accordion */}
+                <MobileAccordion
+                  label="Manufacturing"
+                  isOpen={mobileManufacturingOpen}
+                  onToggle={() => setMobileManufacturingOpen(!mobileManufacturingOpen)}
+                  products={manufacturingProducts}
+                  icon={<ManufacturingIcon />}
+                  viewAllHref="/products/manufacturing"
+                  viewAllLabel="View all Manufacturing products"
+                  onClose={() => setMobileOpen(false)}
+                />
 
                 <div className="h-px bg-gray-100" />
 
@@ -418,5 +389,86 @@ export default function Header() {
         </AnimatePresence>
       </header>
     </>
+  );
+}
+
+/* ──────────────────────────────────────────
+   MOBILE ACCORDION
+   ────────────────────────────────────────── */
+function MobileAccordion({
+  label,
+  isOpen,
+  onToggle,
+  products,
+  icon,
+  viewAllHref,
+  viewAllLabel,
+  onClose,
+}: {
+  label: string;
+  isOpen: boolean;
+  onToggle: () => void;
+  products: typeof qualityProducts;
+  icon: React.ReactNode;
+  viewAllHref: string;
+  viewAllLabel: string;
+  onClose: () => void;
+}) {
+  return (
+    <div>
+      <button
+        className="flex items-center justify-between w-full py-3 text-sm font-semibold text-gray-900"
+        onClick={onToggle}
+      >
+        {label}
+        <svg
+          width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"
+          className={`transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`}
+        >
+          <polyline points="6 9 12 15 18 9" />
+        </svg>
+      </button>
+
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.2 }}
+            className="overflow-hidden"
+          >
+            {/* Category link */}
+            <Link
+              href={viewAllHref}
+              className="block px-3 py-2 mb-1 text-xs font-semibold text-blue-600"
+              onClick={onClose}
+            >
+              {viewAllLabel} →
+            </Link>
+
+            {/* Products list */}
+            <div className="space-y-1 mb-3">
+              {products.map((product) => (
+                <Link
+                  key={product.name}
+                  href={product.href}
+                  className="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-gray-50 transition-colors"
+                  onClick={onClose}
+                >
+                  <div className="w-7 h-7 rounded-lg bg-blue-50 flex items-center justify-center shrink-0">
+                    {icon}
+                  </div>
+                  <div>
+                    <div className="text-sm font-medium text-gray-900 leading-tight">{product.name}</div>
+                    <div className="text-xs text-gray-500 leading-tight">{product.desc}</div>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
   );
 }

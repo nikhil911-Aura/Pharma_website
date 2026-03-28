@@ -39,17 +39,17 @@ const categories = [
     ),
   },
   {
-    id: "laboratory",
-    title: "Laboratory Execution System",
-    subtitle: "10x LES",
+    id: "manufacturing",
+    title: "Manufacturing Execution System",
+    subtitle: "10x MES",
     description:
-      "Enhance lab efficiency with automated environmental monitoring and intelligent instrument management.",
-    href: "/products/laboratory",
-    color: "emerald",
+      "Optimize production with AI-powered batch execution, real-time OTIF tracking, and production logbooks.",
+    href: "/products/manufacturing",
+    color: "indigo",
     products: [
-      "Environmental Monitoring",
-      "Instrument Logbooks",
-      "QC Planning",
+      "Batch Execution",
+      "Batch Intelligence",
+      "Production Logbooks",
     ],
     icon: (
       <svg
@@ -62,8 +62,10 @@ const categories = [
         strokeLinecap="round"
         strokeLinejoin="round"
       >
-        <path d="M9 3h6v7l4 8H5l4-8V3z" />
-        <path d="M9 3h6" />
+        <rect x="2" y="3" width="20" height="18" rx="2" />
+        <path d="M8 7v10" />
+        <path d="M12 7v10" />
+        <path d="M16 7v10" />
       </svg>
     ),
   },
@@ -94,8 +96,8 @@ export default function ProductsPage() {
               Our Products
             </h1>
             <p className="mt-6 text-lg md:text-xl text-gray-500 max-w-3xl mx-auto leading-relaxed">
-              AI-powered platform solutions for pharma quality management and
-              laboratory operations.
+              AI-powered platform solutions for pharma manufacturing execution and
+              quality management.
             </p>
           </motion.div>
         </div>
@@ -123,7 +125,7 @@ export default function ProductsPage() {
                       className={`w-12 h-12 rounded-xl flex items-center justify-center ${
                         category.color === "blue"
                           ? "bg-blue-50 text-blue-600"
-                          : "bg-emerald-50 text-emerald-600"
+                          : "bg-indigo-50 text-indigo-600"
                       }`}
                     >
                       {category.icon}
@@ -132,7 +134,7 @@ export default function ProductsPage() {
                       className={`text-xs font-semibold uppercase tracking-wider ${
                         category.color === "blue"
                           ? "text-blue-600"
-                          : "text-emerald-600"
+                          : "text-indigo-600"
                       }`}
                     >
                       {category.subtitle}
