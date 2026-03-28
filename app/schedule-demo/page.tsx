@@ -93,7 +93,7 @@ export default function ScheduleDemoPage() {
           <h1 className="text-3xl sm:text-4xl lg:text-[44px] font-extrabold leading-[1.12] tracking-tight mb-6">
             Experience{" "}
             <span className="bg-gradient-to-r from-blue-400 via-sky-400 to-blue-500 bg-clip-text text-transparent">
-              SYNCOMX Core
+              SYNCOMX
             </span>{" "}
             <span className="inline-block relative">
               <svg className="absolute -top-1 -right-5 w-4 h-4 text-purple-400" viewBox="0 0 24 24" fill="currentColor">

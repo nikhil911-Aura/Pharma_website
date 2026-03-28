@@ -80,7 +80,6 @@ export default function ProductDetailPage({
             backgroundSize: "24px 24px",
           }}
         />
-        <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-500" />
 
         <div className="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 md:pt-28 pb-10 md:pb-14">
           <motion.div

@@ -153,7 +153,7 @@ export function CTASection() {
             </h2>
             <div className="mt-8">
               <Link
-                href="#"
+                href="/schedule-demo"
                 className="inline-flex items-center gap-2.5 px-7 py-3.5 bg-gray-900 text-white rounded-full text-sm font-semibold hover:bg-gray-800 transition-all duration-300 group shadow-lg shadow-gray-900/20"
               >
                 Book Strategy Session
