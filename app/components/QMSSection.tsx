@@ -138,7 +138,7 @@ export default function QMSSection() {
                       <h4 className="text-xs font-semibold text-gray-700 mb-2">
                         Root Cause Analysis
                       </h4>
-                      <div className="grid grid-cols-6 gap-2">
+                <div className="grid grid-cols-3 sm:grid-cols-6 gap-1.5 sm:gap-2">
                         {[
                           "MAN",
                           "Machine",

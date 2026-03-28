@@ -34,7 +34,7 @@ export function AIInvestigatorHeroDashboard() {
       {/* Main content */}
       <div className="flex min-h-[380px]">
         {/* Sidebar */}
-        <div className="w-12 bg-white border-r border-gray-100 flex flex-col items-center gap-4 pt-4">
+        <div className="hidden sm:flex w-12 bg-white border-r border-gray-100 flex-col items-center gap-4 pt-4 shrink-0">
           {["📊", "📁", "⏱", "📋", "📉", "💡", "👥", "⚙️"].map((icon, i) => (
             <div key={i} className="w-7 h-7 rounded-lg flex items-center justify-center text-xs hover:bg-gray-100 cursor-pointer">{icon}</div>
           ))}
@@ -160,7 +160,7 @@ export function CleaningValidationHeroDashboard() {
       {/* Content listing */}
       <div className="flex min-h-[350px]">
         {/* Sidebar */}
-        <div className="w-12 bg-white border-r border-gray-100 flex flex-col items-center gap-4 pt-4">
+        <div className="hidden sm:flex w-12 bg-white border-r border-gray-100 flex-col items-center gap-4 pt-4 shrink-0">
           {["📋", "📊", "🔬", "📁", "⚗️", "📄", "🗂"].map((icon, i) => (
             <div key={i} className="w-7 h-7 rounded-lg flex items-center justify-center text-xs hover:bg-gray-100 cursor-pointer">{icon}</div>
           ))}
@@ -262,7 +262,7 @@ export function EnvironmentalMonitoringHeroDashboard() {
       {/* Content */}
       <div className="flex min-h-[380px]">
         {/* Sidebar */}
-        <div className="w-12 bg-white border-r border-gray-100 flex flex-col items-center gap-4 pt-4">
+        <div className="hidden sm:flex w-12 bg-white border-r border-gray-100 flex-col items-center gap-4 pt-4 shrink-0">
           {["📋", "📊", "🔬", "📁", "⚗️", "📄"].map((icon, i) => (
             <div key={i} className="w-7 h-7 rounded-lg flex items-center justify-center text-xs hover:bg-gray-100 cursor-pointer">{icon}</div>
           ))}
@@ -378,7 +378,7 @@ export function InstrumentLogbooksHeroDashboard() {
       {/* Content */}
       <div className="flex min-h-[380px]">
         {/* Sidebar */}
-        <div className="w-12 bg-white border-r border-gray-100 flex flex-col items-center gap-4 pt-4">
+        <div className="hidden sm:flex w-12 bg-white border-r border-gray-100 flex-col items-center gap-4 pt-4 shrink-0">
           {["📋", "📊", "🔬", "📁", "⚗️", "📄"].map((icon, i) => (
             <div key={i} className="w-7 h-7 rounded-lg flex items-center justify-center text-xs hover:bg-gray-100 cursor-pointer">{icon}</div>
           ))}
@@ -809,7 +809,8 @@ export function BatchExecutionHeroDashboard() {
         </div>
       </div>
       <div className="flex min-h-[380px]">
-        <div className="w-12 bg-white border-r border-gray-100 flex flex-col items-center gap-4 pt-4">
+        {/* Sidebar */}
+        <div className="hidden sm:flex w-12 bg-white border-r border-gray-100 flex-col items-center gap-4 pt-4 shrink-0">
           {["📊", "📁", "📝", "🔍", "⚡", "⚙️", "👥"].map((icon, i) => (
             <div key={i} className="w-7 h-7 rounded-lg flex items-center justify-center text-xs hover:bg-gray-100 cursor-pointer">{icon}</div>
           ))}
@@ -890,7 +891,8 @@ export function BatchIntelligenceHeroDashboard() {
         </div>
       </div>
       <div className="flex min-h-[380px]">
-        <div className="w-12 bg-white border-r border-gray-100 flex flex-col items-center gap-4 pt-4">
+        {/* Sidebar */}
+        <div className="hidden sm:flex w-12 bg-white border-r border-gray-100 flex-col items-center gap-4 pt-4 shrink-0">
           {["📊", "📁", "🔍", "📋", "⚡", "👥"].map((icon, i) => (
             <div key={i} className="w-7 h-7 rounded-lg flex items-center justify-center text-xs hover:bg-gray-100 cursor-pointer">{icon}</div>
           ))}
@@ -963,14 +965,16 @@ export function ProductionLogbooksHeroDashboard() {
         </div>
       </div>
       <div className="flex min-h-[380px]">
-        <div className="w-12 bg-white border-r border-gray-100 flex flex-col items-center gap-4 pt-4">
+        {/* Sidebar */}
+        <div className="hidden sm:flex w-12 bg-white border-r border-gray-100 flex-col items-center gap-4 pt-4 shrink-0">
           {["📋", "📊", "🔧", "📁", "🔔", "⚙️"].map((icon, i) => (
             <div key={i} className="w-7 h-7 rounded-lg flex items-center justify-center text-xs hover:bg-gray-100 cursor-pointer">{icon}</div>
           ))}
         </div>
-        <div className="flex-1 bg-white p-5">
-          <div className="text-sm font-semibold text-gray-800 mb-4">Blister Pack Machine Log</div>
-          <table className="w-full text-[10px]">
+        <div className="flex-1 bg-white p-5 overflow-x-auto">
+          <div className="text-sm font-semibold text-gray-800 mb-4 font-sans">Machine Log</div>
+          <div className="min-w-[600px]">
+            <table className="w-full text-[10px]">
             <thead>
               <tr className="text-gray-400 text-left border-b border-gray-100">
                 <th className="pb-2 pr-3 font-medium">STATUS</th>
@@ -1004,6 +1008,7 @@ export function ProductionLogbooksHeroDashboard() {
         </div>
       </div>
     </div>
+  </div>
   );
 }
 

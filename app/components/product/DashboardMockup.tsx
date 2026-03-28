@@ -39,7 +39,7 @@ export function AIInvestigatorMockup() {
       {/* Sidebar + content */}
       <div className="flex">
         {/* Sidebar icons */}
-        <div className="w-10 bg-gray-50 border-r border-gray-100 flex flex-col items-center gap-3 py-4">
+        <div className="hidden sm:flex w-10 bg-gray-50 border-r border-gray-100 flex-col items-center gap-3 py-4 shrink-0">
           {["📊", "📁", "📝", "🔍", "⚡", "💬", "👥"].map((icon, i) => (
             <div key={i} className={`w-6 h-6 rounded flex items-center justify-center text-[10px] ${i === 0 ? "bg-blue-50" : ""}`}>
               {icon}
@@ -54,16 +54,15 @@ export function AIInvestigatorMockup() {
           </div>
           <div className="text-xs text-gray-500 mb-4">Root Cause Analysis</div>
           {/* 6M Grid */}
-          <div className="grid grid-cols-3 gap-2">
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
             {fishboneItems.map((item) => (
-              <div key={item.label} className="border border-gray-100 rounded-lg p-3 hover:border-blue-200 transition-colors">
-                <div className="text-lg mb-1">{item.icon}</div>
-                <div className="text-xs font-semibold text-gray-900">{item.label}</div>
+              <div key={item.label} className="border border-gray-100 rounded-lg p-2 sm:p-3 hover:border-blue-200 transition-colors">
+                <div className="text-base sm:text-lg mb-1">{item.icon}</div>
+                <div className="text-[10px] sm:text-xs font-semibold text-gray-900">{item.label}</div>
                 <div className="flex items-center gap-1 mt-1">
                   <div className="w-1.5 h-1.5 rounded-full bg-blue-500" />
-                  <span className="text-[9px] text-gray-500">SYNCOMX AI-Generated {item.count}</span>
+                  <span className="text-[8px] sm:text-[9px] text-gray-500">AI-Generated {item.count}</span>
                 </div>
-                <div className="text-[9px] text-blue-600 mt-1 cursor-pointer">View & Analyze ↗</div>
               </div>
             ))}
           </div>
@@ -97,16 +96,16 @@ export function FDATrackerMockup() {
       </div>
       {/* Content */}
       <div className="p-4">
-        <div className="grid grid-cols-3 gap-3 mb-4">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-4">
           {[
             { label: "Total 483s", value: "2,847", trend: "+12%" },
             { label: "Warning Letters", value: "156", trend: "-8%" },
-            { label: "Active Investigations", value: "423", trend: "+5%" },
+            { label: "Active Case", value: "423", trend: "+5%" },
           ].map((stat) => (
-            <div key={stat.label} className="bg-gray-50 rounded-lg p-3">
-              <div className="text-[9px] text-gray-500 uppercase tracking-wide">{stat.label}</div>
-              <div className="text-lg font-bold text-gray-900 mt-1">{stat.value}</div>
-              <div className={`text-[9px] mt-0.5 ${stat.trend.startsWith("+") ? "text-green-600" : "text-red-500"}`}>{stat.trend} vs last year</div>
+            <div key={stat.label} className="bg-gray-50 rounded-lg p-2.5 sm:p-3">
+              <div className="text-[8px] sm:text-[9px] text-gray-500 uppercase tracking-wide">{stat.label}</div>
+              <div className="text-base sm:text-lg font-bold text-gray-900 mt-0.5 sm:mt-1">{stat.value}</div>
+              <div className={`text-[8px] sm:text-[9px] mt-0.5 ${stat.trend.startsWith("+") ? "text-green-600" : "text-red-500"}`}>{stat.trend}</div>
             </div>
           ))}
         </div>
@@ -154,7 +153,7 @@ export function CleaningValidationMockup() {
       </div>
       {/* Sidebar + content */}
       <div className="flex">
-        <div className="w-10 bg-gray-50 border-r border-gray-100 flex flex-col items-center gap-3 py-4">
+        <div className="hidden sm:flex w-10 bg-gray-50 border-r border-gray-100 flex-col items-center gap-3 py-4 shrink-0">
           {["📊", "📁", "📝", "🔍", "⚡", "👥"].map((icon, i) => (
             <div key={i} className={`w-6 h-6 rounded flex items-center justify-center text-[10px] ${i === 2 ? "bg-blue-50" : ""}`}>
               {icon}
@@ -163,19 +162,16 @@ export function CleaningValidationMockup() {
         </div>
         <div className="flex-1 p-4">
           <div className="text-sm font-semibold text-gray-900 mb-3">Reports</div>
-          <div className="grid grid-cols-2 gap-2">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
             {[
-              { title: "Production Limits", desc: "View how Worst-case Rankings are determined on the basis of different selection rules and scores." },
-              { title: "Equipment Limits", desc: "View how limits are calculated for Equipment on the basis of various combinations." },
-              { title: "Worst Case Rankings", desc: "View how Worst-case Rankings are determined on the basis of different selection rules." },
-              { title: "Cleaning Agent Limits", desc: "View how limits are calculated for Cleaning Agents on the basis of various combinations." },
-              { title: "Procedure Residue Trending", desc: "See how residue has been trending over time for a Cleaning Procedure." },
-              { title: "Location-wise Trending", desc: "See how residue on Equipment Locations is trending over time." },
+              { title: "Production Limits", desc: "Worst-case Rankings and selection rules." },
+              { title: "Equipment Limits", desc: "Calculated based on various combinations." },
+              { title: "Worst Case Rankings", desc: "Determined via scientific scoring." },
+              { title: "Procedure Residue", desc: "Trending over time for procedures." },
             ].map((item) => (
-              <div key={item.title} className="bg-gray-50 rounded-lg p-3 border-l-2 border-cyan-400">
-                <div className="text-xs font-semibold text-gray-900">{item.title}</div>
-                <div className="text-[9px] text-gray-500 mt-1 leading-snug">{item.desc}</div>
-                <div className="text-[9px] text-cyan-600 mt-1.5 cursor-pointer">View</div>
+              <div key={item.title} className="bg-gray-50 rounded-lg p-2.5 sm:p-3 border-l-2 border-cyan-400">
+                <div className="text-[10px] sm:text-xs font-semibold text-gray-900">{item.title}</div>
+                <div className="text-[8px] sm:text-[9px] text-gray-500 mt-0.5 leading-snug">{item.desc}</div>
               </div>
             ))}
           </div>
@@ -207,7 +203,7 @@ export function EnvironmentalMonitoringMockup() {
         </div>
       </div>
       <div className="flex">
-        <div className="w-10 bg-gray-50 border-r border-gray-100 flex flex-col items-center gap-3 py-4">
+        <div className="hidden sm:flex w-10 bg-gray-50 border-r border-gray-100 flex-col items-center gap-3 py-4 shrink-0">
           {["🏠", "📋", "🧪", "📊", "⚠️", "📥"].map((icon, i) => (
             <div key={i} className={`w-6 h-6 rounded flex items-center justify-center text-[10px] ${i === 2 ? "bg-emerald-50" : ""}`}>
               {icon}
@@ -274,7 +270,7 @@ export function InstrumentLogbooksMockup() {
         </div>
       </div>
       <div className="flex">
-        <div className="w-10 bg-gray-50 border-r border-gray-100 flex flex-col items-center gap-3 py-4">
+        <div className="hidden sm:flex w-10 bg-gray-50 border-r border-gray-100 flex flex-col items-center gap-3 py-4 shrink-0">
           {["🏠", "📋", "🔧", "📊", "🔔", "⚙️"].map((icon, i) => (
             <div key={i} className={`w-6 h-6 rounded flex items-center justify-center text-[10px] ${i === 2 ? "bg-emerald-50" : ""}`}>
               {icon}
@@ -297,26 +293,27 @@ export function InstrumentLogbooksMockup() {
             ))}
           </div>
           {/* Instrument list */}
-          <div className="border border-gray-100 rounded-lg overflow-hidden">
-            <div className="grid grid-cols-4 bg-gray-50 text-[9px] font-semibold text-gray-600 uppercase tracking-wide">
-              <div className="px-2 py-2">Instrument</div>
-              <div className="px-2 py-2">Last Calibrated</div>
-              <div className="px-2 py-2">Next Due</div>
-              <div className="px-2 py-2">Status</div>
-            </div>
-            {[
-              { name: "HPLC-001", last: "2025-09-15", next: "2026-03-15", status: "Calibrated", sColor: "text-green-600" },
-              { name: "pH Meter-003", last: "2025-11-20", next: "2026-02-20", status: "Due Soon", sColor: "text-amber-600" },
-              { name: "Balance-007", last: "2025-08-10", next: "2026-02-10", status: "Overdue", sColor: "text-red-600" },
-              { name: "Spectro-012", last: "2025-12-01", next: "2026-06-01", status: "Calibrated", sColor: "text-green-600" },
-            ].map((row, i) => (
-              <div key={i} className="grid grid-cols-4 text-[10px] border-t border-gray-50">
-                <div className="px-2 py-2 font-medium text-gray-900">{row.name}</div>
-                <div className="px-2 py-2 text-gray-500">{row.last}</div>
-                <div className="px-2 py-2 text-gray-500">{row.next}</div>
-                <div className={`px-2 py-2 font-medium ${row.sColor}`}>{row.status}</div>
+          <div className="border border-gray-100 rounded-lg overflow-x-auto">
+            <div className="min-w-[400px]">
+              <div className="grid grid-cols-4 bg-gray-50 text-[9px] font-semibold text-gray-600 uppercase tracking-wide">
+                <div className="px-2 py-2">Instrument</div>
+                <div className="px-2 py-2">Last Cal.</div>
+                <div className="px-2 py-2">Next Due</div>
+                <div className="px-2 py-2">Status</div>
               </div>
-            ))}
+              {[
+                { name: "HPLC-001", last: "2025-09", next: "2026-03", status: "Calibrated", sColor: "text-green-600" },
+                { name: "Meter-003", last: "2025-11", next: "2026-02", status: "Due Soon", sColor: "text-amber-600" },
+                { name: "Bal-007", last: "2025-08", next: "2026-02", status: "Overdue", sColor: "text-red-600" },
+              ].map((row, i) => (
+                <div key={i} className="grid grid-cols-4 text-[10px] border-t border-gray-50">
+                  <div className="px-2 py-2 font-medium text-gray-900">{row.name}</div>
+                  <div className="px-2 py-2 text-gray-500">{row.last}</div>
+                  <div className="px-2 py-2 text-gray-500">{row.next}</div>
+                  <div className={`px-2 py-2 font-medium ${row.sColor}`}>{row.status}</div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>
@@ -346,9 +343,9 @@ export function BatchExecutionMockup() {
         </div>
       </div>
       <div className="flex">
-        <div className="w-10 bg-gray-50 border-r border-gray-100 flex flex-col items-center gap-3 py-4">
-          {["📊", "📁", "📝", "🔍", "⚡", "👥"].map((icon, i) => (
-            <div key={i} className={`w-6 h-6 rounded flex items-center justify-center text-[10px] ${i === 0 ? "bg-indigo-50" : ""}`}>
+        <div className="hidden sm:flex w-10 bg-gray-50 border-r border-gray-100 flex-col items-center gap-3 py-4 shrink-0">
+          {["🏠", "📦", "⚙️", "📋", "⏱", "✅"].map((icon, i) => (
+            <div key={i} className={`w-6 h-6 rounded flex items-center justify-center text-[10px] ${i === 2 ? "bg-blue-50" : ""}`}>
               {icon}
             </div>
           ))}
@@ -412,18 +409,18 @@ export function BatchIntelligenceMockup() {
         </div>
       </div>
       <div className="p-4">
-        <div className="text-sm font-semibold text-gray-900 mb-3">Production Intelligence Dashboard</div>
-        <div className="grid grid-cols-4 gap-2 mb-4">
+        <div className="text-sm font-semibold text-gray-900 mb-3 font-sans">Production Intelligence</div>
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-4">
           {[
-            { label: "Current OTIF", value: "94.5%", trend: "+5.2%", tColor: "text-green-600" },
-            { label: "Avg Delay", value: "1.8 days", trend: "-0.2d", tColor: "text-green-600" },
-            { label: "Active Batches", value: "23", trend: "+3", tColor: "text-blue-600" },
-            { label: "At Risk", value: "4", trend: "-1", tColor: "text-amber-600" },
+            { label: "OTIF", value: "94.5%", trend: "+5.2%", tColor: "text-green-600" },
+            { label: "Delay", value: "1.8d", trend: "-0.2d", tColor: "text-green-600" },
+            { label: "Active", value: "23", trend: "+3", tColor: "text-blue-600" },
+            { label: "Risk", value: "4", trend: "-1", tColor: "text-amber-600" },
           ].map((stat) => (
-            <div key={stat.label} className="bg-gray-50 rounded-lg p-3">
-              <div className="text-[9px] text-gray-500 uppercase tracking-wide">{stat.label}</div>
-              <div className="text-lg font-bold text-gray-900 mt-1">{stat.value}</div>
-              <div className={`text-[9px] mt-0.5 ${stat.tColor}`}>{stat.trend} vs last month</div>
+            <div key={stat.label} className="bg-gray-50 rounded-lg p-2 sm:p-3">
+              <div className="text-[8px] sm:text-[9px] text-gray-500 uppercase tracking-wide">{stat.label}</div>
+              <div className="text-sm sm:text-lg font-bold text-gray-900 mt-1">{stat.value}</div>
+              <div className={`text-[8px] sm:text-[9px] mt-0.5 ${stat.tColor}`}>{stat.trend}</div>
             </div>
           ))}
         </div>
@@ -463,39 +460,41 @@ export function ProductionLogbooksMockup() {
         </div>
       </div>
       <div className="flex">
-        <div className="w-10 bg-gray-50 border-r border-gray-100 flex flex-col items-center gap-3 py-4">
-          {["🏠", "📋", "🔧", "📊", "🔔", "⚙️"].map((icon, i) => (
-            <div key={i} className={`w-6 h-6 rounded flex items-center justify-center text-[10px] ${i === 1 ? "bg-indigo-50" : ""}`}>
+        <div className="hidden sm:flex w-10 bg-gray-50 border-r border-gray-100 flex-col items-center gap-3 py-4 shrink-0">
+          {["🏠", "📖", "📝", "📋", "🔍", "📂"].map((icon, i) => (
+            <div key={i} className={`w-6 h-6 rounded flex items-center justify-center text-[10px] ${i === 1 ? "bg-blue-50" : ""}`}>
               {icon}
             </div>
           ))}
         </div>
         <div className="flex-1 p-4">
-          <div className="text-sm font-semibold text-gray-900 mb-3">Blister Pack Machine Log</div>
-          <div className="border border-gray-100 rounded-lg overflow-hidden">
-            <div className="grid grid-cols-5 bg-gray-50 text-[9px] font-semibold text-gray-600 uppercase tracking-wide">
-              <div className="px-2 py-2">Status</div>
-              <div className="px-2 py-2">Job ID</div>
-              <div className="px-2 py-2">Started By</div>
-              <div className="px-2 py-2">Start Date</div>
-              <div className="px-2 py-2">Action</div>
-            </div>
-            {[
-              { status: "Completed", id: "87543", user: "J. Doe", date: "2026-03-20", sColor: "bg-green-50 text-green-600" },
-              { status: "In Progress", id: "74785", user: "J. Smith", date: "2026-03-22", sColor: "bg-blue-50 text-blue-600" },
-              { status: "Completed", id: "78500", user: "R. Brown", date: "2026-03-18", sColor: "bg-green-50 text-green-600" },
-              { status: "Completed", id: "39665", user: "E. Davis", date: "2026-03-15", sColor: "bg-green-50 text-green-600" },
-            ].map((row, i) => (
-              <div key={i} className="grid grid-cols-5 text-[10px] border-t border-gray-50">
-                <div className="px-2 py-2">
-                  <span className={`px-1.5 py-0.5 rounded text-[8px] font-medium ${row.sColor}`}>{row.status}</span>
-                </div>
-                <div className="px-2 py-2 font-medium text-gray-900">{row.id}</div>
-                <div className="px-2 py-2 text-gray-500">{row.user}</div>
-                <div className="px-2 py-2 text-gray-500">{row.date}</div>
-                <div className="px-2 py-2 text-indigo-600 cursor-pointer">View →</div>
+          <div className="text-sm font-semibold text-gray-900 mb-3 font-sans">Machine Log</div>
+          <div className="border border-gray-100 rounded-lg overflow-x-auto">
+            <div className="min-w-[450px]">
+              <div className="grid grid-cols-5 bg-gray-50 text-[9px] font-semibold text-gray-600 uppercase tracking-wide">
+                <div className="px-2 py-2">Status</div>
+                <div className="px-2 py-2">Job ID</div>
+                <div className="px-2 py-2">Started By</div>
+                <div className="px-2 py-2">Start Date</div>
+                <div className="px-2 py-2">Action</div>
               </div>
-            ))}
+              {[
+                { status: "Completed", id: "87543", user: "J. Doe", date: "2026-03-20", sColor: "bg-green-50 text-green-600" },
+                { status: "In Progress", id: "74785", user: "J. Smith", date: "2026-03-22", sColor: "bg-blue-50 text-blue-600" },
+                { status: "Completed", id: "78500", user: "R. Brown", date: "2026-03-18", sColor: "bg-green-50 text-green-600" },
+                { status: "Completed", id: "39665", user: "E. Davis", date: "2026-03-15", sColor: "bg-green-50 text-green-600" },
+              ].map((row, i) => (
+                <div key={i} className="grid grid-cols-5 text-[10px] border-t border-gray-50">
+                  <div className="px-2 py-2">
+                    <span className={`px-1.5 py-0.5 rounded text-[8px] font-medium ${row.sColor}`}>{row.status}</span>
+                  </div>
+                  <div className="px-2 py-2 font-medium text-gray-900">{row.id}</div>
+                  <div className="px-2 py-2 text-gray-500">{row.user}</div>
+                  <div className="px-2 py-2 text-gray-500">{row.date}</div>
+                  <div className="px-2 py-2 text-blue-600 cursor-pointer">View →</div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>

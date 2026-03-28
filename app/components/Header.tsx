@@ -309,7 +309,7 @@ export default function Header() {
                 href="/schedule-demo"
                 className="hidden md:flex items-center gap-2 px-4 xl:px-5 py-2 xl:py-2.5 rounded-full border border-gray-900 text-sm font-medium text-gray-900 hover:bg-gray-900 hover:text-white transition-all duration-300 group whitespace-nowrap"
               >
-                Schedule Your Tour
+                Schedule Your Demo
                 <svg
                   width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"
                   className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
@@ -388,7 +388,7 @@ export default function Header() {
                 <div className="pt-2 pb-1">
                   <Link
                     href="/schedule-demo"
-                    className="flex items-center justify-center gap-2 w-full px-5 py-3 rounded-full bg-gray-900 text-white text-sm font-semibold"
+                    className="flex items-center justify-center gap-2 w-full px-5 py-2.5 rounded-full bg-gray-900 text-white text-sm font-semibold"
                     onClick={() => setMobileOpen(false)}
                   >
                     Schedule Your Tour

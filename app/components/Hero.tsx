@@ -37,7 +37,7 @@ export default function Hero() {
           transition={{ duration: 0.7, ease: "easeOut" }}
           className="text-center max-w-5xl mx-auto"
         >
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[5.2rem] font-extrabold text-gray-900 leading-[1.06] tracking-[-0.02em]">
+          <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[5.2rem] font-extrabold text-gray-900 leading-[1.1] tracking-[-0.02em]">
             Simplifying
             <br className="hidden sm:block" />
             <span className="sm:hidden"> </span>
@@ -57,7 +57,7 @@ export default function Hero() {
           >
             <Link
               href="/schedule-demo"
-              className="inline-flex items-center gap-2.5 px-6 sm:px-8 py-3.5 sm:py-4 bg-gray-900 text-white rounded-full text-sm sm:text-base font-semibold hover:bg-gray-800 transition-all duration-300 group shadow-xl shadow-gray-900/25 hover:shadow-gray-900/35 hover:scale-[1.02] active:scale-[0.98]"
+              className="inline-flex items-center gap-2.5 px-6 py-3 sm:px-8 sm:py-4 bg-gray-900 text-white rounded-full text-sm sm:text-base font-semibold hover:bg-gray-800 transition-all duration-300 group shadow-xl shadow-gray-900/25 hover:shadow-gray-900/35 hover:scale-[1.02] active:scale-[0.98]"
             >
               Request Your Tour
               <svg
@@ -246,7 +246,7 @@ function ManufacturingDashboard() {
                 ["STATUS", "Running", true],
                 ["TEMP & PRESSURE", "75°C, 1500 psi", false],
                 ["OPERATING RPM", "1200 RPM", false],
-                ["OUTPUT RATE", "500 Tablets/min", false],
+                ["OUTPUT RATE", "500 bpm", false],
               ].map(([label, value, isStatus]) => (
                 <div key={label as string} className="flex justify-between items-center gap-2">
                   <span className="text-gray-400 truncate">{label as string}</span>

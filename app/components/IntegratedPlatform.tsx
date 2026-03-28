@@ -78,7 +78,7 @@ export default function IntegratedPlatform() {
           className="bg-gray-50 rounded-2xl p-2 md:p-3"
         >
           {/* Tab buttons */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-3 mb-0">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-1 md:gap-3 mb-0">
             {tabs.map((tab) => (
               <button
                 key={tab.id}
@@ -214,7 +214,7 @@ function DashboardPreview({ tab }: { tab: (typeof tabs)[number] }) {
                     <div className="flex justify-between"><span className="text-gray-400">CURRENT STATUS</span><span className="px-1.5 py-0.5 bg-green-50 text-green-600 rounded text-[10px] font-medium">Running</span></div>
                     <div className="flex justify-between"><span className="text-gray-400">TEMPERATURE &amp; PRESSURE</span><span className="font-medium text-gray-700">75°C, 1500 psi</span></div>
                     <div className="flex justify-between"><span className="text-gray-400">OPERATING RPM</span><span className="font-medium text-gray-700">1200 RPM</span></div>
-                    <div className="flex justify-between"><span className="text-gray-400">OUTPUT RATE</span><span className="font-medium text-gray-700">500 Tablets/min</span></div>
+                    <div className="flex justify-between"><span className="text-gray-400">OUTPUT RATE</span><span className="font-medium text-gray-700">500 bpm</span></div>
                   </div>
                 </div>
 

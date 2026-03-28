@@ -36,7 +36,7 @@ export default function ProductHero({
           transition={{ duration: 0.7, ease: "easeOut" }}
           className="text-center max-w-4xl mx-auto"
         >
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[64px] font-extrabold text-gray-900 leading-[1.1] tracking-tight">
+          <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-[64px] font-extrabold text-gray-900 leading-[1.1] tracking-tight">
             {title}
           </h1>
           <p className="mt-6 text-lg md:text-xl text-gray-500 max-w-3xl mx-auto leading-relaxed">
@@ -45,7 +45,7 @@ export default function ProductHero({
           <div className="mt-10">
             <Link
               href={ctaHref}
-              className="inline-flex items-center gap-2.5 px-8 py-4 bg-gray-900 text-white rounded-full text-sm font-semibold hover:bg-gray-800 transition-all duration-300 group shadow-xl shadow-gray-900/15"
+              className="inline-flex items-center gap-2.5 px-6 py-3.5 sm:px-8 sm:py-4 bg-gray-900 text-white rounded-full text-sm font-semibold hover:bg-gray-800 transition-all duration-300 group shadow-xl shadow-gray-900/15"
             >
               {ctaText}
               <svg

@@ -145,7 +145,7 @@ export function CTASection() {
           <div>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight tracking-tight">
               Experience{" "}
-              <span className="text-blue-600">SYNCOMX OS</span>
+              <span className="text-blue-600">SYNCOMX</span>
               <br />
               Intelligent life sciences
               <br />
