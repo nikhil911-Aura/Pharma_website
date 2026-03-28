@@ -101,7 +101,7 @@ export default function Footer() {
       {/* Bottom Bar */}
       <div className="border-t border-white/10">
         <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-sm text-gray-500">© Copyright 2026 SYNCOMX</p>
+          <p className="text-sm hover:text-white text-gray-500">© Copyright 2026 SYNCOMX</p>
           <div className="flex items-center gap-5">
             {/* YouTube */}
             <Link

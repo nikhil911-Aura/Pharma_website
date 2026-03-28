@@ -22,7 +22,7 @@ export function AIInvestigatorMockup() {
       <div className="flex items-center justify-between px-4 py-3 bg-slate-800 text-white">
         <div className="flex items-center gap-2">
           <Image
-            src="/logo.png"
+            src="/logo1.png"
             alt="SYNCOMX"
             width={20}
             height={20}
@@ -138,7 +138,7 @@ export function CleaningValidationMockup() {
       <div className="flex items-center justify-between px-4 py-3 bg-slate-800 text-white">
         <div className="flex items-center gap-2">
           <Image
-            src="/logo.png"
+            src="/logo1.png"
             alt="SYNCOMX"
             width={20}
             height={20}
@@ -193,7 +193,7 @@ export function EnvironmentalMonitoringMockup() {
       <div className="flex items-center justify-between px-4 py-3 bg-slate-800 text-white">
         <div className="flex items-center gap-2">
           <Image
-            src="/logo.png"
+            src="/logo1.png"
             alt="SYNCOMX"
             width={20}
             height={20}
@@ -261,7 +261,7 @@ export function InstrumentLogbooksMockup() {
       <div className="flex items-center justify-between px-4 py-3 bg-slate-800 text-white">
         <div className="flex items-center gap-2">
           <Image
-            src="/logo.png"
+            src="/logo1.png"
             alt="SYNCOMX"
             width={20}
             height={20}
@@ -331,7 +331,7 @@ export function BatchExecutionMockup() {
       <div className="flex items-center justify-between px-4 py-3 bg-slate-800 text-white">
         <div className="flex items-center gap-2">
           <Image
-            src="/logo.png"
+            src="/logo1.png"
             alt="SYNCOMX"
             width={20}
             height={20}
@@ -398,7 +398,7 @@ export function BatchIntelligenceMockup() {
       <div className="flex items-center justify-between px-4 py-3 bg-slate-800 text-white">
         <div className="flex items-center gap-2">
           <Image
-            src="/logo.png"
+            src="/logo1.png"
             alt="SYNCOMX"
             width={20}
             height={20}
@@ -450,7 +450,7 @@ export function ProductionLogbooksMockup() {
       <div className="flex items-center justify-between px-4 py-3 bg-slate-800 text-white">
         <div className="flex items-center gap-2">
           <Image
-            src="/logo.png"
+            src="/logo1.png"
             alt="SYNCOMX"
             width={20}
             height={20}
