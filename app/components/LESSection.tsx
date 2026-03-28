@@ -101,7 +101,7 @@ function EnvironmentalMonitoringMockup() {
           <svg width="14" height="14" viewBox="0 0 40 40" fill="none">
             <path d="M20 4C12 4 8 10 8 16C8 22 12 28 20 36C28 28 32 22 32 16C32 10 28 4 20 4Z" fill="white" />
           </svg>
-          <span className="text-white text-xs font-semibold">Leucine</span>
+          <span className="text-white text-xs font-semibold">SYNCOMX</span>
         </div>
         <div className="text-[10px] text-gray-300 flex items-center gap-2">
           <span>New York</span>
@@ -160,7 +160,7 @@ function InstrumentManagementMockup() {
           <svg width="14" height="14" viewBox="0 0 40 40" fill="none">
             <path d="M20 4C12 4 8 10 8 16C8 22 12 28 20 36C28 28 32 22 32 16C32 10 28 4 20 4Z" fill="white" />
           </svg>
-          <span className="text-white text-xs font-semibold">Leucine</span>
+          <span className="text-white text-xs font-semibold">SYNCOMX</span>
         </div>
         <div className="text-[10px] text-gray-300 flex items-center gap-2">
           <span>New York</span>

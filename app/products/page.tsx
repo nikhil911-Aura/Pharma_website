@@ -7,7 +7,7 @@ const categories = [
   {
     id: "quality",
     title: "Quality Management System",
-    subtitle: "NovaRx Quality",
+    subtitle: "SYNCOMX Quality",
     description:
       "Propel investigations, guarantee adherence, and standardize auditing via smart automation.",
     href: "/products/quality",
@@ -41,7 +41,7 @@ const categories = [
   {
     id: "manufacturing",
     title: "Manufacturing Execution System",
-    subtitle: "NovaRx Execution",
+    subtitle: "SYNCOMX Execution",
     description:
       "Turbocharge output with precision batch sequences, instantaneous metrics, and digitized records.",
     href: "/products/manufacturing",

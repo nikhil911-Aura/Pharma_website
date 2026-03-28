@@ -11,7 +11,7 @@ export function AIInvestigatorHeroDashboard() {
       {/* Top bar */}
       <div className="flex items-center justify-between px-5 py-3 bg-slate-800 text-white text-xs">
         <div className="flex items-center gap-2">
-          <div className="w-6 h-6 rounded bg-blue-500 flex items-center justify-center text-[10px] font-bold">N</div>
+          <div className="w-6 h-6 rounded bg-blue-500 flex items-center justify-center text-[10px] font-bold">S</div>
           <span className="text-green-400 text-[8px]">●</span>
         </div>
         <div className="flex items-center gap-4 text-gray-400 text-[11px]">
@@ -136,7 +136,7 @@ export function CleaningValidationHeroDashboard() {
       {/* Top bar */}
       <div className="flex items-center justify-between px-5 py-3 bg-slate-800 text-white text-xs">
         <div className="flex items-center gap-2">
-          <div className="w-6 h-6 rounded bg-blue-500 flex items-center justify-center text-[10px] font-bold">N</div>
+          <div className="w-6 h-6 rounded bg-blue-500 flex items-center justify-center text-[10px] font-bold">S</div>
           <span className="text-green-400 text-[8px]">●</span>
         </div>
         <div className="flex items-center gap-4 text-[11px]">
@@ -177,7 +177,14 @@ export function CleaningValidationHeroDashboard() {
             <tbody>
               {rows.map((row, i) => (
                 <tr key={i} className="border-b border-gray-50 hover:bg-gray-50/50">
-                  <td className="py-2 pr-3"><input type="checkbox" className="w-3 h-3" readOnly /></td>
+                  <td className="py-2 pr-3">
+                    <input
+                      type="checkbox"
+                      className={`w-3 h-3 rounded border-gray-300 ${i === 1 ? "accent-purple-600 bg-purple-600 border-purple-600" : ""} pointer-events-none cursor-default`}
+                      checked={i === 1}
+                      disabled
+                    />
+                  </td>
                   <td className="py-2 pr-3 text-blue-600 font-medium">{row.id}</td>
                   <td className="py-2 pr-3 text-gray-500">{row.date}</td>
                   <td className="py-2 pr-3 text-gray-700">{row.user}</td>
@@ -225,7 +232,7 @@ export function EnvironmentalMonitoringHeroDashboard() {
       {/* Top bar */}
       <div className="flex items-center justify-between px-5 py-3 bg-slate-800 text-white text-xs">
         <div className="flex items-center gap-2">
-          <div className="w-6 h-6 rounded bg-blue-500 flex items-center justify-center text-[10px] font-bold">N</div>
+          <div className="w-6 h-6 rounded bg-blue-500 flex items-center justify-center text-[10px] font-bold">S</div>
           <span className="text-green-400 text-[8px]">●</span>
         </div>
         <div className="flex items-center gap-4 text-[11px]">
@@ -335,7 +342,7 @@ export function InstrumentLogbooksHeroDashboard() {
       {/* Top bar */}
       <div className="flex items-center justify-between px-5 py-3 bg-slate-800 text-white text-xs">
         <div className="flex items-center gap-2">
-          <div className="w-6 h-6 rounded bg-blue-500 flex items-center justify-center text-[10px] font-bold">N</div>
+          <div className="w-6 h-6 rounded bg-blue-500 flex items-center justify-center text-[10px] font-bold">S</div>
           <span className="text-green-400 text-[8px]">●</span>
         </div>
         <div className="flex items-center gap-4 text-[11px]">
@@ -406,7 +413,7 @@ export function RCADashboardMockup() {
     <div className="w-full p-5">
       <div className="bg-slate-800 rounded-t-xl px-4 py-2.5 flex items-center justify-between">
         <div className="flex items-center gap-2 text-white text-[10px]">
-          <div className="w-5 h-5 rounded bg-blue-500 flex items-center justify-center text-[8px] font-bold">N</div>
+          <div className="w-5 h-5 rounded bg-blue-500 flex items-center justify-center text-[8px] font-bold">S</div>
           <span>Root Cause Analysis - 6M Method</span>
         </div>
       </div>
@@ -435,7 +442,7 @@ export function CAPAReportMockup() {
   return (
     <div className="w-full p-5">
       <div className="bg-slate-800 rounded-t-xl px-4 py-2.5 flex items-center gap-2 text-white text-[10px]">
-        <div className="w-5 h-5 rounded bg-blue-500 flex items-center justify-center text-[8px] font-bold">N</div>
+        <div className="w-5 h-5 rounded bg-blue-500 flex items-center justify-center text-[8px] font-bold">S</div>
         <span>CAPA Trend Report</span>
       </div>
       <div className="bg-white border border-gray-100 rounded-b-xl p-4">
@@ -465,7 +472,7 @@ export function HypothesisVerificationMockup() {
   return (
     <div className="w-full p-5">
       <div className="bg-slate-800 rounded-t-xl px-4 py-2.5 flex items-center gap-2 text-white text-[10px]">
-        <div className="w-5 h-5 rounded bg-blue-500 flex items-center justify-center text-[8px] font-bold">N</div>
+        <div className="w-5 h-5 rounded bg-blue-500 flex items-center justify-center text-[8px] font-bold">S</div>
         <span>Hypothesis Cross-Referencing</span>
       </div>
       <div className="bg-white border border-gray-100 rounded-b-xl p-4">
@@ -496,7 +503,7 @@ export function CleaningProtocolMockup() {
   return (
     <div className="w-full p-5">
       <div className="bg-slate-800 rounded-t-xl px-4 py-2.5 flex items-center gap-2 text-white text-[10px]">
-        <div className="w-5 h-5 rounded bg-blue-500 flex items-center justify-center text-[8px] font-bold">N</div>
+        <div className="w-5 h-5 rounded bg-blue-500 flex items-center justify-center text-[8px] font-bold">S</div>
         <span className="text-gray-400">🏢 Boston Plant ▾</span>
         <span className="text-gray-400">🔬 CLEEN ▾</span>
       </div>
@@ -528,7 +535,7 @@ export function ResidueTrendMockup() {
   return (
     <div className="w-full p-5">
       <div className="bg-slate-800 rounded-t-xl px-4 py-2.5 flex items-center gap-2 text-white text-[10px]">
-        <div className="w-5 h-5 rounded bg-blue-500 flex items-center justify-center text-[8px] font-bold">N</div>
+        <div className="w-5 h-5 rounded bg-blue-500 flex items-center justify-center text-[8px] font-bold">S</div>
         <span>Residue Trend Dashboard</span>
       </div>
       <div className="bg-white border border-gray-100 rounded-b-xl p-4">
@@ -564,7 +571,7 @@ export function EMSmartPlanningMockup() {
   return (
     <div className="w-full p-5">
       <div className="bg-slate-800 rounded-t-xl px-4 py-2.5 flex items-center gap-2 text-white text-[10px]">
-        <div className="w-5 h-5 rounded bg-blue-500 flex items-center justify-center text-[8px] font-bold">N</div>
+        <div className="w-5 h-5 rounded bg-blue-500 flex items-center justify-center text-[8px] font-bold">S</div>
         <span>Smart Sampling Planner</span>
       </div>
       <div className="bg-white border border-gray-100 rounded-b-xl p-4">
@@ -603,7 +610,7 @@ export function ExcursionManagementMockup() {
   return (
     <div className="w-full p-5">
       <div className="bg-slate-800 rounded-t-xl px-4 py-2.5 flex items-center gap-2 text-white text-[10px]">
-        <div className="w-5 h-5 rounded bg-blue-500 flex items-center justify-center text-[8px] font-bold">N</div>
+        <div className="w-5 h-5 rounded bg-blue-500 flex items-center justify-center text-[8px] font-bold">S</div>
         <span>Excursion Investigation</span>
       </div>
       <div className="bg-white border border-gray-100 rounded-b-xl p-4">
@@ -640,7 +647,7 @@ export function InstrumentCalibrationMockup() {
   return (
     <div className="w-full p-5">
       <div className="bg-slate-800 rounded-t-xl px-4 py-2.5 flex items-center gap-2 text-white text-[10px]">
-        <div className="w-5 h-5 rounded bg-blue-500 flex items-center justify-center text-[8px] font-bold">N</div>
+        <div className="w-5 h-5 rounded bg-blue-500 flex items-center justify-center text-[8px] font-bold">S</div>
         <span>Calibration Management</span>
       </div>
       <div className="bg-white border border-gray-100 rounded-b-xl p-4">
@@ -674,7 +681,7 @@ export function AuditTrailMockup() {
   return (
     <div className="w-full p-5">
       <div className="bg-slate-800 rounded-t-xl px-4 py-2.5 flex items-center gap-2 text-white text-[10px]">
-        <div className="w-5 h-5 rounded bg-blue-500 flex items-center justify-center text-[8px] font-bold">N</div>
+        <div className="w-5 h-5 rounded bg-blue-500 flex items-center justify-center text-[8px] font-bold">S</div>
         <span>Electronic Audit Trail</span>
       </div>
       <div className="bg-white border border-gray-100 rounded-b-xl p-4">
@@ -709,7 +716,7 @@ export function BatchExecutionHeroDashboard() {
     <div className="w-full">
       <div className="flex items-center justify-between px-5 py-3 bg-slate-800 text-white text-xs">
         <div className="flex items-center gap-2">
-          <div className="w-6 h-6 rounded bg-indigo-500 flex items-center justify-center text-[10px] font-bold">N</div>
+          <div className="w-6 h-6 rounded bg-indigo-500 flex items-center justify-center text-[10px] font-bold">S</div>
           <span className="text-green-400 text-[8px]">●</span>
         </div>
         <div className="flex items-center gap-4 text-[11px]">
@@ -787,7 +794,7 @@ export function BatchIntelligenceHeroDashboard() {
     <div className="w-full">
       <div className="flex items-center justify-between px-5 py-3 bg-slate-800 text-white text-xs">
         <div className="flex items-center gap-2">
-          <div className="w-6 h-6 rounded bg-indigo-500 flex items-center justify-center text-[10px] font-bold">N</div>
+          <div className="w-6 h-6 rounded bg-indigo-500 flex items-center justify-center text-[10px] font-bold">S</div>
           <span className="text-green-400 text-[8px]">●</span>
         </div>
         <div className="flex items-center gap-4 text-[11px]">
@@ -855,7 +862,7 @@ export function ProductionLogbooksHeroDashboard() {
     <div className="w-full">
       <div className="flex items-center justify-between px-5 py-3 bg-slate-800 text-white text-xs">
         <div className="flex items-center gap-2">
-          <div className="w-6 h-6 rounded bg-indigo-500 flex items-center justify-center text-[10px] font-bold">N</div>
+          <div className="w-6 h-6 rounded bg-indigo-500 flex items-center justify-center text-[10px] font-bold">S</div>
           <span className="text-green-400 text-[8px]">●</span>
         </div>
         <div className="flex items-center gap-4 text-[11px]">
@@ -913,7 +920,7 @@ export function BatchWorkflowMockup() {
   return (
     <div className="w-full p-5">
       <div className="bg-slate-800 rounded-t-xl px-4 py-2.5 flex items-center gap-2 text-white text-[10px]">
-        <div className="w-5 h-5 rounded bg-indigo-500 flex items-center justify-center text-[8px] font-bold">N</div>
+        <div className="w-5 h-5 rounded bg-indigo-500 flex items-center justify-center text-[8px] font-bold">S</div>
         <span>Batch Workflow Designer</span>
       </div>
       <div className="bg-white border border-gray-100 rounded-b-xl p-4">
@@ -949,7 +956,7 @@ export function OTIFDashboardMockup() {
   return (
     <div className="w-full p-5">
       <div className="bg-slate-800 rounded-t-xl px-4 py-2.5 flex items-center gap-2 text-white text-[10px]">
-        <div className="w-5 h-5 rounded bg-indigo-500 flex items-center justify-center text-[8px] font-bold">N</div>
+        <div className="w-5 h-5 rounded bg-indigo-500 flex items-center justify-center text-[8px] font-bold">S</div>
         <span>OTIF Monitoring</span>
       </div>
       <div className="bg-white border border-gray-100 rounded-b-xl p-4">
@@ -985,7 +992,7 @@ export function LogbookEntryMockup() {
   return (
     <div className="w-full p-5">
       <div className="bg-slate-800 rounded-t-xl px-4 py-2.5 flex items-center gap-2 text-white text-[10px]">
-        <div className="w-5 h-5 rounded bg-indigo-500 flex items-center justify-center text-[8px] font-bold">N</div>
+        <div className="w-5 h-5 rounded bg-indigo-500 flex items-center justify-center text-[8px] font-bold">S</div>
         <span>Digital Logbook Entry</span>
       </div>
       <div className="bg-white border border-gray-100 rounded-b-xl p-4">

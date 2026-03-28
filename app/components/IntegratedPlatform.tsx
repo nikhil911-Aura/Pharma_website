@@ -77,44 +77,46 @@ export default function IntegratedPlatform() {
           className="bg-gray-50 rounded-2xl p-2 md:p-3"
         >
           {/* Tab buttons */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-2 md:gap-3 mb-0">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-3 mb-0">
             {tabs.map((tab) => (
               <button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
-                className={`relative flex flex-col items-start text-left p-5 md:p-6 rounded-xl transition-all duration-300 ${
-                  activeTab === tab.id
-                    ? "bg-white shadow-lg border border-gray-100"
-                    : "bg-transparent hover:bg-white/50"
-                }`}
+                className="relative flex flex-col items-start text-left p-5 md:p-6 rounded-xl transition-all duration-300 group outline-none"
               >
-                <div className="flex items-center gap-2.5 mb-2">
-                  <span
-                    className={`${
-                      activeTab === tab.id
-                        ? "text-gray-900"
-                        : "text-gray-400"
-                    } transition-colors`}
-                  >
-                    {tab.icon}
-                  </span>
-                  <h3
-                    className={`text-lg font-bold transition-colors ${
-                      activeTab === tab.id
-                        ? "text-gray-900"
-                        : "text-gray-400"
+                {activeTab === tab.id && (
+                  <motion.div
+                    layoutId="activeIndicator"
+                    className="absolute inset-0 bg-white shadow-xl shadow-gray-200/50 border border-gray-100 rounded-xl"
+                    transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
+                  />
+                )}
+                
+                <div className="relative z-10 w-full">
+                  <div className="flex items-center gap-2.5 mb-2">
+                    <span
+                      className={`${
+                        activeTab === tab.id ? "text-blue-600" : "text-gray-400 group-hover:text-gray-600"
+                      } transition-colors`}
+                    >
+                      {tab.icon}
+                    </span>
+                    <h3
+                      className={`text-lg font-bold transition-colors ${
+                        activeTab === tab.id ? "text-gray-900" : "text-gray-400 group-hover:text-gray-600"
+                      }`}
+                    >
+                      {tab.label}
+                    </h3>
+                  </div>
+                  <p
+                    className={`text-sm leading-relaxed transition-colors ${
+                      activeTab === tab.id ? "text-gray-600" : "text-gray-400 group-hover:text-gray-500"
                     }`}
                   >
-                    {tab.label}
-                  </h3>
+                    {tab.description}
+                  </p>
                 </div>
-                <p
-                  className={`text-sm leading-relaxed transition-colors ${
-                    activeTab === tab.id ? "text-gray-600" : "text-gray-400"
-                  }`}
-                >
-                  {tab.description}
-                </p>
               </button>
             ))}
           </div>
@@ -146,7 +148,7 @@ function DashboardSidebar() {
         <svg width="18" height="18" viewBox="0 0 40 40" fill="none">
           <path d="M20 4C12 4 8 10 8 16C8 22 12 28 20 36C28 28 32 22 32 16C32 10 28 4 20 4Z" fill="#0f172a" />
         </svg>
-        <span className="text-sm font-bold text-gray-900">NovaRx</span>
+        <span className="text-sm font-bold text-gray-900">SYNCOMX</span>
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#94a3b8" strokeWidth="2" className="ml-auto">
           <rect x="3" y="3" width="7" height="7" /><rect x="14" y="3" width="7" height="7" />
           <rect x="3" y="14" width="7" height="7" /><rect x="14" y="14" width="7" height="7" />
@@ -390,7 +392,7 @@ function DashboardToolbar({ title }: { title: string }) {
         <svg width="18" height="18" viewBox="0 0 40 40" fill="none">
           <path d="M20 4C12 4 8 10 8 16C8 22 12 28 20 36C28 28 32 22 32 16C32 10 28 4 20 4Z" fill="white" />
         </svg>
-        <span className="text-white text-sm font-semibold">NovaRx</span>
+        <span className="text-white text-sm font-semibold">SYNCOMX</span>
       </div>
       <div className="flex items-center gap-3 text-xs text-gray-300">
         <span className="hidden sm:flex items-center gap-1">

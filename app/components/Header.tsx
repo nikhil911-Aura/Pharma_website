@@ -161,7 +161,7 @@ export default function Header() {
                 <path d="M20 12C17.5 12 16 14 16 16C16 18 17.5 20 20 24C22.5 20 24 18 24 16C24 14 22.5 12 20 12Z" fill="#0f172a" />
               </svg>
               <span className="text-xl sm:text-2xl font-bold text-gray-900 tracking-tight">
-                NovaRx
+                SYNCOMX
               </span>
             </Link>
 

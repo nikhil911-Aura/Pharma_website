@@ -96,17 +96,17 @@ const products: Record<
     ],
     faqs: [
       {
-        question: "How does NovaRx safeguard data integrity within operational histories?",
+        question: "How does SYNCOMX safeguard data integrity within operational histories?",
         answer:
           "Every action is captured with a tamper-proof audit trail including timestamps, user details, and electronic signatures. The system is fully compliant with global electronic record standards.",
       },
       {
-        question: "Is NovaRx compatible with legacy systems?",
+        question: "Is SYNCOMX compatible with legacy systems?",
         answer:
-          "Yes, NovaRx integrates with SAP, Oracle, and other ERP systems via standard APIs. We also support OPC-UA for equipment-level integration.",
+          "Yes, SYNCOMX integrates with SAP, Oracle, and other ERP systems via standard APIs. We also support OPC-UA for equipment-level integration.",
       },
       {
-        question: "What gating features does NovaRx deploy?",
+        question: "What gating features does SYNCOMX deploy?",
         answer:
           "Material verification (barcode/RFID), operator authentication, equipment readiness, environmental condition checks, and sequential step enforcement.",
       },
@@ -177,7 +177,7 @@ const products: Record<
       },
       {
         tag: "Case Study",
-        title: "Client Success: Hitting Zenith Output Targets via NovaRx",
+        title: "Client Success: Hitting Zenith Output Targets via SYNCOMX",
         href: "#",
       },
     ],

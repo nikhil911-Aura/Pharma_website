@@ -11,9 +11,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "NovaRx | Intelligent Life Sciences",
+  title: "SYNCOMX | Intelligent Life Sciences",
   description:
-    "NovaRx's intelligent pharmaceutical ecosystem provides regulatory-ready, edge computing software to accelerate cleanroom production, elevate safety protocols, and maximize overall operational throughput.",
+    "SYNCOMX's intelligent pharmaceutical ecosystem provides regulatory-ready, edge computing software to accelerate cleanroom production, elevate safety protocols, and maximize overall operational throughput.",
   keywords: [
     "pharma manufacturing",
     "AI",

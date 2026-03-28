@@ -37,10 +37,10 @@ export default function Hero() {
           className="text-center max-w-5xl mx-auto"
         >
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[5.2rem] font-extrabold text-gray-900 leading-[1.06] tracking-[-0.02em]">
-            Accelerate the next era
+            Simplifying
             <br className="hidden sm:block" />
             <span className="sm:hidden"> </span>
-            of Life Sciences Production.
+            Manufacturing & Compliance
           </h1>
           <p className="mt-5 sm:mt-7 md:mt-9 text-base sm:text-lg md:text-xl text-gray-500 max-w-2xl mx-auto leading-relaxed font-normal px-4 sm:px-2">
             Coordinate, monitor, and scale every operation. Achieve peak
@@ -201,7 +201,7 @@ function DashboardTopbar({ subtitle }: { subtitle: string }) {
             />
           </svg>
         </div>
-        <span className="text-xs sm:text-sm font-semibold">NovaRx</span>
+        <span className="text-xs sm:text-sm font-semibold">SYNCOMX</span>
       </div>
       <div className="flex items-center gap-2 sm:gap-3 text-[10px] sm:text-xs text-gray-400">
         <span className="hidden md:inline">📍 New York</span>

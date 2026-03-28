@@ -26,7 +26,7 @@ export default function AboutPage() {
             className="text-center max-w-4xl mx-auto"
           >
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-gray-900 leading-tight tracking-tight">
-              About Leucine
+              About SYNCOMX
             </h1>
             <p className="mt-5 text-lg text-gray-500 max-w-2xl mx-auto leading-relaxed">
               Transforming pharmaceutical manufacturing with AI-powered intelligence. 
@@ -50,7 +50,7 @@ export default function AboutPage() {
                 Our Mission
               </h2>
               <p className="text-base text-gray-500 leading-relaxed mb-4">
-                Leucine is dedicated to transforming pharmaceutical manufacturing through 
+                SYNCOMX is dedicated to transforming pharmaceutical manufacturing through 
                 AI-powered solutions that ensure compliance, enhance quality, and optimize 
                 productivity across the entire batch lifecycle.
               </p>

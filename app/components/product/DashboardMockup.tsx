@@ -21,7 +21,7 @@ export function AIInvestigatorMockup() {
       {/* Top bar */}
       <div className="flex items-center justify-between px-4 py-3 bg-slate-800 text-white">
         <div className="flex items-center gap-2">
-          <div className="w-5 h-5 rounded bg-blue-500 flex items-center justify-center text-[8px] font-bold">N</div>
+          <div className="w-5 h-5 rounded bg-blue-500 flex items-center justify-center text-[8px] font-bold">S</div>
           <div className="w-1 h-1 rounded-full bg-green-400" />
         </div>
         <div className="flex items-center gap-2 text-xs">
@@ -55,7 +55,7 @@ export function AIInvestigatorMockup() {
                 <div className="text-xs font-semibold text-gray-900">{item.label}</div>
                 <div className="flex items-center gap-1 mt-1">
                   <div className="w-1.5 h-1.5 rounded-full bg-blue-500" />
-                  <span className="text-[9px] text-gray-500">NovaRx AI-Generated {item.count}</span>
+                  <span className="text-[9px] text-gray-500">SYNCOMX AI-Generated {item.count}</span>
                 </div>
                 <div className="text-[9px] text-blue-600 mt-1 cursor-pointer">View & Analyze ↗</div>
               </div>
@@ -131,7 +131,7 @@ export function CleaningValidationMockup() {
       {/* Top bar */}
       <div className="flex items-center justify-between px-4 py-3 bg-slate-800 text-white">
         <div className="flex items-center gap-2">
-          <div className="w-5 h-5 rounded bg-blue-500 flex items-center justify-center text-[8px] font-bold">N</div>
+          <div className="w-5 h-5 rounded bg-blue-500 flex items-center justify-center text-[8px] font-bold">S</div>
           <div className="w-1 h-1 rounded-full bg-green-400" />
         </div>
         <div className="flex items-center gap-2 text-xs">
@@ -180,7 +180,7 @@ export function EnvironmentalMonitoringMockup() {
       {/* Top bar */}
       <div className="flex items-center justify-between px-4 py-3 bg-slate-800 text-white">
         <div className="flex items-center gap-2">
-          <div className="w-5 h-5 rounded bg-emerald-500 flex items-center justify-center text-[8px] font-bold">N</div>
+          <div className="w-5 h-5 rounded bg-emerald-500 flex items-center justify-center text-[8px] font-bold">S</div>
           <div className="w-1 h-1 rounded-full bg-green-400" />
         </div>
         <div className="flex items-center gap-2 text-xs">
@@ -242,7 +242,7 @@ export function InstrumentLogbooksMockup() {
       {/* Top bar */}
       <div className="flex items-center justify-between px-4 py-3 bg-slate-800 text-white">
         <div className="flex items-center gap-2">
-          <div className="w-5 h-5 rounded bg-emerald-500 flex items-center justify-center text-[8px] font-bold">N</div>
+          <div className="w-5 h-5 rounded bg-emerald-500 flex items-center justify-center text-[8px] font-bold">S</div>
           <div className="w-1 h-1 rounded-full bg-green-400" />
         </div>
         <div className="flex items-center gap-2 text-xs">
@@ -306,7 +306,7 @@ export function BatchExecutionMockup() {
     <div className="bg-white">
       <div className="flex items-center justify-between px-4 py-3 bg-slate-800 text-white">
         <div className="flex items-center gap-2">
-          <div className="w-5 h-5 rounded bg-indigo-500 flex items-center justify-center text-[8px] font-bold">N</div>
+          <div className="w-5 h-5 rounded bg-indigo-500 flex items-center justify-center text-[8px] font-bold">S</div>
           <div className="w-1 h-1 rounded-full bg-green-400" />
         </div>
         <div className="flex items-center gap-2 text-xs">
@@ -367,7 +367,7 @@ export function BatchIntelligenceMockup() {
     <div className="bg-white">
       <div className="flex items-center justify-between px-4 py-3 bg-slate-800 text-white">
         <div className="flex items-center gap-2">
-          <div className="w-5 h-5 rounded bg-indigo-500 flex items-center justify-center text-[8px] font-bold">N</div>
+          <div className="w-5 h-5 rounded bg-indigo-500 flex items-center justify-center text-[8px] font-bold">S</div>
           <div className="w-1 h-1 rounded-full bg-green-400" />
         </div>
         <div className="flex items-center gap-2 text-xs">
@@ -413,7 +413,7 @@ export function ProductionLogbooksMockup() {
     <div className="bg-white">
       <div className="flex items-center justify-between px-4 py-3 bg-slate-800 text-white">
         <div className="flex items-center gap-2">
-          <div className="w-5 h-5 rounded bg-indigo-500 flex items-center justify-center text-[8px] font-bold">N</div>
+          <div className="w-5 h-5 rounded bg-indigo-500 flex items-center justify-center text-[8px] font-bold">S</div>
           <div className="w-1 h-1 rounded-full bg-green-400" />
         </div>
         <div className="flex items-center gap-2 text-xs">

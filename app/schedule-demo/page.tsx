@@ -8,10 +8,8 @@ import { useRouter } from "next/navigation";
 export default function ScheduleDemoPage() {
   const router = useRouter();
   const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
+    fullName: "",
     workEmail: "",
-    company: "",
     phone: "",
     message: "",
   });
@@ -43,10 +41,8 @@ export default function ScheduleDemoPage() {
       if (res.ok) {
         setSubmitStatus("success");
         setFormData({
-          firstName: "",
-          lastName: "",
+          fullName: "",
           workEmail: "",
-          company: "",
           phone: "",
           message: "",
         });
@@ -85,14 +81,14 @@ export default function ScheduleDemoPage() {
             <div className="w-8 h-8 bg-white rounded-lg flex items-center justify-center">
               <span className="text-gray-900 font-extrabold text-sm">N</span>
             </div>
-            <span className="text-xl font-bold tracking-tight">NovaRx</span>
+            <span className="text-xl font-bold tracking-tight">SYNCOMX</span>
           </Link>
 
           {/* Hero text */}
           <h1 className="text-3xl sm:text-4xl lg:text-[44px] font-extrabold leading-[1.12] tracking-tight mb-6">
             Experience{" "}
             <span className="bg-gradient-to-r from-purple-400 via-violet-400 to-purple-500 bg-clip-text text-transparent">
-              NovaRx Core
+              SYNCOMX Core
             </span>{" "}
             <span className="inline-block relative">
               <svg className="absolute -top-1 -right-5 w-4 h-4 text-purple-400" viewBox="0 0 24 24" fill="currentColor">
@@ -107,20 +103,11 @@ export default function ScheduleDemoPage() {
 
           <p className="text-gray-400 text-sm sm:text-base leading-relaxed max-w-md">
             Revolutionize Your Manufacturing Base with Systemic Control.
-            Explore how NovaRx unites operations, oversight, and logging inside a singular
+            Explore how SYNCOMX unites operations, oversight, and logging inside a singular
             ecosystem. Schedule a personalized showcase to see how our platforms can secure
             flawless adherence, compress output delays, and optimize your entire facility.
           </p>
 
-          {/* Trust indicators */}
-          <div className="mt-12 pt-8 border-t border-gray-800">
-            <p className="text-xs text-gray-500 uppercase tracking-widest mb-4">Trusted by 300+ pharma facilities</p>
-            <div className="flex flex-wrap gap-x-6 gap-y-2 text-gray-600 text-xs font-semibold tracking-wider">
-              {["CIPLA", "BIOCON", "DR. REDDY'S", "ZYDUS", "STRIDES"].map((logo) => (
-                <span key={logo}>{logo}</span>
-              ))}
-            </div>
-          </div>
         </motion.div>
       </div>
 
@@ -145,7 +132,7 @@ export default function ScheduleDemoPage() {
           className="max-w-lg mx-auto w-full"
         >
           <h2 className="text-2xl sm:text-3xl font-extrabold text-gray-900 mb-1.5 tracking-tight">
-            Connect with a NovaRx Specialist
+            Connect with a SYNCOMX Specialist
           </h2>
           <p className="text-sm text-gray-500 mb-8">
             Schedule a 30-Minute Product Demo with Expert Q&A
@@ -188,37 +175,20 @@ export default function ScheduleDemoPage() {
                 onSubmit={handleSubmit}
                 className="space-y-5"
               >
-                {/* First Name */}
+                {/* Full Name */}
                 <div>
-                  <label htmlFor="firstName" className="block text-sm font-medium text-gray-700 mb-1.5">
-                    First name
+                  <label htmlFor="fullName" className="block text-sm font-medium text-gray-700 mb-1.5">
+                    Full Name<span className="text-red-500">*</span>
                   </label>
                   <input
                     type="text"
-                    id="firstName"
-                    name="firstName"
-                    value={formData.firstName}
+                    id="fullName"
+                    name="fullName"
+                    value={formData.fullName}
                     onChange={handleChange}
                     required
                     className="w-full px-4 py-3 bg-white border border-gray-200 rounded-xl text-gray-900 text-sm placeholder-gray-400 outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/10 transition-all duration-200"
-                    placeholder="Enter your first name"
-                  />
-                </div>
-
-                {/* Last Name */}
-                <div>
-                  <label htmlFor="lastName" className="block text-sm font-medium text-gray-700 mb-1.5">
-                    Last name
-                  </label>
-                  <input
-                    type="text"
-                    id="lastName"
-                    name="lastName"
-                    value={formData.lastName}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-4 py-3 bg-white border border-gray-200 rounded-xl text-gray-900 text-sm placeholder-gray-400 outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/10 transition-all duration-200"
-                    placeholder="Enter your last name"
+                    placeholder="Enter your full name"
                   />
                 </div>
 
@@ -239,21 +209,7 @@ export default function ScheduleDemoPage() {
                   />
                 </div>
 
-                {/* Company */}
-                <div>
-                  <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-1.5">
-                    Company
-                  </label>
-                  <input
-                    type="text"
-                    id="company"
-                    name="company"
-                    value={formData.company}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 bg-white border border-gray-200 rounded-xl text-gray-900 text-sm placeholder-gray-400 outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/10 transition-all duration-200"
-                    placeholder="Your company name"
-                  />
-                </div>
+
 
                 {/* Phone */}
                 <div>
@@ -323,7 +279,7 @@ export default function ScheduleDemoPage() {
                 </button>
 
                 <p className="text-xs text-gray-400 mt-2">
-                  By submitting, you agree to our Privacy Policy and consent to being contacted regarding NovaRx systems.
+                  By submitting, you agree to our Privacy Policy and consent to being contacted regarding SYNCOMX systems.
                 </p>
               </motion.form>
             )}

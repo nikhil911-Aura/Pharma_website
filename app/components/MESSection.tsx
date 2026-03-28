@@ -75,7 +75,7 @@ export default function MESSection() {
         </motion.div>
 
         {/* Top 3 Feature Cards with Dashboard Previews */}
-        <div className="mt-12 md:mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5">
+        <div className="mt-12 md:mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {topFeatures.map((feature, index) => (
             <motion.div
               key={feature.title}
@@ -83,42 +83,46 @@ export default function MESSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
+              className="flex"
             >
               <Link
                 href={feature.href}
-                className="feature-card block bg-white rounded-xl overflow-hidden h-full group"
+                className="feature-card flex flex-col bg-white rounded-xl overflow-hidden w-full group transition-all duration-300 hover:shadow-2xl hover:shadow-gray-200"
               >
-                <div className="p-6 md:p-7">
-                  <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
+                <div className="p-6 md:p-8 flex flex-col flex-1">
+                  <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
                     {feature.title}
                   </h3>
-                  <p className="text-sm font-medium text-gray-700 mb-2">
-                    {feature.subtitle}
-                  </p>
-                  <p className="text-sm text-gray-500 leading-relaxed mb-4">
-                    {feature.description}
-                  </p>
-                  <span className="inline-flex items-center gap-1.5 text-sm font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">
-                    Know More
-                    <svg
-                      width="14"
-                      height="14"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2.5"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
-                    >
-                      <line x1="7" y1="17" x2="17" y2="7" />
-                      <polyline points="7 7 17 7 17 17" />
-                    </svg>
-                  </span>
-                </div>
-                {/* Mini dashboard preview */}
-                <div className="px-5 pb-5">
-                  <MiniDashboard type={feature.title} />
+                  <div className="flex-1">
+                    <p className="text-sm font-semibold text-gray-700 mb-3">
+                      {feature.subtitle}
+                    </p>
+                    <p className="text-sm text-gray-500 leading-relaxed mb-6">
+                      {feature.description}
+                    </p>
+                  </div>
+                  <div className="mt-auto">
+                    <span className="inline-flex items-center gap-1.5 text-sm font-bold text-gray-900 group-hover:text-blue-600 transition-colors mb-6">
+                      Know More
+                      <svg
+                        width="14"
+                        height="14"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2.5"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                      >
+                        <line x1="7" y1="17" x2="17" y2="7" />
+                        <polyline points="7 7 17 7 17 17" />
+                      </svg>
+                    </span>
+                    <div className="h-[140px] w-full">
+                      <MiniDashboard type={feature.title} />
+                    </div>
+                  </div>
                 </div>
               </Link>
             </motion.div>
@@ -126,7 +130,7 @@ export default function MESSection() {
         </div>
 
         {/* Bottom 3 Feature Cards */}
-        <div className="mt-4 md:mt-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5">
+        <div className="mt-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {bottomFeatures.map((feature, index) => (
             <motion.div
               key={feature.title}
@@ -134,21 +138,24 @@ export default function MESSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
+              className="flex"
             >
               <Link
                 href={feature.href}
-                className="feature-card block bg-white rounded-xl p-6 md:p-7 h-full group"
+                className="feature-card flex flex-col bg-white rounded-xl p-6 md:p-8 w-full group transition-all duration-300 hover:shadow-2xl hover:shadow-gray-200"
               >
-                <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
+                <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
                   {feature.title}
                 </h3>
-                <p className="text-sm font-medium text-gray-700 mb-2">
-                  {feature.subtitle}
-                </p>
-                <p className="text-sm text-gray-500 leading-relaxed mb-4">
-                  {feature.description}
-                </p>
-                <span className="inline-flex items-center gap-1.5 text-sm font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">
+                <div className="flex-1">
+                  <p className="text-sm font-semibold text-gray-700 mb-3">
+                    {feature.subtitle}
+                  </p>
+                  <p className="text-sm text-gray-500 leading-relaxed mb-6">
+                    {feature.description}
+                  </p>
+                </div>
+                <span className="inline-flex items-center gap-1.5 text-sm font-bold text-gray-900 group-hover:text-blue-600 transition-colors mt-auto">
                   Know More
                   <svg
                     width="14"
@@ -183,7 +190,7 @@ function MiniDashboard({ type }: { type: string }) {
             <svg width="12" height="12" viewBox="0 0 40 40" fill="none">
               <path d="M20 4C12 4 8 10 8 16C8 22 12 28 20 36C28 28 32 22 32 16C32 10 28 4 20 4Z" fill="white" />
             </svg>
-            <span className="text-[10px] font-semibold">NovaRx</span>
+            <span className="text-[10px] font-semibold">SYNCOMX</span>
           </div>
           <span className="text-[8px] text-gray-400">Batch Manufacturing</span>
         </div>
@@ -212,7 +219,7 @@ function MiniDashboard({ type }: { type: string }) {
             <svg width="12" height="12" viewBox="0 0 40 40" fill="none">
               <path d="M20 4C12 4 8 10 8 16C8 22 12 28 20 36C28 28 32 22 32 16C32 10 28 4 20 4Z" fill="white" />
             </svg>
-            <span className="text-[10px] font-semibold">NovaRx</span>
+            <span className="text-[10px] font-semibold">SYNCOMX</span>
           </div>
           <span className="text-[8px] text-gray-400">OTIF Analysis</span>
         </div>
@@ -246,7 +253,7 @@ function MiniDashboard({ type }: { type: string }) {
           <svg width="12" height="12" viewBox="0 0 40 40" fill="none">
             <path d="M20 4C12 4 8 10 8 16C8 22 12 28 20 36C28 28 32 22 32 16C32 10 28 4 20 4Z" fill="white" />
           </svg>
-          <span className="text-[10px] font-semibold">NovaRx</span>
+          <span className="text-[10px] font-semibold">SYNCOMX</span>
         </div>
         <span className="text-[8px] text-gray-400">Production Logbooks</span>
       </div>

@@ -13,8 +13,8 @@ interface ConsultationCTAProps {
 
 export default function ConsultationCTA({
   heading = "Powered pharma manufacturing",
-  highlightText = "Experience Leucine AI",
-  description = "300+ pharma facilities worldwide use Leucine to stay compliant. Talk to one of our expert consultants at Leucine to learn how.",
+  highlightText = "Experience SYNCOMX AI",
+  description = "300+ pharma facilities worldwide use SYNCOMX to stay compliant. Talk to one of our expert consultants at SYNCOMX to learn how.",
   ctaText = "Request Consultation",
   ctaHref = "#",
 }: ConsultationCTAProps) {

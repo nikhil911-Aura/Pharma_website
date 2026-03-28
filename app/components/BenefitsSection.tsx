@@ -95,7 +95,7 @@ export default function BenefitsSection() {
           className="text-center mb-12 md:mb-16"
         >
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight tracking-tight">
-            Unleash Measurable Advantages with NovaRx
+            Unleash Measurable Advantages with SYNCOMX
           </h2>
           <p className="mt-4 text-lg text-gray-500 max-w-2xl mx-auto leading-relaxed">
             Monitor every unit from design to final handover—pinpoint friction gaps,
@@ -145,7 +145,7 @@ export function CTASection() {
           <div>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight tracking-tight">
               Experience{" "}
-              <span className="text-blue-600">NovaRx OS</span>
+              <span className="text-blue-600">SYNCOMX OS</span>
               <br />
               Intelligent life sciences
               <br />

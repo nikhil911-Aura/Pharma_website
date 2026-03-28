@@ -103,7 +103,7 @@ export default function QMSSection() {
                         />
                       </svg>
                       <span className="text-white text-xs font-semibold">
-                        NovaRx
+                        SYNCOMX
                       </span>
                     </div>
                     <div className="flex items-center gap-3 text-[10px] text-gray-300">
@@ -317,7 +317,7 @@ function CleaningValidationMockup() {
               fill="white"
             />
           </svg>
-          <span className="text-white text-xs font-semibold">NovaRx</span>
+          <span className="text-white text-xs font-semibold">SYNCOMX</span>
         </div>
         <div className="text-[10px] text-gray-300 flex items-center gap-2">
           <span>New York</span>

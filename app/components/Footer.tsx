@@ -47,11 +47,11 @@ export default function Footer() {
                 />
               </svg>
               <span className="text-xl font-bold text-white tracking-tight">
-                NovaRx
+                SYNCOMX
               </span>
             </Link>
             <p className="text-sm text-gray-400 leading-relaxed max-w-xs">
-              Accelerate the Next Era of Life Sciences Production.
+              Simplifying Manufacturing & Compliance
             </p>
           </div>
 
@@ -113,7 +113,7 @@ export default function Footer() {
       {/* Bottom Bar */}
       <div className="border-t border-white/10">
         <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-sm text-gray-500">© Copyright 2026 NovaRx</p>
+          <p className="text-sm text-gray-500">© Copyright 2026 SYNCOMX</p>
           <div className="flex items-center gap-5">
             {/* YouTube */}
             <Link

@@ -236,7 +236,7 @@ export default function ProductDetailPage({
               <div>
                 <h2 className="text-3xl sm:text-4xl md:text-[42px] font-extrabold text-gray-900 leading-tight tracking-tight">
                   Experience{" "}
-                  <span className="text-blue-600">Leucine AI</span>
+                  <span className="text-blue-600">SYNCOMX AI</span>
                   <br />
                   Powered pharma manufacturing
                 </h2>
@@ -259,7 +259,7 @@ export default function ProductDetailPage({
               </div>
               <div>
                 <p className="text-lg md:text-xl text-gray-500 leading-relaxed">
-                  300+ pharma facilities worldwide use Leucine to stay compliant. Talk to one of our expert consultants at Leucine to learn how.
+                  300+ pharma facilities worldwide use SYNCOMX to stay compliant. Talk to one of our expert consultants at SYNCOMX to learn how.
                 </p>
               </div>
             </div>
